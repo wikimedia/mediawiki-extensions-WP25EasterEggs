@@ -1,0 +1,18 @@
+{
+	"name": "WP25EasterEggs",
+	"private": true,
+	"scripts": {
+		"lint": "npm -s run lint:styles && npm -s run lint:js && npm -s run lint:i18n",
+		"lint:fix": "npm -s run lint:styles -- --fix && npm -s run lint:js -- --fix && npm -s run lint:i18",
+		"lint:js": "eslint --cache .",
+		"lint:styles": "stylelint --cache --report-needless-disables **/*.{css,less}",
+		"lint:i18n": "banana-checker --requireLowerCase=0 i18n/",
+		"test": "grunt test"
+	},
+	"devDependencies": {
+		"eslint-config-wikimedia": "0.31.0",
+		"grunt-banana-checker": "0.13.0",
+		"stylelint-config-wikimedia": "0.18.0",
+		"types-mediawiki": "^2.0.0"
+	}
+}

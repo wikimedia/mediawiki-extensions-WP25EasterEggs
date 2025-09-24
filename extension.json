@@ -1,0 +1,43 @@
+{
+	"name": "WP25EasterEggs",
+	"author": [
+		"Artem Titkov"
+	],
+	"url": "https://www.mediawiki.org/wiki/Extension:WP25EasterEggs",
+	"descriptionmsg": "wp25EasterEggs-desc",
+	"license-name": "GPL-2.0-or-later",
+	"type": "other",
+	"requires": {
+		"MediaWiki": ">= 1.42.0"
+	},
+	"AutoloadNamespaces": {
+		"MediaWiki\\Extension\\WP25EasterEggs\\": "src/"
+	},
+	"HookHandlers": {
+		"WP25EasterEggsHooks": {
+			"class": "MediaWiki\\Extension\\WP25EasterEggs\\Hooks"
+		}
+	},
+	"Hooks": {
+		"BeforePageDisplay": "WP25EasterEggsHooks"
+	},
+	"config": {},
+	"MessagesDirs": {
+		"WP25EasterEggs": [
+			"i18n"
+		]
+	},
+	"ResourceModules": {
+		"ext.wp25EasterEggs": {
+			"localBasePath": "resources/ext.wp25EasterEggs",
+			"remoteExtPath": "WP25EasterEggs/resources/ext.wp25EasterEggs",
+			"dependencies": [],
+			"styles": [],
+			"packageFiles": [
+				"init.js"
+			],
+			"messages": []
+		}
+	},
+	"manifest_version": 2
+}
