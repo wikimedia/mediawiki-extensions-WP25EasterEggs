@@ -5,6 +5,15 @@
 		]
 	},
 	"wp25EasterEggs-desc": "A short description of the extension.",
-	"wp25eastereggs-enable-label": "The label of the toggle switch that enables the option.",
-	"wp25eastereggs-enable-help": "The description of the toggle switch that enables the option."
+	"wp25eastereggs-enable-name": "The label of the option displayed in the Appearance menu and in the Settings page.",
+	"wp25eastereggs-enable-label": "The label of the option displayed in Appearance Preferences page, both on desktop and mobile.",
+	"wp25eastereggs-enable-description": "The description of the option displayed in the mobile Settings page.",
+	"wp25eastereggs-enable-help": "The description of the option displayed in Appearance Preferences page, both on desktop and mobile.",
+	"wp25eastereggs-enable-0-label": "Label of the option that disables the extension",
+	"wp25eastereggs-enable-1-label": "Label of the option that enables the extension",
+	"communityconfiguration-wp25eastereggs-title": "Title of the Community Configuration section",
+	"communityconfiguration-wp25eastereggs-description": "Description of the Community Configuration section",
+	"communityconfiguration-wp25eastereggs-cc_enable-label": "Label of the Community Configuration option that enables the extension",
+	"communityconfiguration-wp25eastereggs-cc_enable-option-disabled-label": "Label of the Community Configuration option radio button that disables the extension",
+	"communityconfiguration-wp25eastereggs-cc_enable-option-enabled-label": "Label of the Community Configuration option radio button that enables the extension"
 }

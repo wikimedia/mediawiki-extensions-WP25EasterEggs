@@ -23,33 +23,68 @@ use MediaWiki\Config\Config;
 use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
 use MediaWiki\User\Options\UserOptionsLookup;
+use MediaWiki\User\User;
 
 class Hooks implements BeforePageDisplayHook, GetPreferencesHook {
 
 	public function __construct(
 		private readonly Config $config,
-		private readonly UserOptionsLookup $userOptionsLookup
+		private readonly UserOptionsLookup $userOptionsLookup,
+		private readonly ?Config $communityConfig,
 	) {
+	}
+
+	/**
+	 * Returns if the extension is enabled with CommunityConfiguration.
+	 * @return bool
+	 */
+	public function isCommunityConfigEnabled(): bool {
+		return $this->communityConfig && $this->communityConfig->get( 'CC_ENABLE' ) === "enabled";
+	}
+
+	/**
+	 * Returns the key and value for the user preference that is responsible for
+	 * enabling / disabling the Birthday Mode.
+	 * @param User $user
+	 * @return array{key: string, value: mixed, isEnabled: bool}
+	 */
+	private function getUserPrefEnabled( $user ) {
+		$key = 'wp25eastereggs-enable';
+		$value = $this->userOptionsLookup->getOption(
+			$user,
+			$key,
+			$this->config->get( 'Wp25EasterEggsEnable' ) );
+		$isEnabled = $value && $value !== 'disabled' ? '1' : '0';
+		return [ 'key' => $key, 'value' => $value, 'isEnabled' => $isEnabled ];
 	}
 
 	/** @inheritDoc */
 	public function onGetPreferences( $user, &$preferences ) {
-		$preferencesKey = 'wp25eastereggs-enable';
-		$preferencesValue = $this->userOptionsLookup->getOption(
-			$user,
-			$preferencesKey,
-			$this->config->get( 'Wp25EasterEggsEnable' ) );
-		$preferences[$preferencesKey] = [
+		if ( !$this->isCommunityConfigEnabled() ) {
+			return;
+		}
+
+		$userPrefEnabled = $this->getUserPrefEnabled( $user );
+		$preferences[$userPrefEnabled['key']] = [
 			'type' => 'toggle',
-			'label-message' => $preferencesKey . '-label',
-			'help-message' => $preferencesKey . '-help',
-			'default' => $preferencesValue,
+			'label-message' => $userPrefEnabled['key'] . '-label',
+			'help-message' => $userPrefEnabled['key'] . '-help',
+			'default' => $userPrefEnabled['value'],
 			'section' => 'rendering/skin/skin-prefs'
 		];
 	}
 
 	/** @inheritDoc */
 	public function onBeforePageDisplay( $out, $skin ): void {
+		if ( !$this->isCommunityConfigEnabled() ) {
+			return;
+		}
+
+		$user = $skin->getUser();
+		$userPrefEnabled = $this->getUserPrefEnabled( $user );
+		$htmlClass = $userPrefEnabled['key'] . '-clientpref-' . $userPrefEnabled['isEnabled'];
+		$out->addHtmlClasses( $htmlClass );
+
 		$out->addModules( 'ext.wp25EasterEggs' );
 	}
 }

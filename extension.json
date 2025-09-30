@@ -19,6 +19,9 @@
 			"services": [
 				"MainConfig",
 				"UserOptionsLookup"
+			],
+			"optional_services": [
+				"CommunityConfiguration.MediaWikiConfigReader"
 			]
 		}
 	},
@@ -26,19 +29,40 @@
 		"BeforePageDisplay": "WP25EasterEggsHooks",
 		"GetPreferences": "WP25EasterEggsHooks"
 	},
+	"MessagesDirs": {
+		"WP25EasterEggs": [
+			"i18n"
+		]
+	},
 	"config": {
 		"Wp25EasterEggsEnable": {
 			"description": "Enable the easter eggs feature.",
 			"value": false
 		}
 	},
-	"MessagesDirs": {
-		"WP25EasterEggs": [
-			"i18n"
-		]
-	},
 	"DefaultUserOptions": {
 		"wp25eastereggs-enable": "0"
+	},
+	"attributes": {
+		"CommunityConfiguration": {
+			"Providers": {
+				"WP25EasterEggs": {
+					"store": {
+						"type": "wikipage",
+						"args": [
+							"MediaWiki:WP25EasterEggsConfig.json"
+						]
+					},
+					"validator": {
+						"type": "jsonschema",
+						"args": [
+							"MediaWiki\\Extension\\WP25EasterEggs\\CommunityConfigurationSchema"
+						]
+					},
+					"type": "mw-config"
+				}
+			}
+		}
 	},
 	"ResourceModules": {
 		"ext.wp25EasterEggs": {
@@ -50,8 +74,13 @@
 				"init.js"
 			],
 			"messages": [
+				"wp25EasterEggs-desc",
+				"wp25eastereggs-enable-name",
 				"wp25eastereggs-enable-label",
-				"wp25eastereggs-enable-help"
+				"wp25eastereggs-enable-description",
+				"wp25eastereggs-enable-help",
+				"wp25eastereggs-enable-0-label",
+				"wp25eastereggs-enable-1-label"
 			]
 		}
 	},

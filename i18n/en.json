@@ -5,6 +5,15 @@
 		]
 	},
 	"wp25EasterEggs-desc": "This is an extension to celebrate Wikipedia's 25th birthday by adding interactive Easter Eggs.",
-	"wp25eastereggs-enable-label": "🎉 Birthday mode",
-	"wp25eastereggs-enable-help": "Celebrate 25 years of Wikipedia with a festive appearance setting"
+	"wp25eastereggs-enable-name": "Birthday mode 🎉",
+	"wp25eastereggs-enable-label": "Birthday mode 🎉",
+	"wp25eastereggs-enable-description": "Celebrate 25 years of Wikipedia with a festive appearance setting",
+	"wp25eastereggs-enable-help": "Celebrate 25 years of Wikipedia with a festive appearance setting",
+	"wp25eastereggs-enable-0-label": "Disabled",
+	"wp25eastereggs-enable-1-label": "Enabled",
+	"communityconfiguration-wp25eastereggs-title": "WP25EasterEggs",
+	"communityconfiguration-wp25eastereggs-description": "Configuration of the WP25EasterEggs extension",
+	"communityconfiguration-wp25eastereggs-cc_enable-label": "Wikepedia 25 Easter Eggs",
+	"communityconfiguration-wp25eastereggs-cc_enable-option-disabled-label": "Disabled",
+	"communityconfiguration-wp25eastereggs-cc_enable-option-enabled-label": "Enabled"
 }
