@@ -8,24 +8,37 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.42.0"
+		"MediaWiki": ">= 1.45.0"
 	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\WP25EasterEggs\\": "src/"
 	},
 	"HookHandlers": {
 		"WP25EasterEggsHooks": {
-			"class": "MediaWiki\\Extension\\WP25EasterEggs\\Hooks"
+			"class": "MediaWiki\\Extension\\WP25EasterEggs\\Hooks",
+			"services": [
+				"MainConfig",
+				"UserOptionsLookup"
+			]
 		}
 	},
 	"Hooks": {
-		"BeforePageDisplay": "WP25EasterEggsHooks"
+		"BeforePageDisplay": "WP25EasterEggsHooks",
+		"GetPreferences": "WP25EasterEggsHooks"
 	},
-	"config": {},
+	"config": {
+		"Wp25EasterEggsEnable": {
+			"description": "Enable the easter eggs feature.",
+			"value": false
+		}
+	},
 	"MessagesDirs": {
 		"WP25EasterEggs": [
 			"i18n"
 		]
+	},
+	"DefaultUserOptions": {
+		"wp25eastereggs-enable": "0"
 	},
 	"ResourceModules": {
 		"ext.wp25EasterEggs": {
@@ -36,7 +49,10 @@
 			"packageFiles": [
 				"init.js"
 			],
-			"messages": []
+			"messages": [
+				"wp25eastereggs-enable-label",
+				"wp25eastereggs-enable-help"
+			]
 		}
 	},
 	"manifest_version": 2

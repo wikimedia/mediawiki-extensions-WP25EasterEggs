@@ -1,3 +1,5 @@
+/docs/
+/i18n/
 /node_modules/
 /vendor/
-/tests/
+/coverage/

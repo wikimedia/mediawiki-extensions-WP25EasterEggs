@@ -19,17 +19,37 @@
 
 namespace MediaWiki\Extension\WP25EasterEggs;
 
+use MediaWiki\Config\Config;
 use MediaWiki\Output\Hook\BeforePageDisplayHook;
+use MediaWiki\Preferences\Hook\GetPreferencesHook;
+use MediaWiki\User\Options\UserOptionsLookup;
 
-class Hooks implements BeforePageDisplayHook {
+class Hooks implements BeforePageDisplayHook, GetPreferencesHook {
 
-	/**
-	 * @see https://www.mediawiki.org/wiki/Manual:Hooks/BeforePageDisplay
-	 * @param \OutputPage $out
-	 * @param \Skin $skin
-	 */
+	public function __construct(
+		private readonly Config $config,
+		private readonly UserOptionsLookup $userOptionsLookup
+	) {
+	}
+
+	/** @inheritDoc */
+	public function onGetPreferences( $user, &$preferences ) {
+		$preferencesKey = 'wp25eastereggs-enable';
+		$preferencesValue = $this->userOptionsLookup->getOption(
+			$user,
+			$preferencesKey,
+			$this->config->get( 'Wp25EasterEggsEnable' ) );
+		$preferences[$preferencesKey] = [
+			'type' => 'toggle',
+			'label-message' => $preferencesKey . '-label',
+			'help-message' => $preferencesKey . '-help',
+			'default' => $preferencesValue,
+			'section' => 'rendering/skin/skin-prefs'
+		];
+	}
+
+	/** @inheritDoc */
 	public function onBeforePageDisplay( $out, $skin ): void {
 		$out->addModules( 'ext.wp25EasterEggs' );
 	}
-
 }

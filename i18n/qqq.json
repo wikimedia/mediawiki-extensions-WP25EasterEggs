@@ -4,5 +4,7 @@
 			"Artem Titkov"
 		]
 	},
-	"wp25EasterEggs-desc": "A short description of the extension."
+	"wp25EasterEggs-desc": "A short description of the extension.",
+	"wp25eastereggs-enable-label": "The label of the toggle switch that enables the option.",
+	"wp25eastereggs-enable-help": "The description of the toggle switch that enables the option."
 }
