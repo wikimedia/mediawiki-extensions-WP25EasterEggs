@@ -54,7 +54,7 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook {
 			$user,
 			$key,
 			$this->config->get( 'Wp25EasterEggsEnable' ) );
-		$isEnabled = $value && $value !== 'disabled' ? '1' : '0';
+		$isEnabled = $value && $value !== 'disabled';
 		return [ 'key' => $key, 'value' => $value, 'isEnabled' => $isEnabled ];
 	}
 
@@ -82,7 +82,7 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook {
 
 		$user = $skin->getUser();
 		$userPrefEnabled = $this->getUserPrefEnabled( $user );
-		$htmlClass = $userPrefEnabled['key'] . '-clientpref-' . $userPrefEnabled['isEnabled'];
+		$htmlClass = $userPrefEnabled['key'] . '-clientpref-' . ( $userPrefEnabled['isEnabled'] ? '1' : '0' );
 		$out->addHtmlClasses( $htmlClass );
 
 		$out->addModules( 'ext.wp25EasterEggs' );
