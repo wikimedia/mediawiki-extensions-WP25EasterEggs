@@ -4,6 +4,7 @@ $cfg = require __DIR__ . '/../vendor/mediawiki/mediawiki-phan-config/src/config.
 
 $dependencies = [
 	'../../extensions/CommunityConfiguration',
+	'../../extensions/Wikibase',
 ];
 
 $cfg['directory_list'] = array_merge(

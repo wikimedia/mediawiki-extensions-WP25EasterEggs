@@ -6,6 +6,8 @@ use MediaWiki\Config\Config;
 use MediaWiki\Extension\WP25EasterEggs\PageCompanionService;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Title\Title;
+use Wikimedia\ObjectCache\HashBagOStuff;
+use Wikimedia\ObjectCache\WANObjectCache;
 
 /**
  * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionService
@@ -16,7 +18,8 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionService::getCompanionConfigHtmlClasses()
 	 */
 	public function testGetCompanionConfigHtmlClassesWhenCommunityConfigIsNull() {
-		$service = new PageCompanionService( null );
+		$cache = new WANObjectCache( [ 'cache' => new HashBagOStuff() ] );
+		$service = new PageCompanionService( $cache, null );
 
 		$outputPageMock = $this->createMock( OutputPage::class );
 
@@ -30,8 +33,9 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testGetCompanionConfigHtmlClassesWhenTitleIsNull() {
 		$communityConfigMock = $this->createMock( Config::class );
+		$cache = new WANObjectCache( [ 'cache' => new HashBagOStuff() ] );
 
-		$service = new PageCompanionService( $communityConfigMock );
+		$service = new PageCompanionService( $cache, $communityConfigMock );
 
 		$outputPageMock = $this->createMock( OutputPage::class );
 		$outputPageMock->method( 'getTitle' )
@@ -47,8 +51,9 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testGetCompanionConfigHtmlClassesWhenNotViewArticlePage() {
 		$communityConfigMock = $this->createMock( Config::class );
+		$cache = new WANObjectCache( [ 'cache' => new HashBagOStuff() ] );
 
-		$service = new PageCompanionService( $communityConfigMock );
+		$service = new PageCompanionService( $cache, $communityConfigMock );
 
 		$titleMock = $this->createMock( Title::class );
 		$titleMock->method( 'getNamespace' )
@@ -89,7 +94,9 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 				[ 'newspaper', null ]
 			] );
 
-		$service = new PageCompanionService( $communityConfigMock );
+		$cache = new WANObjectCache( [ 'cache' => new HashBagOStuff() ] );
+
+		$service = new PageCompanionService( $cache, $communityConfigMock );
 
 		$titleMock = $this->createMock( Title::class );
 		$titleMock->method( 'getNamespace' )
@@ -127,7 +134,8 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 				[ 'EnableCompanion', $enableCompanion ],
 			] );
 
-		$service = new PageCompanionService( $communityConfigMock );
+		$cache = new WANObjectCache( [ 'cache' => new HashBagOStuff() ] );
+		$service = new PageCompanionService( $cache, $communityConfigMock );
 
 		$titleMock = $this->createMock( Title::class );
 		$titleMock->method( 'getNamespace' )
@@ -165,7 +173,8 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 				[ 'newspaper', null ]
 			] );
 
-		$service = new PageCompanionService( $communityConfigMock );
+		$cache = new WANObjectCache( [ 'cache' => new HashBagOStuff() ] );
+		$service = new PageCompanionService( $cache, $communityConfigMock );
 
 		$titleMock = $this->createMock( Title::class );
 		$titleMock->method( 'getNamespace' )

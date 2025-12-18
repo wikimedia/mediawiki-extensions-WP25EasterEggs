@@ -5,6 +5,8 @@ namespace MediaWiki\Extension\WP25EasterEggs;
 use MediaWiki\Config\Config;
 use MediaWiki\Title\Title;
 use stdClass;
+use Wikibase\Client\Store\ClientStore;
+use Wikibase\Lib\SettingsArray;
 
 /**
  * Resolve which companion config should be displayed for a given article,
@@ -15,17 +17,32 @@ class PageCompanionConfigResolver {
 	private readonly Config $communityConfig;
 	/** @var string[] */
 	private readonly array $companionConfigNames;
+	/** @var array<string,string> */
+	private readonly array $defaultCompanionConfigs;
+	/** @var ClientStore|null */
+	private readonly ?object $wikibaseStore;
+	/** @var SettingsArray|null */
+	private readonly ?object $wikibaseSettings;
 
 	/**
 	 * @param Config $communityConfig Community configuration instance
-	 * @param string[]|null $companionConfigNames List of companion config names
+	 * @param string[] $companionConfigNames List of companion config names
+	 * @param array<string,string> $defaultCompanionConfigs Map of QIDs to companion config names
+	 * @param ClientStore|null $wikibaseStore Optional WikibaseClient Store service
+	 * @param SettingsArray|null $wikibaseSettings Optional WikibaseClient Settings service
 	 */
 	public function __construct(
 		Config $communityConfig,
-		?array $companionConfigNames = null,
+		array $companionConfigNames,
+		array $defaultCompanionConfigs,
+		?object $wikibaseStore = null,
+		?object $wikibaseSettings = null
 	) {
 		$this->communityConfig = $communityConfig;
-		$this->companionConfigNames = $companionConfigNames ?? CommunityConfigurationSchema::getCompanionConfigNames();
+		$this->companionConfigNames = $companionConfigNames;
+		$this->defaultCompanionConfigs = $defaultCompanionConfigs;
+		$this->wikibaseStore = $wikibaseStore;
+		$this->wikibaseSettings = $wikibaseSettings;
 	}
 
 	/**
@@ -67,6 +84,8 @@ class PageCompanionConfigResolver {
 	 * @return string|null
 	 */
 	public function getCurrentCompanionConfig( Title $title ): ?string {
+		$articleName = $title->getPrefixedText();
+
 		// Check each companion config to find the first match
 		foreach ( $this->companionConfigNames as $name ) {
 			$settings = $this->communityConfig->get( $name );
@@ -75,7 +94,7 @@ class PageCompanionConfigResolver {
 				continue;
 			}
 
-			if ( $this->shouldApplyCompanionConfig( $title, $settings ) ) {
+			if ( $this->shouldApplyCompanionConfig( $articleName, $name, $settings ) ) {
 				return $name;
 			}
 		}
@@ -88,16 +107,16 @@ class PageCompanionConfigResolver {
 	 *
 	 * Check defaults, allow list, and block list to determine applicability.
 	 *
-	 * @param Title $title The title object for the article
+	 * @param string $articleName The article name (prefixed text)
+	 * @param string $companionConfigName Name of the companion config
 	 * @param stdClass $settings Configuration settings for the companion config
 	 * @return bool
 	 */
 	private function shouldApplyCompanionConfig(
-		Title $title,
+		string $articleName,
+		string $companionConfigName,
 		stdClass $settings,
 	): bool {
-		$articleName = $title->getPrefixedText();
-
 		// First check block list - if article is blocked, it's never applied
 		$blockPages = $settings->blockPages ?? [];
 		if ( in_array( $articleName, $blockPages, true ) ) {
@@ -117,17 +136,43 @@ class PageCompanionConfigResolver {
 		}
 
 		// Check if article is in default companion configs for this site
-		return $this->isInDefaultCompanionConfigs();
+		return $this->isInDefaultCompanionConfigs( $articleName, $companionConfigName );
 	}
 
 	/**
 	 * Check if an article has a specific companion config in the default companion configs
 	 *
+	 * @param string $articleName Prefixed article name
+	 * @param string $companionConfigName Name of the companion config to check
 	 * @return bool
 	 */
-	private function isInDefaultCompanionConfigs(): bool {
-		// Scaffolding: No Wikibase integration yet.
-		// Cannot resolve default configs by QID, so return true, ie. "enabled everywhere".
-		return true;
+	private function isInDefaultCompanionConfigs( string $articleName, string $companionConfigName ): bool {
+		// Check if Wikibase Client Store and Settings are available
+		if ( !$this->wikibaseStore || !$this->wikibaseSettings ) {
+			return false;
+		}
+
+		$siteLinkLookup = $this->wikibaseStore->getSiteLinkLookup();
+		$globalId = $this->wikibaseSettings->getSetting( 'siteGlobalID' );
+		$itemId = $siteLinkLookup->getItemIdForLink( $globalId, $articleName );
+
+		if ( !$itemId ) {
+			return false;
+		}
+
+		$qId = $itemId->getSerialization();
+
+		// In default-companion-configs.json, QIDs are keys (e.g., "Q35831", "Q8337")
+		// Check if this QID exists in the default companion configs
+		if ( !array_key_exists( $qId, $this->defaultCompanionConfigs ) ) {
+			return false;
+		}
+
+		// Check if the companion config matches for this QID
+		if ( $this->defaultCompanionConfigs[$qId] === $companionConfigName ) {
+			return true;
+		}
+
+		return false;
 	}
 }

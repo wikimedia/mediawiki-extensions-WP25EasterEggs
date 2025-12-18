@@ -24,6 +24,9 @@ use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
+use Wikibase\Client\Store\ClientStore;
+use Wikibase\Lib\SettingsArray;
+use Wikimedia\ObjectCache\WANObjectCache;
 
 class Hooks implements BeforePageDisplayHook, GetPreferencesHook {
 
@@ -32,15 +35,24 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook {
 	/**
 	 * @param Config $config
 	 * @param UserOptionsLookup $userOptionsLookup
+	 * @param WANObjectCache $cache
 	 * @param Config|null $communityConfig
+	 * @param ClientStore|null $wikibaseStore Optional WikibaseClient Store service
+	 * @param SettingsArray|null $wikibaseSettings Optional WikibaseClient Settings service
 	 */
 	public function __construct(
 		private readonly Config $config,
 		private readonly UserOptionsLookup $userOptionsLookup,
+		private readonly WANObjectCache $cache,
 		private readonly ?Config $communityConfig = null,
+		private readonly ?object $wikibaseStore = null,
+		private readonly ?object $wikibaseSettings = null,
 	) {
 		$this->pageCompanionService = new PageCompanionService(
-			$this->communityConfig
+			$this->cache,
+			$this->communityConfig,
+			$this->wikibaseStore,
+			$this->wikibaseSettings
 		);
 	}
 

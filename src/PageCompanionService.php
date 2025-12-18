@@ -5,18 +5,27 @@ namespace MediaWiki\Extension\WP25EasterEggs;
 use MediaWiki\Config\Config;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Title\Title;
+use Wikibase\Client\Store\ClientStore;
+use Wikibase\Lib\SettingsArray;
+use Wikimedia\LightweightObjectStore\ExpirationAwareness;
+use Wikimedia\ObjectCache\WANObjectCache;
 
 /**
  * Service for determining which companion configs apply to a page
- * (Simplified for Scaffolding)
  */
 class PageCompanionService {
 
 	/**
+	 * @param WANObjectCache $cache Cache for storing default companion configs
 	 * @param Config|null $communityConfig Community configuration provider
+	 * @param ClientStore|null $wikibaseStore Optional WikibaseClient Store service
+	 * @param SettingsArray|null $wikibaseSettings Optional WikibaseClient Settings service
 	 */
 	public function __construct(
-		private readonly ?Config $communityConfig = null
+		private readonly WANObjectCache $cache,
+		private readonly ?Config $communityConfig = null,
+		private readonly ?object $wikibaseStore = null,
+		private readonly ?object $wikibaseSettings = null
 	) {
 	}
 
@@ -43,8 +52,14 @@ class PageCompanionService {
 		}
 
 		// Create the companion config resolver
+		$companionConfigNames = CommunityConfigurationSchema::getCompanionConfigNames();
+		$defaultCompanionConfigs = $this->getDefaultCompanionConfigs();
 		$companionConfigResolver = new PageCompanionConfigResolver(
-			$this->communityConfig
+			$this->communityConfig,
+			$companionConfigNames,
+			$defaultCompanionConfigs,
+			$this->wikibaseStore,
+			$this->wikibaseSettings
 		);
 
 		$classes = [];
@@ -76,5 +91,35 @@ class PageCompanionService {
 		$isContent = $title->isContentPage();
 		$isViewAction = $out->getActionName() === "view";
 		return $isMainNamespace && $isContent && $isViewAction;
+	}
+
+	/**
+	 * Get default companion configs from JSON file (cached)
+	 *
+	 * @return array<string,string>
+	 */
+	private function getDefaultCompanionConfigs(): array {
+		$defaultCompanionConfigs = $this->cache->getWithSetCallback(
+			$this->cache->makeKey( 'wp25eastereggs', 'default-companion-configs' ),
+			ExpirationAwareness::TTL_DAY,
+			static function () {
+				// Load the default companion configs mapping from JSON file
+				$path = __DIR__ . '/../resources/ext.wp25EasterEggs/default-companion-configs.json';
+				if ( !file_exists( $path ) ) {
+					return [];
+				}
+
+				$content = file_get_contents( $path );
+				if ( $content === false ) {
+					return [];
+				}
+
+				// Parse JSON and return the QID -> companion config mapping
+				$decoded = json_decode( $content, true );
+				return $decoded ?? [];
+			}
+		);
+
+		return $defaultCompanionConfigs;
 	}
 }
