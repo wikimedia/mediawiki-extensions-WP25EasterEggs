@@ -33,4 +33,23 @@ class CommunityConfigurationSchema extends JsonSchema {
 			'filterPages' => [],
 		],
 	];
+
+	/**
+	 * Get the list of available companion config names
+	 *
+	 * @return string[] Array of companion config names
+	 */
+	public static function getCompanionConfigNames() {
+		return [ 'celebrate', 'dream', 'newspaper' ];
+	}
+
+	public const celebrate = [
+		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
+	];
+	public const dream = [
+		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
+	];
+	public const newspaper = [
+		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
+	];
 }

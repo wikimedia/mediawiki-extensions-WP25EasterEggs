@@ -72,7 +72,8 @@
 			"styles": [],
 			"packageFiles": [
 				{ "name": "init.js", "main": true },
-				"core/ClientPrefsHandler.js"
+				"core/ClientPrefsHandler.js",
+				"utils/ColorSchemeResolver.js"
 			],
 			"messages": [
 				"wp25EasterEggs-desc",

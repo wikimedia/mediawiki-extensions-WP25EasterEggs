@@ -52,7 +52,13 @@ class PageCompanionService {
 		// Check if companion is enabled for this page (global filter)
 		if ( $companionConfigResolver->isCompanionEnabled( $title ) ) {
 			$classes[] = 'wp25eastereggs-companion-enabled';
-			// Scaffolding: Not resolving specific companion config variant yet
+
+			// Resolve specific companion config (state) based on filters
+			$companionConfigName = $companionConfigResolver->getCurrentCompanionConfig( $title );
+			if ( $companionConfigName ) {
+				// Add specific config class, e.g. wp25eastereggs-companion-celebrate
+				$classes[] = 'wp25eastereggs-companion-' . $companionConfigName;
+			}
 		}
 
 		return $classes;

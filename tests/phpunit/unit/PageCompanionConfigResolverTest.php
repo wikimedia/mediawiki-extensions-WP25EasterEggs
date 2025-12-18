@@ -146,4 +146,133 @@ class PageCompanionConfigResolverTest extends \MediaWikiUnitTestCase {
 
 		$this->assertFalse( $result );
 	}
+
+	/**
+	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionConfigResolver::getCurrentCompanionConfig()
+	 */
+	public function testGetCurrentCompanionConfigReturnsNullWhenNoConfig() {
+		$communityConfigMock = $this->createMock( Config::class );
+		$communityConfigMock->method( 'get' )
+			->willReturn( null );
+
+		$resolver = new PageCompanionConfigResolver( $communityConfigMock );
+
+		$titleMock = $this->createMock( Title::class );
+
+		$result = $resolver->getCurrentCompanionConfig( $titleMock );
+
+		$this->assertNull( $result );
+	}
+
+	/**
+	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionConfigResolver::getCurrentCompanionConfig()
+	 */
+	public function testGetCurrentCompanionConfigResolvesAllowPages() {
+		$celebrateConfig = new stdClass();
+		$celebrateConfig->allowPages = [ 'Test_Page' ];
+		$celebrateConfig->blockPages = [];
+		$celebrateConfig->defaultPages = 'disabled';
+
+		$communityConfigMock = $this->createMock( Config::class );
+		$communityConfigMock->method( 'get' )
+			->willReturnMap( [
+				[ 'celebrate', $celebrateConfig ],
+				[ 'dream', null ],
+				[ 'newspaper', null ]
+			] );
+
+		$resolver = new PageCompanionConfigResolver( $communityConfigMock );
+
+		$titleMock = $this->createMock( Title::class );
+		$titleMock->method( 'getPrefixedText' )
+			->willReturn( 'Test_Page' );
+
+		$result = $resolver->getCurrentCompanionConfig( $titleMock );
+
+		$this->assertSame( 'celebrate', $result );
+	}
+
+	/**
+	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionConfigResolver::getCurrentCompanionConfig()
+	 */
+	public function testGetCurrentCompanionConfigRespectsBlockPages() {
+		$celebrateConfig = new stdClass();
+		$celebrateConfig->allowPages = [ 'Test_Page' ];
+		$celebrateConfig->blockPages = [ 'Test_Page' ];
+		$celebrateConfig->defaultPages = 'disabled';
+
+		$communityConfigMock = $this->createMock( Config::class );
+		$communityConfigMock->method( 'get' )
+			->willReturnMap( [
+				[ 'celebrate', $celebrateConfig ],
+				[ 'dream', null ],
+				[ 'newspaper', null ]
+			] );
+
+		$resolver = new PageCompanionConfigResolver( $communityConfigMock );
+
+		$titleMock = $this->createMock( Title::class );
+		$titleMock->method( 'getPrefixedText' )
+			->willReturn( 'Test_Page' );
+
+		$result = $resolver->getCurrentCompanionConfig( $titleMock );
+
+		$this->assertNull( $result );
+	}
+
+	/**
+	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionConfigResolver::getCurrentCompanionConfig()
+	 */
+	public function testGetCurrentCompanionConfigWithDefaultPagesEnabled() {
+		$celebrateConfig = new stdClass();
+		$celebrateConfig->allowPages = [];
+		$celebrateConfig->blockPages = [];
+		$celebrateConfig->defaultPages = 'enabled';
+
+		$communityConfigMock = $this->createMock( Config::class );
+		$communityConfigMock->method( 'get' )
+			->willReturnMap( [
+				[ 'celebrate', $celebrateConfig ],
+				[ 'dream', null ],
+				[ 'newspaper', null ]
+			] );
+
+		$resolver = new PageCompanionConfigResolver( $communityConfigMock );
+
+		$titleMock = $this->createMock( Title::class );
+		$titleMock->method( 'getPrefixedText' )
+			->willReturn( 'Any_Page' );
+
+		$result = $resolver->getCurrentCompanionConfig( $titleMock );
+
+		$this->assertSame( 'celebrate', $result );
+	}
+
+	/**
+	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionConfigResolver::getCurrentCompanionConfig()
+	 */
+	public function testGetCurrentCompanionConfigWithDefaultPagesDisabled() {
+		$celebrateConfig = new stdClass();
+		$celebrateConfig->allowPages = [];
+		$celebrateConfig->blockPages = [];
+		$celebrateConfig->defaultPages = 'disabled';
+
+		$communityConfigMock = $this->createMock( Config::class );
+		$communityConfigMock->method( 'get' )
+			->willReturnMap( [
+				[ 'celebrate', $celebrateConfig ],
+				[ 'dream', null ],
+				[ 'newspaper', null ]
+			] );
+
+		$resolver = new PageCompanionConfigResolver( $communityConfigMock );
+
+		$titleMock = $this->createMock( Title::class );
+		$titleMock->method( 'getPrefixedText' )
+			->willReturn( 'Any_Page' );
+
+		$result = $resolver->getCurrentCompanionConfig( $titleMock );
+
+		$this->assertNull( $result );
+	}
 }
