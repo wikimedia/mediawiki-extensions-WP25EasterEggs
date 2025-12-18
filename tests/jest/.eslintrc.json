@@ -1,0 +1,24 @@
+{
+	"extends": [
+		"wikimedia/server"
+	],
+	"env": {
+		"jest": true,
+		"node": true
+	},
+	"globals": {
+		"mw": "readonly",
+		"document": "readonly",
+		"window": "readonly"
+	},
+	"rules": {
+		"jsdoc/check-tag-names": [
+			"warn",
+			{
+				"definedTags": [
+					"jest-environment"
+				]
+			}
+		]
+	}
+}

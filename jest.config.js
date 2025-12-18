@@ -37,6 +37,12 @@ module.exports = {
 		}
 	},
 
+	// A list of paths to directories that Jest should use to search for files in
+	roots: [
+		'<rootDir>/tests/jest',
+		'<rootDir>/resources/ext.wp25EasterEggs'
+	],
+
 	// An array of file extensions your modules use
 	moduleFileExtensions: [
 		'js',

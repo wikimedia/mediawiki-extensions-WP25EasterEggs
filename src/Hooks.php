@@ -27,26 +27,36 @@ use MediaWiki\User\User;
 
 class Hooks implements BeforePageDisplayHook, GetPreferencesHook {
 
+	private readonly PageCompanionService $pageCompanionService;
+
+	/**
+	 * @param Config $config
+	 * @param UserOptionsLookup $userOptionsLookup
+	 * @param Config|null $communityConfig
+	 */
 	public function __construct(
 		private readonly Config $config,
 		private readonly UserOptionsLookup $userOptionsLookup,
-		private readonly ?Config $communityConfig,
+		private readonly ?Config $communityConfig = null,
 	) {
+		$this->pageCompanionService = new PageCompanionService(
+			$this->communityConfig
+		);
 	}
 
 	/**
-	 * Returns if the extension is enabled with CommunityConfiguration.
+	 * Return if the extension is enabled with CommunityConfiguration.
 	 * @return bool
 	 */
 	public function isCommunityConfigEnabled(): bool {
-		return $this->communityConfig && $this->communityConfig->get( 'CC_ENABLE' ) === "enabled";
+		return $this->communityConfig && $this->communityConfig->get( 'EnableExtension' ) === "enabled";
 	}
 
 	/**
-	 * Returns the key and value for the user preference that is responsible for
+	 * Return the key and value for the user preference that is responsible for
 	 * enabling / disabling the Birthday Mode.
 	 * @param User $user
-	 * @return array{key: string, value: mixed, isEnabled: bool}
+	 * @return array{key: string, value: mixed, isEnabled: string}
 	 */
 	private function getUserPrefEnabled( $user ) {
 		$key = 'wp25eastereggs-enable';
@@ -54,7 +64,7 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook {
 			$user,
 			$key,
 			$this->config->get( 'Wp25EasterEggsEnable' ) );
-		$isEnabled = $value && $value !== 'disabled';
+		$isEnabled = $value && $value !== 'disabled' ? '1' : '0';
 		return [ 'key' => $key, 'value' => $value, 'isEnabled' => $isEnabled ];
 	}
 
@@ -82,8 +92,14 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook {
 
 		$user = $skin->getUser();
 		$userPrefEnabled = $this->getUserPrefEnabled( $user );
-		$htmlClass = $userPrefEnabled['key'] . '-clientpref-' . ( $userPrefEnabled['isEnabled'] ? '1' : '0' );
-		$out->addHtmlClasses( $htmlClass );
+		$clientPrefHtmlClass = $userPrefEnabled['key'] . '-clientpref-' . $userPrefEnabled['isEnabled'];
+		$out->addHtmlClasses( $clientPrefHtmlClass );
+
+		// Check if companion is enabled via service
+		$companionConfigHtmlClasses = $this->pageCompanionService->getCompanionConfigHtmlClasses( $out );
+		if ( $companionConfigHtmlClasses !== [] ) {
+			$out->addHtmlClasses( $companionConfigHtmlClasses );
+		}
 
 		$out->addModules( 'ext.wp25EasterEggs' );
 	}

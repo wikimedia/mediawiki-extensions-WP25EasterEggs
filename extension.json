@@ -71,7 +71,8 @@
 			"dependencies": [],
 			"styles": [],
 			"packageFiles": [
-				"init.js"
+				{ "name": "init.js", "main": true },
+				"core/ClientPrefsHandler.js"
 			],
 			"messages": [
 				"wp25EasterEggs-desc",

@@ -13,7 +13,18 @@
 	"wp25eastereggs-enable-1-label": "Enabled",
 	"communityconfiguration-wp25eastereggs-title": "WP25EasterEggs",
 	"communityconfiguration-wp25eastereggs-description": "Configuration of the WP25EasterEggs extension",
-	"communityconfiguration-wp25eastereggs-cc_enable-label": "Wikepedia 25 Easter Eggs",
-	"communityconfiguration-wp25eastereggs-cc_enable-option-disabled-label": "Disabled",
-	"communityconfiguration-wp25eastereggs-cc_enable-option-enabled-label": "Enabled"
+	"communityconfiguration-wp25eastereggs-enableextension-label": "Enable WP25EasterEggs extension",
+	"communityconfiguration-wp25eastereggs-enableextension-description": "Enable WP25EasterEggs extension description",
+	"communityconfiguration-wp25eastereggs-enableextension-help-text": "Enable WP25EasterEggs extension help text",
+	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Disabled",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Enable",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Global filter",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "Global filter description",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-help-text": "Global filter help text",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Display everywhere",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-allowfilter-label": "Display only on Global filter Pages",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-blockfilter-label": "Display everywhere except Global filter Pages",
+	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-label": "Global filter Pages",
+	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-description": "Global filter Pages description",
+	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-help-text": "Global filter Pages help text"
 }

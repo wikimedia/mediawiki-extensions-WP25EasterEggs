@@ -1,12 +1,13 @@
+const { ClientPrefsHandler } = require( './core/ClientPrefsHandler.js' );
+
 /**
  * Initialize wp25EasterEggs extension
  *
  * @private
  */
 const init = () => {
-	if ( mw.user.clientPrefs.get( 'wp25eastereggs-enable' ) === '1' ) {
-		// should execute easter eggs loading here
-	}
+	const handler = new ClientPrefsHandler();
+	handler.setup();
 };
 
 $( () => {
