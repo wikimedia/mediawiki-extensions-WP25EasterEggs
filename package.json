@@ -13,7 +13,7 @@
 	"devDependencies": {
 		"@types/jest": "^30.0.0",
 		"@wikimedia/mw-node-qunit": "^7.2.0",
-		"eslint-config-wikimedia": "0.32.2",
+		"eslint-config-wikimedia": "0.32.3",
 		"grunt-banana-checker": "0.13.0",
 		"jest": "^30.2.0",
 		"jest-environment-jsdom": "^30.2.0",
