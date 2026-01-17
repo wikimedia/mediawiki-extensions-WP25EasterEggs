@@ -3,24 +3,28 @@ const { ClientPrefsHandler } = require( './core/ClientPrefsHandler.js' );
 /**
  * Initialize wp25EasterEggs extension
  *
- * @private
+ * @return {void}
  */
 const init = () => {
-	// Scaffolding: Dummy companion configs until we import them
+	const assetsPath = `${ mw.config.get( 'wgExtensionAssetsPath' ) }/WP25EasterEggs/resources/media`;
 	const companionConfigs = {
-		default: () => ( { name: 'default' } ),
-		celebrate: () => ( { name: 'celebrate' } ),
-		dream: () => ( { name: 'dream' } ),
-		newspaper: () => ( { name: 'newspaper' } )
+		default: () => ( {
+			name: 'idle',
+			videoVariants: {
+				light: `${ assetsPath }/idle-light.webm`,
+				dark: `${ assetsPath }/idle-dark.webm`
+			}
+		} )
 	};
 
-	const configCreator = ClientPrefsHandler.getCurrentCompanionConfigCreator( companionConfigs );
-	if ( !configCreator ) {
+	const companionConfigCreator = ClientPrefsHandler.getCurrentCompanionConfigCreator(
+		companionConfigs );
+	if ( !companionConfigCreator ) {
 		return;
 	}
 
-	const handler = new ClientPrefsHandler( configCreator );
-	handler.setup();
+	const clientPrefsHandler = new ClientPrefsHandler( companionConfigCreator );
+	clientPrefsHandler.setup();
 };
 
 $( () => {

@@ -65,6 +65,19 @@ describe( 'ColorSchemeResolver', () => {
 			mw.user.clientPrefs.get.mockReturnValue( 'unknown' );
 			expect( ColorSchemeResolver.getCurrentColorScheme() ).toBe( 'light' );
 		} );
+
+		it( 'should return "light" when client pref is null', () => {
+			mw.user.clientPrefs.get.mockReturnValue( null );
+			expect( ColorSchemeResolver.getCurrentColorScheme() ).toBe( 'light' );
+		} );
+
+		it( 'should return "light" when client pref is "os" but os scheme is null', () => {
+			// Manually set static properties to simulate this state
+			ColorSchemeResolver.skinColorScheme = 'os';
+			ColorSchemeResolver.osColorScheme = null;
+
+			expect( ColorSchemeResolver.getCurrentColorScheme() ).toBe( 'light' );
+		} );
 	} );
 
 	describe( 'setup', () => {
@@ -121,6 +134,21 @@ describe( 'ColorSchemeResolver', () => {
 
 			// Assert
 			expect( onChange ).not.toHaveBeenCalled();
+		} );
+
+		it( 'should update color scheme to light when OS changes to light', () => {
+			// Arrange
+			mw.user.clientPrefs.get.mockReturnValue( 'os' );
+			mockMatchMedia.matches = true; // initially dark
+			window.matchMedia = jest.fn().mockReturnValue( mockMatchMedia );
+			colorSchemeResolver = new ColorSchemeResolver( onChange );
+			colorSchemeResolver.setup();
+
+			// Act - simulate OS color scheme change to light
+			colorSchemeResolver.handleOsColorSchemeChange( { matches: false } );
+
+			// Assert
+			expect( onChange ).toHaveBeenCalledWith( 'light', 'dark' );
 		} );
 	} );
 
@@ -243,6 +271,41 @@ describe( 'ColorSchemeResolver', () => {
 			expect( onChange ).toHaveBeenCalledWith( 'dark', 'light' );
 			expect( colorSchemeResolver.currentColorScheme ).toBeNull();
 			expect( colorSchemeResolver.removeOsListener ).toBeNull();
+		} );
+
+		it( 'should switch to light mode when client pref changes from "night" to "day"', () => {
+			// Arrange
+			mw.user.clientPrefs.get.mockReturnValue( 'night' );
+			colorSchemeResolver = new ColorSchemeResolver( onChange );
+
+			// Verify initial state
+			expect( colorSchemeResolver.currentColorScheme ).toBe( 'dark' );
+
+			// Act
+			colorSchemeResolver.handleSkinColorSchemeChange( 'day' );
+
+			// Assert
+			expect( onChange ).toHaveBeenCalledWith( 'light', 'dark' );
+			expect( colorSchemeResolver.currentColorScheme ).toBe( 'light' );
+		} );
+
+		it( 'should switch to light mode when switching from OS (dark) to "day" preference', () => {
+			// Arrange
+			mw.user.clientPrefs.get.mockReturnValue( 'os' );
+			mockMatchMedia.matches = true; // OS Dark
+			window.matchMedia = jest.fn().mockReturnValue( mockMatchMedia );
+
+			colorSchemeResolver = new ColorSchemeResolver( onChange );
+
+			// Verify initial state
+			expect( colorSchemeResolver.currentColorScheme ).toBe( 'dark' );
+
+			// Act
+			colorSchemeResolver.handleSkinColorSchemeChange( 'day' );
+
+			// Assert
+			expect( onChange ).toHaveBeenCalledWith( 'light', 'dark' );
+			expect( colorSchemeResolver.currentColorScheme ).toBe( 'light' );
 		} );
 
 		it( 'should handle OS color scheme changes when in OS mode', () => {

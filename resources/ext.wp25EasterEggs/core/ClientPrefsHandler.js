@@ -1,3 +1,4 @@
+const { Companion } = require( '../companion/Companion.js' );
 const { ColorSchemeResolver } = require( '../utils/ColorSchemeResolver.js' );
 
 /**
@@ -58,6 +59,7 @@ class ClientPrefsHandler {
 			this.colorSchemeResolver.handleSkinColorSchemeChange( value );
 		}
 
+		// Handle changes from enable/disable "Birthday Mode" appearance switch
 		if ( featureName === 'wp25eastereggs-enable' ) {
 			if ( value === '1' ) {
 				this.showCompanion();
@@ -79,12 +81,7 @@ class ClientPrefsHandler {
 		}
 
 		const companionConfig = this.companionConfigCreator();
-		this.companion = {
-			config: companionConfig,
-			setup: () => {},
-			cleanup: () => {},
-			handleColorSchemeChange: () => {}
-		};
+		this.companion = new Companion( companionConfig );
 		this.companion.setup();
 
 		// Initialize color scheme resolver

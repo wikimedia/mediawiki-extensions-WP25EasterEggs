@@ -30,7 +30,8 @@
 	},
 	"Hooks": {
 		"BeforePageDisplay": "WP25EasterEggsHooks",
-		"GetPreferences": "WP25EasterEggsHooks"
+		"GetPreferences": "WP25EasterEggsHooks",
+		"SiteNoticeAfter": "WP25EasterEggsHooks"
 	},
 	"MessagesDirs": {
 		"WP25EasterEggs": [
@@ -67,17 +68,32 @@
 			}
 		}
 	},
+	"ResourceFileModulePaths": {
+		"localBasePath": "",
+		"remoteSkinPath": "WP25EasterEggs"
+	},
 	"ResourceModules": {
+		"ext.wp25EasterEggs.styles": {
+			"styles": [
+				"resources/ext.wp25EasterEggs/style.css"
+			]
+		},
 		"ext.wp25EasterEggs": {
 			"localBasePath": "resources/ext.wp25EasterEggs",
 			"remoteExtPath": "WP25EasterEggs/resources/ext.wp25EasterEggs",
 			"dependencies": [
 				"mediawiki.user"
 			],
-			"styles": [],
+			"styles": [
+				"style.css"
+			],
 			"packageFiles": [
 				{ "name": "init.js", "main": true },
+				"companion/Companion.js",
 				"core/ClientPrefsHandler.js",
+				"core/VideoContainer.js",
+				"core/VideoPlayer.js",
+				"utils/BreakpointResolver.js",
 				"utils/ColorSchemeResolver.js"
 			],
 			"messages": [

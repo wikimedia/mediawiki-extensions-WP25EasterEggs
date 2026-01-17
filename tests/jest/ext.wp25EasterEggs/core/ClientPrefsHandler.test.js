@@ -10,13 +10,21 @@ describe( 'ClientPrefsHandler', () => {
 	let mockCompanionConfigCreator;
 	let mockMwHook;
 
-	// Mock ColorSchemeResolver class
+	/* Mock ColorSchemeResolver class */
 	const mockColorSchemeResolverInstance = {
 		setup: jest.fn(),
 		handleSkinColorSchemeChange: jest.fn(),
 		cleanup: jest.fn()
 	};
 	const MockColorSchemeResolver = jest.fn( () => mockColorSchemeResolverInstance );
+
+	/* Mock Companion class */
+	const mockCompanionInstance = {
+		setup: jest.fn(),
+		cleanup: jest.fn(),
+		handleColorSchemeChange: jest.fn()
+	};
+	const MockCompanion = jest.fn( () => mockCompanionInstance );
 
 	beforeEach( () => {
 		// Reset modules to ensure fresh require
@@ -25,6 +33,11 @@ describe( 'ClientPrefsHandler', () => {
 		// Mock ColorSchemeResolver
 		jest.doMock( '../../../../resources/ext.wp25EasterEggs/utils/ColorSchemeResolver.js', () => ( {
 			ColorSchemeResolver: MockColorSchemeResolver
+		} ) );
+
+		// Mock Companion
+		jest.doMock( '../../../../resources/ext.wp25EasterEggs/companion/Companion.js', () => ( {
+			Companion: MockCompanion
 		} ) );
 
 		// Require ClientPrefsHandler after mocking dependencies
@@ -36,6 +49,9 @@ describe( 'ClientPrefsHandler', () => {
 		// Reset mocks
 		MockColorSchemeResolver.mockClear();
 		Object.values( mockColorSchemeResolverInstance ).forEach( ( mock ) => mock.mockClear() );
+
+		MockCompanion.mockClear();
+		Object.values( mockCompanionInstance ).forEach( ( mock ) => mock.mockClear() );
 
 		// Reset document
 		document.documentElement.className = '';

@@ -22,13 +22,14 @@ namespace MediaWiki\Extension\WP25EasterEggs;
 use MediaWiki\Config\Config;
 use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
+use MediaWiki\Skin\Hook\SiteNoticeAfterHook;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
 use Wikibase\Client\Store\ClientStore;
 use Wikibase\Lib\SettingsArray;
 use Wikimedia\ObjectCache\WANObjectCache;
 
-class Hooks implements BeforePageDisplayHook, GetPreferencesHook {
+class Hooks implements BeforePageDisplayHook, GetPreferencesHook, SiteNoticeAfterHook {
 
 	private readonly PageCompanionService $pageCompanionService;
 
@@ -114,5 +115,15 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook {
 		}
 
 		$out->addModules( 'ext.wp25EasterEggs' );
+		$out->addModuleStyles( 'ext.wp25EasterEggs.styles' );
+	}
+
+	/** @inheritDoc */
+	public function onSiteNoticeAfter( &$siteNotice, $skin ): void {
+		if ( !$this->isCommunityConfigEnabled() ) {
+			return;
+		}
+
+		$siteNotice .= '<div class="wp25eastereggs-sitenotice-landmark"></div>';
 	}
 }
