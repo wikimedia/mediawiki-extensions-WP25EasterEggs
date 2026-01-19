@@ -103,7 +103,9 @@
 				"wp25eastereggs-enable-description",
 				"wp25eastereggs-enable-help",
 				"wp25eastereggs-enable-0-label",
-				"wp25eastereggs-enable-1-label"
+				"wp25eastereggs-enable-1-label",
+				"wp25eastereggs-enable-learn-more-link-label",
+				"wp25eastereggs-enable-learn-more-link-url"
 			]
 		}
 	},

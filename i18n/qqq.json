@@ -11,6 +11,8 @@
 	"wp25eastereggs-enable-help": "Help text explaining the Birthday mode feature, shown in the Appearance Preferences page on both desktop and mobile interfaces.",
 	"wp25eastereggs-enable-0-label": "Label for the option to disable the Birthday mode feature.",
 	"wp25eastereggs-enable-1-label": "Label for the option to enable the Birthday mode feature.",
+	"wp25eastereggs-enable-learn-more-link-label": "Label for the link in the Appearance Preferences page leading to more information about the Birthday mode.",
+	"wp25eastereggs-enable-learn-more-link-url": "URL for the link in the Appearance Preferences page leading to more information about the Birthday mode.",
 	"communityconfiguration-wp25eastereggs-title": "Title of the WP25EasterEggs section in Community Configuration.",
 	"communityconfiguration-wp25eastereggs-description": "Description of the WP25EasterEggs extension configuration section in Community Configuration.",
 	"communityconfiguration-wp25eastereggs-enableextension-label": "Label for the option to enable or disable the WP25EasterEggs extension globally.",

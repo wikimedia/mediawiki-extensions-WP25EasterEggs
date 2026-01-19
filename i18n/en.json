@@ -11,6 +11,8 @@
 	"wp25eastereggs-enable-help": "Celebrate 25 years of Wikipedia with a cute reading companion",
 	"wp25eastereggs-enable-0-label": "Disabled",
 	"wp25eastereggs-enable-1-label": "Enabled",
+	"wp25eastereggs-enable-learn-more-link-label": "Learn more about Birthday mode",
+	"wp25eastereggs-enable-learn-more-link-url": "https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/?utm_campaign=eepp&utm_source=eepp&utm_medium=eepp",
 	"communityconfiguration-wp25eastereggs-title": "WP25EasterEggs",
 	"communityconfiguration-wp25eastereggs-description": "Configuration of the WP25EasterEggs extension",
 	"communityconfiguration-wp25eastereggs-enableextension-label": "Enable WP25EasterEggs extension",
