@@ -99,6 +99,13 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook, SiteNoticeAfte
 
 	/** @inheritDoc */
 	public function onBeforePageDisplay( $out, $skin ): void {
+		$title = $out->getTitle();
+		if ( $title && $title->isSpecial( 'CommunityConfiguration' ) &&
+			$title->getSubpageText() === 'CommunityConfiguration/WP25EasterEggs'
+		) {
+			$out->addModules( 'ext.wp25EasterEggs.config' );
+		}
+
 		if ( !$this->isCommunityConfigEnabled() ) {
 			return;
 		}

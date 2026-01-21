@@ -1,0 +1,43 @@
+.page-Special_CommunityConfiguration_WP25EasterEggs {
+	.ext-communityConfiguration-JsonForm > .cdx-field.cdx-field--is-fieldset {
+		border-top: 0;
+		position: relative;
+		margin-top: 40px;
+	}
+
+	.ext-communityConfiguration-JsonForm > .cdx-field.cdx-field--is-fieldset > legend.cdx-label::before {
+		content: '';
+		display: block;
+		position: absolute;
+		top: -20px;
+		left: 0;
+		right: 0;
+		height: 1px;
+		background-color: #ccc;
+	}
+
+	.ext-communityConfiguration-JsonForm > .cdx-field.cdx-field--is-fieldset > legend.cdx-label > .cdx-label__label {
+		color: var( --color-base );
+	}
+
+	span.cdx-label__description {
+		font-weight: normal;
+	}
+
+	fieldset[ id$='.defaultPages' ] .cdx-label__label__text,
+	div[ id$='.allowPages' ] .cdx-label__label__text,
+	div[ id$='.blockPages' ] .cdx-label__label__text {
+		color: var( --color-subtle );
+		font-weight: bold;
+	}
+
+	fieldset[ id$='.defaultPages' ] {
+		margin-top: 16px;
+	}
+
+	h3.communityconfiguration-wp25eastereggs-section-label {
+		margin-top: 40px;
+		padding-top: 40px;
+		border-top: 1px solid #666;
+	}
+}

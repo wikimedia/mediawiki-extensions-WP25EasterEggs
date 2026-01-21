@@ -107,6 +107,26 @@
 				"wp25eastereggs-enable-learn-more-link-label",
 				"wp25eastereggs-enable-learn-more-link-url"
 			]
+		},
+		"ext.wp25EasterEggs.config": {
+			"localBasePath": "resources/ext.wp25EasterEggs.config",
+			"remoteExtPath": "WP25EasterEggs/resources/ext.wp25EasterEggs.config",
+			"dependencies": [
+				"mediawiki.jqueryMsg"
+			],
+			"styles": [
+				"config.less"
+			],
+			"packageFiles": [
+				{ "name": "config.js", "main": true },
+				"domUtils.js"
+			],
+			"messages": [
+				"communityconfiguration-wp25eastereggs-description",
+				"communityconfiguration-wp25eastereggs-additional-description",
+				"communityconfiguration-wp25eastereggs-modeconfiguration-section-label",
+				"communityconfiguration-wp25eastereggs-modeconfiguration-section-description"
+			]
 		}
 	},
 	"manifest_version": 2
