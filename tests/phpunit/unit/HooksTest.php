@@ -32,6 +32,7 @@ class HooksTest extends \MediaWikiUnitTestCase {
 		$specialPageFactoryMock = $this->createMock( SpecialPageFactory::class );
 		$communityConfig = new HashConfig( [
 			'EnableExtension' => 'enabled',
+			'DefaultUserPreference' => 'enabled',
 			'EnableCompanion' => [ 'type' => 'everywhere' ],
 		] );
 
@@ -150,7 +151,10 @@ class HooksTest extends \MediaWikiUnitTestCase {
 		$userOptionsLookupMock->method( 'getOption' )
 			->willReturn( true );
 		$specialPageFactoryMock = $this->createMock( SpecialPageFactory::class );
-		$communityConfig = new HashConfig( [ 'EnableExtension' => 'enabled' ] );
+		$communityConfig = new HashConfig( [
+			'EnableExtension' => 'enabled',
+			'DefaultUserPreference' => 'enabled'
+		] );
 
 		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $specialPageFactoryMock, $communityConfig );
 

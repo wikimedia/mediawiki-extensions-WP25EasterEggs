@@ -48,9 +48,6 @@
 			"value": false
 		}
 	},
-	"DefaultUserOptions": {
-		"wp25eastereggs-enable": "0"
-	},
 	"attributes": {
 		"CommunityConfiguration": {
 			"Providers": {

@@ -14,6 +14,12 @@ class CommunityConfigurationSchema extends JsonSchema {
 		self::DEFAULT => 'disabled',
 	];
 
+	public const DefaultUserPreference = [
+		self::TYPE => self::TYPE_STRING,
+		self::ENUM => [ 'disabled', 'enabled' ],
+		self::DEFAULT => 'disabled',
+	];
+
 	public const EnableCompanion = [
 		self::TYPE => self::TYPE_OBJECT,
 		self::PROPERTIES => [
