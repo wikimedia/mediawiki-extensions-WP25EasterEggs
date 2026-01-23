@@ -82,13 +82,14 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook, SiteNoticeAfte
 	/**
 	 * Return the key and value for the user preference that is responsible for
 	 * enabling / disabling the Birthday Mode. The default / fallback value is
-	 * `false`.
+	 * defined by CommunityConfiguration `DefaultUserPreference` field.
 	 * @param User $user
 	 * @return array{key: string, value: mixed, isEnabled: string}
 	 */
 	private function getUserPrefEnabled( $user ) {
 		$key = 'wp25eastereggs-enable';
-		$defaultUserPref = false;
+		$defaultUserPref = $this->communityConfig &&
+			$this->communityConfig->get( 'DefaultUserPreference' ) === 'enabled';
 		$value = $this->userOptionsLookup->getOption( $user, $key, $defaultUserPref );
 		$isEnabled = $value && $value !== 'disabled' ? '1' : '0';
 		return [ 'key' => $key, 'value' => $value, 'isEnabled' => $isEnabled ];
