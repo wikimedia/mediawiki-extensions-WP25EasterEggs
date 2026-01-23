@@ -90,6 +90,37 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	}
 
 	/**
+	 * @covers \MediaWiki\Extension\WP25EasterEggs\Hooks::onBeforePageDisplay()
+	 */
+	public function testOnBeforePageDisplayWhenConfigFlagDisabled() {
+		$configMock = $this->createMock( Config::class );
+		$configMock->method( 'get' )
+			->with( 'Wp25EasterEggsEnable' )
+			->willReturn( false );
+
+		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
+		$communityConfigMock = $this->createMock( Config::class );
+		// Even if community says enabled
+		$communityConfigMock->method( 'get' )
+			->with( 'EnableExtension' )
+			->willReturn( 'enabled' );
+
+		$cacheMock = $this->createMock( WANObjectCache::class );
+
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $cacheMock, $communityConfigMock );
+
+		$skinMock = $this->createMock( Skin::class );
+		$outputPageMock = $this->createMock( OutputPage::class );
+
+		$outputPageMock->expects( $this->never() )
+			->method( 'addModules' );
+		$outputPageMock->expects( $this->never() )
+			->method( 'addHtmlClasses' );
+
+		$hooks->onBeforePageDisplay( $outputPageMock, $skinMock );
+	}
+
+	/**
 	 * @covers \MediaWiki\Extension\WP25EasterEggs\Hooks::onGetPreferences()
 	 */
 	public function testOnGetPreferencesAddsPreferenceWhenCCEnabled() {

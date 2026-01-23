@@ -58,32 +58,37 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook, SiteNoticeAfte
 	}
 
 	/**
-	 * Return if the extension is enabled with CommunityConfiguration.
+	 * Returns whether the extension's visual interventions are enabled for the
+	 * end users. I.e. whether the "Birthday Mode" appearance toggle switch and
+	 * the Baby Globe companion is displayed. Checks both the
+	 * `Wp25EasterEggsEnable` configuration flag and CommunityConfiguration
+	 * `EnableExtension` field.
 	 * @return bool
 	 */
-	public function isCommunityConfigEnabled(): bool {
-		return $this->communityConfig && $this->communityConfig->get( 'EnableExtension' ) === "enabled";
+	public function isExtensionEnabled(): bool {
+		return $this->config->get( 'Wp25EasterEggsEnable' ) &&
+			$this->communityConfig &&
+			$this->communityConfig->get( 'EnableExtension' ) === "enabled";
 	}
 
 	/**
 	 * Return the key and value for the user preference that is responsible for
-	 * enabling / disabling the Birthday Mode.
+	 * enabling / disabling the Birthday Mode. The default / fallback value is
+	 * `false`.
 	 * @param User $user
 	 * @return array{key: string, value: mixed, isEnabled: string}
 	 */
 	private function getUserPrefEnabled( $user ) {
 		$key = 'wp25eastereggs-enable';
-		$value = $this->userOptionsLookup->getOption(
-			$user,
-			$key,
-			$this->config->get( 'Wp25EasterEggsEnable' ) );
+		$defaultUserPref = false;
+		$value = $this->userOptionsLookup->getOption( $user, $key, $defaultUserPref );
 		$isEnabled = $value && $value !== 'disabled' ? '1' : '0';
 		return [ 'key' => $key, 'value' => $value, 'isEnabled' => $isEnabled ];
 	}
 
 	/** @inheritDoc */
 	public function onGetPreferences( $user, &$preferences ) {
-		if ( !$this->isCommunityConfigEnabled() ) {
+		if ( !$this->isExtensionEnabled() ) {
 			return;
 		}
 
@@ -106,7 +111,7 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook, SiteNoticeAfte
 			$out->addModules( 'ext.wp25EasterEggs.config' );
 		}
 
-		if ( !$this->isCommunityConfigEnabled() ) {
+		if ( !$this->isExtensionEnabled() ) {
 			return;
 		}
 
@@ -127,7 +132,7 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook, SiteNoticeAfte
 
 	/** @inheritDoc */
 	public function onSiteNoticeAfter( &$siteNotice, $skin ): void {
-		if ( !$this->isCommunityConfigEnabled() ) {
+		if ( !$this->isExtensionEnabled() ) {
 			return;
 		}
 
