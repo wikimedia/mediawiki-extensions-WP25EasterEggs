@@ -154,7 +154,7 @@ class PageCompanionConfigResolverTest extends \MediaWikiUnitTestCase {
 		$communityConfigMock->method( 'get' )
 			->willReturn( null );
 
-		$companionConfigNames = [ 'celebrate', 'dream', 'newspaper' ];
+		$companionConfigNames = [ 'confetti', 'dream', 'newspaper' ];
 		$resolver = new PageCompanionConfigResolver( $communityConfigMock, $companionConfigNames, [] );
 
 		$titleMock = $this->createMock( Title::class );
@@ -168,20 +168,20 @@ class PageCompanionConfigResolverTest extends \MediaWikiUnitTestCase {
 	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionConfigResolver::getCurrentCompanionConfig()
 	 */
 	public function testGetCurrentCompanionConfigResolvesAllowPages() {
-		$celebrateConfig = new stdClass();
-		$celebrateConfig->allowPages = [ 'Test_Page' ];
-		$celebrateConfig->blockPages = [];
-		$celebrateConfig->defaultPages = 'disabled';
+		$confettiConfig = new stdClass();
+		$confettiConfig->allowPages = [ 'Test_Page' ];
+		$confettiConfig->blockPages = [];
+		$confettiConfig->defaultPages = 'disabled';
 
 		$communityConfigMock = $this->createMock( Config::class );
 		$communityConfigMock->method( 'get' )
 			->willReturnMap( [
-				[ 'celebrate', $celebrateConfig ],
+				[ 'confetti', $confettiConfig ],
 				[ 'dream', null ],
 				[ 'newspaper', null ]
 			] );
 
-		$resolver = new PageCompanionConfigResolver( $communityConfigMock, [ 'celebrate', 'dream', 'newspaper' ], [] );
+		$resolver = new PageCompanionConfigResolver( $communityConfigMock, [ 'confetti', 'dream', 'newspaper' ], [] );
 
 		$titleMock = $this->createMock( Title::class );
 		$titleMock->method( 'getPrefixedText' )
@@ -189,27 +189,27 @@ class PageCompanionConfigResolverTest extends \MediaWikiUnitTestCase {
 
 		$result = $resolver->getCurrentCompanionConfig( $titleMock );
 
-		$this->assertSame( 'celebrate', $result );
+		$this->assertSame( 'confetti', $result );
 	}
 
 	/**
 	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionConfigResolver::getCurrentCompanionConfig()
 	 */
 	public function testGetCurrentCompanionConfigRespectsBlockPages() {
-		$celebrateConfig = new stdClass();
-		$celebrateConfig->allowPages = [ 'Test_Page' ];
-		$celebrateConfig->blockPages = [ 'Test_Page' ];
-		$celebrateConfig->defaultPages = 'disabled';
+		$confettiConfig = new stdClass();
+		$confettiConfig->allowPages = [ 'Test_Page' ];
+		$confettiConfig->blockPages = [ 'Test_Page' ];
+		$confettiConfig->defaultPages = 'disabled';
 
 		$communityConfigMock = $this->createMock( Config::class );
 		$communityConfigMock->method( 'get' )
 			->willReturnMap( [
-				[ 'celebrate', $celebrateConfig ],
+				[ 'confetti', $confettiConfig ],
 				[ 'dream', null ],
 				[ 'newspaper', null ]
 			] );
 
-		$resolver = new PageCompanionConfigResolver( $communityConfigMock, [ 'celebrate', 'dream', 'newspaper' ], [] );
+		$resolver = new PageCompanionConfigResolver( $communityConfigMock, [ 'confetti', 'dream', 'newspaper' ], [] );
 
 		$titleMock = $this->createMock( Title::class );
 		$titleMock->method( 'getPrefixedText' )
@@ -283,20 +283,20 @@ class PageCompanionConfigResolverTest extends \MediaWikiUnitTestCase {
 	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionConfigResolver::getCurrentCompanionConfig()
 	 */
 	public function testGetCurrentCompanionConfigReturnsNullWhenEnabledButNotConfiguredInWikibase() {
-		$celebrateConfig = new stdClass();
-		$celebrateConfig->allowPages = [];
-		$celebrateConfig->blockPages = [];
-		$celebrateConfig->defaultPages = 'enabled';
+		$confettiConfig = new stdClass();
+		$confettiConfig->allowPages = [];
+		$confettiConfig->blockPages = [];
+		$confettiConfig->defaultPages = 'enabled';
 
 		$communityConfigMock = $this->createMock( Config::class );
 		$communityConfigMock->method( 'get' )
 			->willReturnMap( [
-				[ 'celebrate', $celebrateConfig ],
+				[ 'confetti', $confettiConfig ],
 				[ 'dream', null ],
 				[ 'newspaper', null ]
 			] );
 
-		$resolver = new PageCompanionConfigResolver( $communityConfigMock, [ 'celebrate', 'dream', 'newspaper' ], [] );
+		$resolver = new PageCompanionConfigResolver( $communityConfigMock, [ 'confetti', 'dream', 'newspaper' ], [] );
 
 		$titleMock = $this->createMock( Title::class );
 		$titleMock->method( 'getPrefixedText' )
@@ -311,20 +311,20 @@ class PageCompanionConfigResolverTest extends \MediaWikiUnitTestCase {
 	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionConfigResolver::getCurrentCompanionConfig()
 	 */
 	public function testGetCurrentCompanionConfigWithDefaultPagesDisabled() {
-		$celebrateConfig = new stdClass();
-		$celebrateConfig->allowPages = [];
-		$celebrateConfig->blockPages = [];
-		$celebrateConfig->defaultPages = 'disabled';
+		$confettiConfig = new stdClass();
+		$confettiConfig->allowPages = [];
+		$confettiConfig->blockPages = [];
+		$confettiConfig->defaultPages = 'disabled';
 
 		$communityConfigMock = $this->createMock( Config::class );
 		$communityConfigMock->method( 'get' )
 			->willReturnMap( [
-				[ 'celebrate', $celebrateConfig ],
+				[ 'confetti', $confettiConfig ],
 				[ 'dream', null ],
 				[ 'newspaper', null ]
 			] );
 
-		$resolver = new PageCompanionConfigResolver( $communityConfigMock, [ 'celebrate', 'dream', 'newspaper' ], [] );
+		$resolver = new PageCompanionConfigResolver( $communityConfigMock, [ 'confetti', 'dream', 'newspaper' ], [] );
 
 		$titleMock = $this->createMock( Title::class );
 		$titleMock->method( 'getPrefixedText' )

@@ -40,16 +40,52 @@ class CommunityConfigurationSchema extends JsonSchema {
 	 * @return string[] Array of companion config names
 	 */
 	public static function getCompanionConfigNames() {
-		return [ 'celebrate', 'dream', 'newspaper' ];
+		return [
+			'phone',
+			'newspaper',
+			'book',
+			'laptop',
+			'dreaming',
+			'outerspace',
+			'headphones',
+			'camera',
+			'synthesizer',
+			'confetti',
+			'balloons'
+		];
 	}
 
-	public const celebrate = [
-		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
-	];
-	public const dream = [
+	public const phone = [
 		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
 	];
 	public const newspaper = [
+		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
+	];
+	public const book = [
+		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
+	];
+	public const laptop = [
+		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
+	];
+	public const dreaming = [
+		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
+	];
+	public const outerspace = [
+		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
+	];
+	public const headphones = [
+		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
+	];
+	public const camera = [
+		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
+	];
+	public const synthesizer = [
+		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
+	];
+	public const confetti = [
+		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
+	];
+	public const balloons = [
 		self::REF => [ 'class' => CommunityConfigurationDefinitions::class, 'field' => 'PageFilter' ]
 	];
 }

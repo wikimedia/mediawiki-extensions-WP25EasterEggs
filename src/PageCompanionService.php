@@ -71,7 +71,7 @@ class PageCompanionService {
 			// Resolve specific companion config (state) based on filters
 			$companionConfigName = $companionConfigResolver->getCurrentCompanionConfig( $title );
 			if ( $companionConfigName ) {
-				// Add specific config class, e.g. wp25eastereggs-companion-celebrate
+				// Add specific config class, e.g. wp25eastereggs-companion-confetti
 				$classes[] = 'wp25eastereggs-companion-' . $companionConfigName;
 			}
 		}

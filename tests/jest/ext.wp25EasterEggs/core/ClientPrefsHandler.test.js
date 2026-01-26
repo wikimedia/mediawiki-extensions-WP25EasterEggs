@@ -274,18 +274,18 @@ describe( 'ClientPrefsHandler', () => {
 
 		it( 'should return specific config creator based on class', () => {
 			// Arrange
-			document.documentElement.className = 'wp25eastereggs-companion-enabled wp25eastereggs-companion-celebrate';
-			const celebrateCreator = jest.fn();
+			document.documentElement.className = 'wp25eastereggs-companion-enabled wp25eastereggs-companion-confetti';
+			const confettiCreator = jest.fn();
 			const configs = {
 				default: jest.fn(),
-				celebrate: celebrateCreator
+				confetti: confettiCreator
 			};
 
 			// Act
 			const result = ClientPrefsHandler.getCurrentCompanionConfigCreator( configs );
 
 			// Assert
-			expect( result ).toBe( celebrateCreator );
+			expect( result ).toBe( confettiCreator );
 		} );
 
 		it( 'should return null if specific config not in map', () => {

@@ -7,7 +7,7 @@ Features
 --------
 
 - **Animated Page Companion**: An interactive character that appears on specific articles based on their Wikidata QIDs
-- **Three Themed States**: `celebrate`, `dream`, `newspaper`
+- **Multiple Companion States**: Showing different animations based on the article's Wikidata QID and Community Configuration
 - **Theme Support**: Automatic adaptation to light/dark themes and OS preferences
 - **Community Configuration**: Fine-grained control over which pages show companions and which companion states to display
 - **User Preferences**: Users can enable/disable the feature via client preferences
@@ -76,10 +76,18 @@ Installation
 
     INSERT INTO content_models (model_id, model_name) VALUES (2, 'wikibase-item');
     INSERT INTO wb_items_per_site (ips_item_id, ips_site_id, ips_site_page) VALUES
-        (35831, 'enwiki', 'Sleep'),
-        (5242962, 'enwiki', 'Nap'),
-        (47223, 'enwiki', 'Birthday'),
-        (11032, 'enwiki', 'Newspaper');
+        (202833, 'enwiki', 'Social media'),
+        (17517, 'enwiki', 'Mobile phone'),
+        (144334, 'enwiki', 'Printing press'),
+        (5891, 'enwiki', 'Philosophy'),
+        (2927074, 'enwiki', 'Internet meme'),
+        (36348, 'enwiki', 'Dream'),
+        (1, 'enwiki', 'Universe'),
+        (638, 'enwiki', 'Music'),
+        (183998, 'enwiki', 'Camera obscura'),
+        (164444, 'enwiki', 'Funk'),
+        (200538, 'enwiki', 'Party'),
+        (47223, 'enwiki', 'Birthday');
     ```
     </details>
 3. Install this extension following the standard MediaWiki extension installation process: <https://www.mediawiki.org/wiki/Manual:Extensions/Installation_and_upgrade>
@@ -113,7 +121,7 @@ How It Works
 1. **Page Detection**: When a page loads, [PageCompanionService](src/PageCompanionService.php) checks if it's a viewable article in the main namespace.
 2. **State Resolution**: [PageCompanionConfigResolver](src/PageCompanionConfigResolver.php) determines which companion state to show by:
    - Checking the global companion filter (`everywhere`/`allowFilter`/`blockFilter`) via `isCompanionEnabled()`
-   - Iterating through each state (`celebrate`, `dream`, `newspaper`) to find the first match using `getCurrentCompanionConfig()`
+   - Iterating through each state (`phone`, `newspaper`, `book`, etc.) to find the first match using `getCurrentCompanionConfig()`
    - For each state, checking filtering priority: block list (excludes page) > allow list (includes page) > defaultPages setting.
    - If Wikibase Client is enabled, `defaultPages` checks if the current page's QID maps to a companion state in `default-companion-configs.json`.
 3. **HTML Classes**: Appropriate classes are added to the page (e.g., `wp25eastereggs-companion-enabled`, `wp25eastereggs-companion-dream`).
@@ -130,7 +138,7 @@ The extension can be configured via Community Configuration with the following o
   - `everywhere` - Show on all eligible pages
   - `allowFilter` - Only show on specified pages
   - `blockFilter` - Show everywhere except specified pages
-- **Per-companion-state settings**: Each companion state (`celebrate`, `dream`, `newspaper`) has individual configuration with:
+- **Per-companion-state settings**: Each companion state (`phone`, `newspaper`, `book`, etc.) has individual configuration with:
   - `defaultPages` - Whether to use default QID mappings
   - `allowPages` - Additional pages to show this state
   - `blockPages` - Pages to exclude from this state

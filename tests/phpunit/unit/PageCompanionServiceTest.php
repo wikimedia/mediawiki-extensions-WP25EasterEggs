@@ -79,8 +79,8 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 		$communityConfigMock = $this->createMock( Config::class );
 		// Mock EnableCompanion to be enabled everywhere
 		$enableCompanion = (object)[ 'type' => 'everywhere' ];
-		// Mock a specific companion config (e.g. celebrate) to be enabled
-		$celebrateConfig = (object)[
+		// Mock a specific companion config (e.g. confetti) to be enabled
+		$confettiConfig = (object)[
 			'allowPages' => [ 'Test_Page' ],
 			'blockPages' => [],
 			'defaultPages' => 'disabled'
@@ -89,8 +89,8 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 		$communityConfigMock->method( 'get' )
 			->willReturnMap( [
 				[ 'EnableCompanion', $enableCompanion ],
-				[ 'celebrate', $celebrateConfig ],
-				[ 'dream', null ],
+				[ 'confetti', $confettiConfig ],
+				[ 'dreaming', null ],
 				[ 'newspaper', null ]
 			] );
 
@@ -115,7 +115,7 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 		$result = $service->getCompanionConfigHtmlClasses( $outputPageMock );
 
 		$this->assertContains( 'wp25eastereggs-companion-enabled', $result );
-		$this->assertContains( 'wp25eastereggs-companion-celebrate', $result );
+		$this->assertContains( 'wp25eastereggs-companion-confetti', $result );
 	}
 
 	/**
@@ -168,8 +168,8 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 		$communityConfigMock->method( 'get' )
 			->willReturnMap( [
 				[ 'EnableCompanion', $enableCompanion ],
-				[ 'celebrate', null ],
-				[ 'dream', null ],
+				[ 'confetti', null ],
+				[ 'dreaming', null ],
 				[ 'newspaper', null ]
 			] );
 
