@@ -71,7 +71,9 @@
 		"ext.wp25EasterEggs": {
 			"localBasePath": "resources/ext.wp25EasterEggs",
 			"remoteExtPath": "WP25EasterEggs/resources/ext.wp25EasterEggs",
-			"dependencies": [],
+			"dependencies": [
+				"mediawiki.user"
+			],
 			"styles": [],
 			"packageFiles": [
 				{ "name": "init.js", "main": true },
