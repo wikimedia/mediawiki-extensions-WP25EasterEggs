@@ -88,13 +88,12 @@ class PageCompanionConfigResolver {
 
 		// Check each companion config to find the first match
 		foreach ( $this->companionConfigNames as $name ) {
-			$settings = $this->communityConfig->get( $name );
+			$settings = $this->communityConfig->has( $name ) ?
+				$this->communityConfig->get( $name ) : null;
 
-			if ( !$settings || !is_object( $settings ) ) {
-				continue;
-			}
-
-			if ( $this->shouldApplyCompanionConfig( $articleName, $name, $settings ) ) {
+			if ( is_object( $settings ) &&
+				$this->shouldApplyCompanionConfig( $articleName, $name, $settings )
+			) {
 				return $name;
 			}
 		}
