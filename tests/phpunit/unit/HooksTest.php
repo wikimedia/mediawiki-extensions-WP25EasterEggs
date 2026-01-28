@@ -2,7 +2,7 @@
 
 namespace MediaWiki\Extension\WP25EasterEggs\Tests;
 
-use MediaWiki\Config\Config;
+use MediaWiki\Config\HashConfig;
 use MediaWiki\Extension\WP25EasterEggs\Hooks;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Skin\Skin;
@@ -19,25 +19,19 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	 * @covers \MediaWiki\Extension\WP25EasterEggs\Hooks::onBeforePageDisplay()
 	 */
 	public function testOnBeforePageDisplayAddsMainJsModuleWhenCCEnabled() {
-		$configMock = $this->createMock( Config::class );
-		$configMock->method( 'get' )
-			->willReturnMap( [
-				[ 'Wp25EasterEggsEnable', true ],
-				[ 'ExtensionDirectory', '' ]
-			] );
-
+		$configMock = new HashConfig( [
+			'Wp25EasterEggsEnable' => true,
+			'ExtensionDirectory' => ''
+		] );
 		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
 		$userOptionsLookupMock->method( 'getOption' )
 			->willReturn( '1' );
+		$communityConfig = new HashConfig( [
+			'EnableExtension' => 'enabled',
+			'EnableCompanion' => [ 'type' => 'everywhere' ],
+		] );
 
-		$communityConfigMock = $this->createMock( Config::class );
-		$communityConfigMock->method( 'get' )
-			->willReturnMap( [
-				[ 'EnableExtension', 'enabled' ],
-				[ 'EnableCompanion', [ 'type' => 'everywhere' ] ]
-			] );
-
-		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfigMock );
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfig );
 
 		$userMock = $this->createMock( UserIdentity::class );
 
@@ -71,7 +65,7 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	 * @covers \MediaWiki\Extension\WP25EasterEggs\Hooks::onBeforePageDisplay()
 	 */
 	public function testOnBeforePageDisplayWhenCCDisabled() {
-		$configMock = $this->createMock( Config::class );
+		$configMock = new HashConfig( [ 'Wp25EasterEggsEnable' => true ] );
 		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
 
 		$hooks = new Hooks( $configMock, $userOptionsLookupMock, null );
@@ -91,19 +85,11 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	 * @covers \MediaWiki\Extension\WP25EasterEggs\Hooks::onBeforePageDisplay()
 	 */
 	public function testOnBeforePageDisplayWhenConfigFlagDisabled() {
-		$configMock = $this->createMock( Config::class );
-		$configMock->method( 'get' )
-			->with( 'Wp25EasterEggsEnable' )
-			->willReturn( false );
-
+		$configMock = new HashConfig( [ 'Wp25EasterEggsEnable' => false ] );
 		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
-		$communityConfigMock = $this->createMock( Config::class );
-		// Even if community says enabled
-		$communityConfigMock->method( 'get' )
-			->with( 'EnableExtension' )
-			->willReturn( 'enabled' );
+		$communityConfig = new HashConfig( [ 'EnableExtension' => 'enabled' ] );
 
-		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfigMock );
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfig );
 
 		$skinMock = $this->createMock( Skin::class );
 		$outputPageMock = $this->createMock( OutputPage::class );
@@ -120,25 +106,17 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	 * @covers \MediaWiki\Extension\WP25EasterEggs\Hooks::onGetPreferences()
 	 */
 	public function testOnGetPreferencesAddsPreferenceWhenCCEnabled() {
-		$configMock = $this->createMock( Config::class );
-		$configMock->method( 'get' )
-			->with( 'Wp25EasterEggsEnable' )
-			->willReturn( true );
-
+		$configMock = new HashConfig( [ 'Wp25EasterEggsEnable' => true ] );
 		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
 		$userOptionsLookupMock->method( 'getOption' )
 			->willReturn( true );
+		$communityConfig = new HashConfig( [ 'EnableExtension' => 'enabled' ] );
 
-		$communityConfigMock = $this->createMock( Config::class );
-		$communityConfigMock->method( 'get' )
-			->with( 'EnableExtension' )
-			->willReturn( 'enabled' );
-
-		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfigMock );
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfig );
 
 		$userMock = $this->createMock( UserIdentity::class );
-
 		$preferences = [];
+
 		$hooks->onGetPreferences( $userMock, $preferences );
 
 		$this->assertArrayHasKey( 'wp25eastereggs-enable', $preferences );
@@ -149,14 +127,14 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	 * @covers \MediaWiki\Extension\WP25EasterEggs\Hooks::onGetPreferences()
 	 */
 	public function testOnGetPreferencesWhenCCDisabled() {
-		$configMock = $this->createMock( Config::class );
+		$configMock = new HashConfig( [ 'Wp25EasterEggsEnable' => true ] );
 		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
 
 		$hooks = new Hooks( $configMock, $userOptionsLookupMock, null );
 
 		$userMock = $this->createMock( UserIdentity::class );
-
 		$preferences = [];
+
 		$hooks->onGetPreferences( $userMock, $preferences );
 
 		$this->assertArrayNotHasKey( 'wp25eastereggs-enable', $preferences );

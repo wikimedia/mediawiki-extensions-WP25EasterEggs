@@ -2,7 +2,6 @@
 
 namespace MediaWiki\Extension\WP25EasterEggs\Tests;
 
-use MediaWiki\Config\Config;
 use MediaWiki\Config\HashConfig;
 use MediaWiki\Extension\WP25EasterEggs\PageCompanionService;
 use MediaWiki\MainConfigNames;
@@ -34,7 +33,7 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testGetCompanionConfigHtmlClassesWhenTitleIsNull() {
 		$configMock = new HashConfig( [ MainConfigNames::ExtensionDirectory => '' ] );
-		$communityConfigMock = $this->createMock( Config::class );
+		$communityConfigMock = new HashConfig();
 
 		$service = new PageCompanionService( $configMock, $communityConfigMock );
 
@@ -52,7 +51,7 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testGetCompanionConfigHtmlClassesWhenNotViewArticlePage() {
 		$configMock = new HashConfig( [ MainConfigNames::ExtensionDirectory => '' ] );
-		$communityConfigMock = $this->createMock( Config::class );
+		$communityConfigMock = new HashConfig();
 
 		$service = new PageCompanionService( $configMock, $communityConfigMock );
 
@@ -78,23 +77,16 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testGetCompanionConfigHtmlClassesReturnsClassesWhenEnabled() {
 		$configMock = new HashConfig( [ MainConfigNames::ExtensionDirectory => '' ] );
-		$communityConfigMock = $this->createMock( Config::class );
-		// Mock EnableCompanion to be enabled everywhere
-		$enableCompanion = (object)[ 'type' => 'everywhere' ];
-		// Mock a specific companion config (e.g. confetti) to be enabled
-		$confettiConfig = (object)[
-			'allowPages' => [ 'Test_Page' ],
-			'blockPages' => [],
-			'defaultPages' => 'disabled'
-		];
-
-		$communityConfigMock->method( 'get' )
-			->willReturnMap( [
-				[ 'EnableCompanion', $enableCompanion ],
-				[ 'confetti', $confettiConfig ],
-				[ 'dreaming', null ],
-				[ 'newspaper', null ]
-			] );
+		$communityConfigMock = new HashConfig( [
+			// Mock EnableCompanion to be enabled everywhere
+			'EnableCompanion' => (object)[ 'type' => 'everywhere' ],
+			// Mock a specific companion config (e.g. confetti) to be enabled
+			'confetti' => (object)[
+				'allowPages' => [ 'Test_Page' ],
+				'blockPages' => [],
+				'defaultPages' => 'disabled'
+			],
+		] );
 
 		$service = new PageCompanionService( $configMock, $communityConfigMock );
 
@@ -123,17 +115,13 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testGetCompanionConfigHtmlClassesWhenCompanionIsDisabledByFilter() {
 		$configMock = new HashConfig( [ MainConfigNames::ExtensionDirectory => '' ] );
-		$communityConfigMock = $this->createMock( Config::class );
 		// Mock EnableCompanion to be disabled for this page via blockFilter
-		$enableCompanion = (object)[
-			'type' => 'blockFilter',
-			'filterPages' => [ 'Test_Page' ]
-		];
-
-		$communityConfigMock->method( 'get' )
-			->willReturnMap( [
-				[ 'EnableCompanion', $enableCompanion ],
-			] );
+		$communityConfigMock = new HashConfig( [
+			'EnableCompanion' => (object)[
+				'type' => 'blockFilter',
+				'filterPages' => [ 'Test_Page' ]
+			],
+		] );
 
 		$service = new PageCompanionService( $configMock, $communityConfigMock );
 
@@ -161,18 +149,10 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testGetCompanionConfigHtmlClassesWhenEnabledButNoSpecificConfigMatches() {
 		$configMock = new HashConfig( [ MainConfigNames::ExtensionDirectory => '' ] );
-		$communityConfigMock = $this->createMock( Config::class );
 		// Mock EnableCompanion to be enabled everywhere
-		$enableCompanion = (object)[ 'type' => 'everywhere' ];
-
-		// Mock all specific configs to return null or not verify
-		$communityConfigMock->method( 'get' )
-			->willReturnMap( [
-				[ 'EnableCompanion', $enableCompanion ],
-				[ 'confetti', null ],
-				[ 'dreaming', null ],
-				[ 'newspaper', null ]
-			] );
+		$communityConfigMock = new HashConfig( [
+			'EnableCompanion' => (object)[ 'type' => 'everywhere' ],
+		] );
 
 		$service = new PageCompanionService( $configMock, $communityConfigMock );
 
