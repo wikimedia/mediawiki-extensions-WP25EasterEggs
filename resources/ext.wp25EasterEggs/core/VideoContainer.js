@@ -9,6 +9,8 @@ const { BreakpointResolver } = require( '../utils/BreakpointResolver.js' );
  */
 class VideoContainer {
 	constructor() {
+		/** @type {boolean} */
+		this.isEnabled = false;
 		/** @type {HTMLElement|null} */
 		this.vectorColumnEndLandmark = null;
 		/** @type {HTMLElement|null} */
@@ -61,33 +63,37 @@ class VideoContainer {
 		const targetLandmark = landmarkName === 'vector-column-end' ? this.vectorColumnEndLandmark : this.sitenoticeLandmark;
 
 		if ( !targetLandmark ) {
-			// If landmark is not found, hide the container and detach it from DOM
-			this.hide();
-			if ( this.container.parentElement ) {
-				this.container.parentElement.removeChild( this.container );
-			}
+			// If landmark is not found - hide the container
+			this.container.style.display = 'none';
 			return;
 		}
 
 		// Move container to new landmark
 		targetLandmark.appendChild( this.container );
+		if ( this.isEnabled ) {
+			// The companion might have been hidden because the previous landmark was not found,
+			// so if the companion is currently enabled - "unhide" the container
+			this.container.style.display = 'block';
+		}
 	}
 
 	/**
-	 * Show the container
+	 * Enable the container and show the inner div
 	 *
 	 * @return {void}
 	 */
-	show() {
+	enable() {
+		this.isEnabled = true;
 		this.container.style.display = 'block';
 	}
 
 	/**
-	 * Hide the container
+	 * Disable the container and hide the inner div
 	 *
 	 * @return {void}
 	 */
-	hide() {
+	disable() {
+		this.isEnabled = false;
 		this.container.style.display = 'none';
 	}
 
@@ -97,6 +103,8 @@ class VideoContainer {
 	 * @return {void}
 	 */
 	cleanup() {
+		this.disable();
+
 		// Clean up breakpoint resolver
 		this.breakpointResolver.cleanup();
 

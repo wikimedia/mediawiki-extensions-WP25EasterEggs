@@ -44,9 +44,16 @@ html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .skin-m
 
 html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .wp25eastereggs-video-container {
 	display: block;
-	width: 100%;
-	height: 100%;
+	width: 12.25rem;
+	height: 12.25rem;
 	position: relative;
+}
+
+@media screen and ( min-width: 1680px ) {
+	html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .wp25eastereggs-video-container {
+		width: 15.5rem;
+		height: 15.5rem;
+	}
 }
 
 /* Add a gap between bodyContent and companion for the case the sidebar is hidden */

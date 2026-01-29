@@ -134,7 +134,7 @@ describe( 'VideoContainer', () => {
 			).toBe( true );
 		} );
 
-		it( 'should remove container if target landmark not found', () => {
+		it( 'should hide container if target landmark not found', () => {
 			videoContainer = new VideoContainer();
 			videoContainer.setup();
 
@@ -148,7 +148,7 @@ describe( 'VideoContainer', () => {
 			// Now try to move to sitenotice (which is null)
 			videoContainer.moveContainer( 'sitenotice' );
 
-			expect( videoContainer.container.parentNode ).toBeNull();
+			expect( videoContainer.container.style.display ).toBe( 'none' );
 		} );
 
 		it( 'should not throw error if target landmark not found and container has no parent', () => {
@@ -159,21 +159,21 @@ describe( 'VideoContainer', () => {
 			// Container is initially detached or detached by previous move
 			videoContainer.moveContainer( 'sitenotice' );
 
-			expect( videoContainer.container.parentNode ).toBeNull();
+			expect( videoContainer.container.style.display ).toBe( 'none' );
 		} );
 	} );
 
-	describe( 'show/hide', () => {
-		it( 'should show container', () => {
+	describe( 'enable/disable', () => {
+		it( 'should enable container', () => {
 			videoContainer = new VideoContainer();
-			videoContainer.show();
+			videoContainer.enable();
 			expect( videoContainer.container.style.display ).toBe( 'block' );
 		} );
 
-		it( 'should hide container', () => {
+		it( 'should disable container', () => {
 			videoContainer = new VideoContainer();
 			videoContainer.container.style.display = 'block';
-			videoContainer.hide();
+			videoContainer.disable();
 			expect( videoContainer.container.style.display ).toBe( 'none' );
 		} );
 	} );

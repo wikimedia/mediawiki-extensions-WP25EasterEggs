@@ -31,7 +31,7 @@ class Companion {
 		this.videoContainer.setup();
 
 		return this.playIdleVideo().then( () => {
-			this.videoContainer.show();
+			this.videoContainer.enable();
 		} );
 	}
 

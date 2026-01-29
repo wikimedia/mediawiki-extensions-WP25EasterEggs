@@ -19,7 +19,8 @@ describe( 'Companion', () => {
 		mockVideoContainerInstance = {
 			container: document.createElement( 'div' ),
 			setup: jest.fn(),
-			show: jest.fn(),
+			enable: jest.fn(),
+			disable: jest.fn(),
 			cleanup: jest.fn()
 		};
 		const MockVideoContainer = jest.fn( () => mockVideoContainerInstance );
@@ -82,7 +83,7 @@ describe( 'Companion', () => {
 
 			expect( mockVideoContainerInstance.setup ).toHaveBeenCalled();
 			expect( mockVideoPlayerInstance.play ).toHaveBeenCalledWith( 'path/to/light.webm' );
-			expect( mockVideoContainerInstance.show ).toHaveBeenCalled();
+			expect( mockVideoContainerInstance.enable ).toHaveBeenCalled();
 		} );
 
 		it( 'should wait for playback before showing container', async () => {
@@ -94,12 +95,12 @@ describe( 'Companion', () => {
 
 			const setupPromise = companion.setup();
 
-			expect( mockVideoContainerInstance.show ).not.toHaveBeenCalled();
+			expect( mockVideoContainerInstance.enable ).not.toHaveBeenCalled();
 
 			resolvePlay();
 			await setupPromise;
 
-			expect( mockVideoContainerInstance.show ).toHaveBeenCalled();
+			expect( mockVideoContainerInstance.enable ).toHaveBeenCalled();
 		} );
 	} );
 
