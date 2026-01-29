@@ -7,8 +7,10 @@ describe( 'Companion', () => {
 	let mockVideoPlayerInstance;
 	const mockConfig = {
 		videoVariants: {
-			light: 'path/to/light.webm',
-			dark: 'path/to/dark.webm'
+			idle: {
+				light: 'path/to/light.webm',
+				dark: 'path/to/dark.webm'
+			}
 		}
 	};
 

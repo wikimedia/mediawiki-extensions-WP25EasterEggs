@@ -90,11 +90,13 @@
 			"packageFiles": [
 				{ "name": "init.js", "main": true },
 				"companion/Companion.js",
+				"companion/CompanionConfig.js",
 				"core/ClientPrefsHandler.js",
 				"core/VideoContainer.js",
 				"core/VideoPlayer.js",
 				"utils/BreakpointResolver.js",
-				"utils/ColorSchemeResolver.js"
+				"utils/ColorSchemeResolver.js",
+				"companionConfigs.js"
 			],
 			"messages": [
 				"wp25EasterEggs-desc",

@@ -1,4 +1,5 @@
 const { ClientPrefsHandler } = require( './core/ClientPrefsHandler.js' );
+const { getCompanionConfigs } = require( './companionConfigs.js' );
 
 /**
  * Initialize wp25EasterEggs extension
@@ -7,15 +8,7 @@ const { ClientPrefsHandler } = require( './core/ClientPrefsHandler.js' );
  */
 const init = () => {
 	const assetsPath = `${ mw.config.get( 'wgExtensionAssetsPath' ) }/WP25EasterEggs/resources/media`;
-	const companionConfigs = {
-		default: () => ( {
-			name: 'idle',
-			videoVariants: {
-				light: `${ assetsPath }/idle-light.webm`,
-				dark: `${ assetsPath }/idle-dark.webm`
-			}
-		} )
-	};
+	const companionConfigs = getCompanionConfigs( assetsPath );
 
 	const companionConfigCreator = ClientPrefsHandler.getCurrentCompanionConfigCreator(
 		companionConfigs );

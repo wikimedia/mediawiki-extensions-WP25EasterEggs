@@ -1,6 +1,9 @@
 const { Companion } = require( '../companion/Companion.js' );
 const { ColorSchemeResolver } = require( '../utils/ColorSchemeResolver.js' );
 
+/** @typedef {import('../companion/CompanionConfig.js').CompanionConfig} CompanionConfig */
+/** @typedef {import('../companionConfigs.js').CompanionConfigs} CompanionConfigs */
+
 /**
  * ClientPrefsHandler
  *
@@ -9,10 +12,11 @@ const { ColorSchemeResolver } = require( '../utils/ColorSchemeResolver.js' );
  */
 class ClientPrefsHandler {
 	/**
-	 * @param {Function} companionConfigCreator - The companion config creator function
+	 * @param {function(): CompanionConfig} companionConfigCreator - The companion config creator
+	 * function
 	 */
 	constructor( companionConfigCreator ) {
-		/** @type {Function} */
+		/** @type {function(): CompanionConfig} */
 		this.companionConfigCreator = companionConfigCreator;
 		/** @type {Companion|null} */
 		this.companion = null;
@@ -114,8 +118,8 @@ class ClientPrefsHandler {
 	 * variant is active (default, or a custom variant like 'cake'), and return the
 	 * corresponding config creator function.
 	 *
-	 * @param {Object.<string,Function>} companionConfigs - Map of config names to creator functions
-	 * @return {Function|null}
+	 * @param {CompanionConfigs} companionConfigs - Map of config names to creator functions
+	 * @return {(function(): CompanionConfig)|null}
 	 */
 	static getCurrentCompanionConfigCreator( companionConfigs ) {
 		const isCompanionEnabled = document.documentElement.classList.contains(

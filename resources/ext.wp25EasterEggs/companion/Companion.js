@@ -1,20 +1,20 @@
 const { VideoPlayer } = require( '../core/VideoPlayer.js' );
 const { VideoContainer } = require( '../core/VideoContainer.js' );
 const { ColorSchemeResolver } = require( '../utils/ColorSchemeResolver.js' );
+const { CompanionConfig } = require( './CompanionConfig.js' );
 
 /**
  * Companion
  *
- * Simplified controller for the WP25 Companion.
+ * Controller for the WP25 Companion.
  * Manages the video container and player to display the idle animation.
  */
 class Companion {
 	/**
-	 * @param {Object} [config={}]
-	 * @param {Object.<string.string>} [config.videoVariants={}]
+	 * @param {CompanionConfig} config
 	 */
 	constructor( config ) {
-		/** @type {Object} */
+		/** @type {CompanionConfig} */
 		this.config = config || {};
 		/** @type {VideoContainer} */
 		this.videoContainer = new VideoContainer();
@@ -42,8 +42,9 @@ class Companion {
 	 */
 	playIdleVideo() {
 		const colorScheme = ColorSchemeResolver.getCurrentColorScheme();
-		const variants = this.config.videoVariants || {};
-		const videoSrc = variants[ colorScheme ] || variants.light;
+		const videoVariants = this.config.videoVariants || {};
+		const videoSet = videoVariants.idle || {};
+		const videoSrc = videoSet[ colorScheme ] || videoSet.light;
 
 		if ( !videoSrc ) {
 			return Promise.resolve();
