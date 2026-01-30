@@ -154,7 +154,7 @@ class PageCompanionConfigResolverTest extends \MediaWikiUnitTestCase {
 		$communityConfigMock->method( 'get' )
 			->willReturn( null );
 
-		$companionConfigNames = [ 'confetti', 'dream', 'newspaper' ];
+		$companionConfigNames = [ 'confetti', 'dreaming', 'newspaper' ];
 		$resolver = new PageCompanionConfigResolver( $communityConfigMock, $companionConfigNames, [] );
 
 		$titleMock = $this->createMock( Title::class );
@@ -177,11 +177,15 @@ class PageCompanionConfigResolverTest extends \MediaWikiUnitTestCase {
 		$communityConfigMock->method( 'get' )
 			->willReturnMap( [
 				[ 'confetti', $confettiConfig ],
-				[ 'dream', null ],
+				[ 'dreaming', null ],
 				[ 'newspaper', null ]
 			] );
 
-		$resolver = new PageCompanionConfigResolver( $communityConfigMock, [ 'confetti', 'dream', 'newspaper' ], [] );
+		$resolver = new PageCompanionConfigResolver(
+			$communityConfigMock,
+			[ 'confetti', 'dreaming', 'newspaper' ],
+			[]
+		);
 
 		$titleMock = $this->createMock( Title::class );
 		$titleMock->method( 'getPrefixedText' )
@@ -205,11 +209,15 @@ class PageCompanionConfigResolverTest extends \MediaWikiUnitTestCase {
 		$communityConfigMock->method( 'get' )
 			->willReturnMap( [
 				[ 'confetti', $confettiConfig ],
-				[ 'dream', null ],
+				[ 'dreaming', null ],
 				[ 'newspaper', null ]
 			] );
 
-		$resolver = new PageCompanionConfigResolver( $communityConfigMock, [ 'confetti', 'dream', 'newspaper' ], [] );
+		$resolver = new PageCompanionConfigResolver(
+			$communityConfigMock,
+			[ 'confetti', 'dreaming', 'newspaper' ],
+			[]
+		);
 
 		$titleMock = $this->createMock( Title::class );
 		$titleMock->method( 'getPrefixedText' )
@@ -228,11 +236,11 @@ class PageCompanionConfigResolverTest extends \MediaWikiUnitTestCase {
 		// Ensure defaults validation passes
 		$communityConfigMock->method( 'get' )
 			->willReturnMap( [
-				[ 'dream', (object)[ 'defaultPages' => 'enabled' ] ]
+				[ 'dreaming', (object)[ 'defaultPages' => 'enabled' ] ]
 			] );
 
-		$companionConfigNames = [ 'dream' ];
-		$defaultCompanionConfigs = [ 'Q123' => 'dream' ];
+		$companionConfigNames = [ 'dreaming' ];
+		$defaultCompanionConfigs = [ 'Q123' => 'dreaming' ];
 
 		// Mock Wikibase Services using stdClass with __call or addMethods
 		// Since we can't rely on Wikibase classes being present, we mock objects that behave like them.
@@ -272,11 +280,11 @@ class PageCompanionConfigResolverTest extends \MediaWikiUnitTestCase {
 
 		$titleMock = $this->createMock( Title::class );
 		$titleMock->method( 'getPrefixedText' )
-			->willReturn( 'Dream_Page' );
+			->willReturn( 'Dreaming_Page' );
 
 		$result = $resolver->getCurrentCompanionConfig( $titleMock );
 
-		$this->assertSame( 'dream', $result );
+		$this->assertSame( 'dreaming', $result );
 	}
 
 	/**
@@ -292,11 +300,15 @@ class PageCompanionConfigResolverTest extends \MediaWikiUnitTestCase {
 		$communityConfigMock->method( 'get' )
 			->willReturnMap( [
 				[ 'confetti', $confettiConfig ],
-				[ 'dream', null ],
+				[ 'dreaming', null ],
 				[ 'newspaper', null ]
 			] );
 
-		$resolver = new PageCompanionConfigResolver( $communityConfigMock, [ 'confetti', 'dream', 'newspaper' ], [] );
+		$resolver = new PageCompanionConfigResolver(
+			$communityConfigMock,
+			[ 'confetti', 'dreaming', 'newspaper' ],
+			[]
+		);
 
 		$titleMock = $this->createMock( Title::class );
 		$titleMock->method( 'getPrefixedText' )
@@ -320,11 +332,15 @@ class PageCompanionConfigResolverTest extends \MediaWikiUnitTestCase {
 		$communityConfigMock->method( 'get' )
 			->willReturnMap( [
 				[ 'confetti', $confettiConfig ],
-				[ 'dream', null ],
+				[ 'dreaming', null ],
 				[ 'newspaper', null ]
 			] );
 
-		$resolver = new PageCompanionConfigResolver( $communityConfigMock, [ 'confetti', 'dream', 'newspaper' ], [] );
+		$resolver = new PageCompanionConfigResolver(
+			$communityConfigMock,
+			[ 'confetti', 'dreaming', 'newspaper' ],
+			[]
+		);
 
 		$titleMock = $this->createMock( Title::class );
 		$titleMock->method( 'getPrefixedText' )

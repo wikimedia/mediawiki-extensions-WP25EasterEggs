@@ -124,7 +124,7 @@ How It Works
    - Iterating through each state (`phone`, `newspaper`, `book`, etc.) to find the first match using `getCurrentCompanionConfig()`
    - For each state, checking filtering priority: block list (excludes page) > allow list (includes page) > defaultPages setting.
    - If Wikibase Client is enabled, `defaultPages` checks if the current page's QID maps to a companion state in `default-companion-configs.json`.
-3. **HTML Classes**: Appropriate classes are added to the page (e.g., `wp25eastereggs-companion-enabled`, `wp25eastereggs-companion-dream`).
+3. **HTML Classes**: Appropriate classes are added to the page (e.g., `wp25eastereggs-companion-enabled`, `wp25eastereggs-companion-dreaming`).
 4. **Client Initialization**: [init.js](resources/ext.wp25EasterEggs/init.js) detects the companion config from HTML classes and initializes [ClientPrefsHandler](resources/ext.wp25EasterEggs/core/ClientPrefsHandler.js).
 5. **Color Scheme Management**: [ColorSchemeResolver](resources/ext.wp25EasterEggs/utils/ColorSchemeResolver.js) detects the current color scheme and listens for changes via `prefers-color-scheme` media query and client preference radio buttons.
 
