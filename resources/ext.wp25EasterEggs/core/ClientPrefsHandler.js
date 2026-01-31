@@ -14,7 +14,7 @@ class ClientPrefsHandler {
 	constructor( companionConfigCreator ) {
 		/** @type {Function} */
 		this.companionConfigCreator = companionConfigCreator;
-		/** @type {Object|null} */
+		/** @type {Companion|null} */
 		this.companion = null;
 		/** @type {ColorSchemeResolver} */
 		this.colorSchemeResolver = new ColorSchemeResolver( () => this.handleColorSchemeChange() );
@@ -114,7 +114,7 @@ class ClientPrefsHandler {
 	 * variant is active (default, or a custom variant like 'cake'), and return the
 	 * corresponding config creator function.
 	 *
-	 * @param {Object} companionConfigs - Map of config names to creator functions
+	 * @param {Object.<string,Function>} companionConfigs - Map of config names to creator functions
 	 * @return {Function|null}
 	 */
 	static getCurrentCompanionConfigCreator( companionConfigs ) {
@@ -127,7 +127,9 @@ class ClientPrefsHandler {
 		let companionConfigName = 'default';
 		const prefix = 'wp25eastereggs-companion-';
 		const classList = Array.from( document.documentElement.classList );
-		const companionClass = classList.find( ( className ) => className.startsWith( prefix ) && className !== 'wp25eastereggs-companion-enabled' );
+		const companionClass = classList.find(
+			( className ) => className.startsWith( prefix ) && className !== 'wp25eastereggs-companion-enabled'
+		);
 		if ( companionClass ) {
 			companionConfigName = companionClass.slice( prefix.length );
 		}

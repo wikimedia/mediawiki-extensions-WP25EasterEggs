@@ -10,7 +10,8 @@ const { ColorSchemeResolver } = require( '../utils/ColorSchemeResolver.js' );
  */
 class Companion {
 	/**
-	 * @param {Object} config
+	 * @param {Object} [config={}]
+	 * @param {Object.<string.string>} [config.videoVariants={}]
 	 */
 	constructor( config ) {
 		/** @type {Object} */
