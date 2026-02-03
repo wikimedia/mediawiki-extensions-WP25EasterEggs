@@ -7,6 +7,12 @@
 /**
  * @typedef {Object} VideoVariants
  * @property {VideoVariant} idle
+ * @property {VideoVariant} click
+ */
+
+/**
+ * @typedef {Object} Interactions
+ * @property {boolean | undefined} click
  */
 
 /**
@@ -20,8 +26,9 @@ class CompanionConfig {
 	/**
 	 * @param {string} assetsPath
 	 * @param {string} configName
+	 * @param {Interactions | undefined} interactions
 	 */
-	constructor( assetsPath, configName ) {
+	constructor( assetsPath, configName, interactions ) {
 		/** @type {boolean} */
 		this.isReducedMotion = window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches;
 		/** @type {string} */
@@ -30,6 +37,9 @@ class CompanionConfig {
 		this.extension = this.isReducedMotion ? 'webp' : 'webm';
 		/** @type {string} */
 		this.configName = configName;
+		/** @type {Interactions} */
+		this.interactions = interactions || {};
+
 		/** @type {VideoVariants} */
 		this.videoVariants = {
 			idle: {
@@ -37,6 +47,13 @@ class CompanionConfig {
 				dark: `${ this.assetsPath }/${ this.configName }-idle-dark.${ this.extension }`
 			}
 		};
+
+		if ( this.interactions.click ) {
+			this.videoVariants.click = {
+				light: `${ this.assetsPath }/${ this.configName }-click-light.${ this.extension }`,
+				dark: `${ this.assetsPath }/${ this.configName }-click-dark.${ this.extension }`
+			};
+		}
 	}
 }
 

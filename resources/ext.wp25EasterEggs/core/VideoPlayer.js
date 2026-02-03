@@ -23,17 +23,39 @@ class VideoPlayer {
 	}
 
 	/**
-	 * Play a video source
+	 * Play a video source in a loop
 	 *
 	 * @param {string} src - Video source URL
 	 * @return {Promise<void>}
 	 */
-	play( src ) {
+	playLoop( src ) {
+		this.video.loop = true;
 		this.video.src = src;
-		return this.video.play().catch( ( err ) => {
-			// eslint-disable-next-line no-console
-			console.warn( 'Video playback error', err );
-		} );
+		return this.video.play().catch( () => {} );
+	}
+
+	/**
+	 * Play a video source once (no loop), resolve when it ends
+	 *
+	 * @param {string} src - Video source URL
+	 * @return {Promise<void>}
+	 */
+	playOnce( src ) {
+		return new Promise( ( resolve ) => {
+			this.video.loop = false;
+			this.video.src = src;
+
+			const onEnded = () => {
+				this.video.removeEventListener( 'ended', onEnded );
+				resolve();
+			};
+			this.video.addEventListener( 'ended', onEnded );
+
+			this.video.play().catch( () => {
+				this.video.removeEventListener( 'ended', onEnded );
+				resolve();
+			} );
+		} ).catch( () => {} );
 	}
 
 	/**

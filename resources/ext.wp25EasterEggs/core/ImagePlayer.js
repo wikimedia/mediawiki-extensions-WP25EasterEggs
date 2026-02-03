@@ -20,14 +20,29 @@ class ImagePlayer {
 	}
 
 	/**
-	 * Display an image source
+	 * Display an image source as replacement for video loop
 	 *
 	 * @param {string} src - Image source URL
 	 * @return {Promise<void>}
 	 */
-	play( src ) {
+	playLoop( src ) {
 		this.image.src = src;
 		return Promise.resolve();
+	}
+
+	/**
+	 * Display an image source once for a short duration as replacement for
+	 * video play once
+	 *
+	 * @param {string} src - Image source URL
+	 * @param {number|undefined} duration - Duration in milliseconds
+	 * @return {Promise<void>}
+	 */
+	playOnce( src, duration ) {
+		this.image.src = src;
+		return new Promise( ( resolve ) => {
+			setTimeout( resolve, duration || 2000 );
+		} );
 	}
 
 	/**

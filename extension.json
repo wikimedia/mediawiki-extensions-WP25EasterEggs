@@ -94,6 +94,7 @@
 				"core/ImagePlayer.js",
 				"core/VideoContainer.js",
 				"core/VideoPlayer.js",
+				"interactions/ClickHandler.js",
 				"utils/BreakpointResolver.js",
 				"utils/ColorSchemeResolver.js",
 				"companionConfigs.js"
