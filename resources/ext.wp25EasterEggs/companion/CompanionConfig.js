@@ -8,11 +8,13 @@
  * @typedef {Object} VideoVariants
  * @property {VideoVariant} idle
  * @property {VideoVariant} click
+ * @property {VideoVariant} flashlight
  */
 
 /**
  * @typedef {Object} Interactions
  * @property {boolean | undefined} click
+ * @property {boolean | undefined} flashlight
  */
 
 /**
@@ -52,6 +54,12 @@ class CompanionConfig {
 			this.videoVariants.click = {
 				light: `${ this.assetsPath }/${ this.configName }-click-light.${ this.extension }`,
 				dark: `${ this.assetsPath }/${ this.configName }-click-dark.${ this.extension }`
+			};
+		}
+
+		if ( this.interactions.flashlight ) {
+			this.videoVariants.flashlight = {
+				dark: `${ this.assetsPath }/flashlight-dark.${ this.extension }`
 			};
 		}
 	}

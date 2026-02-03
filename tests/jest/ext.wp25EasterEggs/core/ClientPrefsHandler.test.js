@@ -178,8 +178,8 @@ describe( 'ClientPrefsHandler', () => {
 				return mockColorSchemeResolverInstance;
 			} );
 
+			const handleSpy = jest.spyOn( ClientPrefsHandler.prototype, 'handleColorSchemeChange' );
 			clientPrefsHandler = new ClientPrefsHandler( mockCompanionConfigCreator );
-			const handleSpy = jest.spyOn( clientPrefsHandler, 'handleColorSchemeChange' );
 
 			// Act
 			// Trigger the callback captured from constructor
@@ -187,6 +187,7 @@ describe( 'ClientPrefsHandler', () => {
 
 			// Assert
 			expect( handleSpy ).toHaveBeenCalled();
+			handleSpy.mockRestore();
 		} );
 	} );
 

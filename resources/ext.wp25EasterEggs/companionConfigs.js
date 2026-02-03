@@ -12,18 +12,18 @@ const { CompanionConfig } = require( './companion/CompanionConfig.js' );
  */
 function getCompanionConfigs( assetsPath ) {
 	return {
-		default: () => ( new CompanionConfig( assetsPath, 'default' ) ),
-		phone: () => ( new CompanionConfig( assetsPath, 'phone' ) ),
-		newspaper: () => ( new CompanionConfig( assetsPath, 'newspaper' ) ),
-		book: () => ( new CompanionConfig( assetsPath, 'book' ) ),
-		laptop: () => ( new CompanionConfig( assetsPath, 'laptop' ) ),
+		default: () => ( new CompanionConfig( assetsPath, 'default', { flashlight: true } ) ),
+		phone: () => ( new CompanionConfig( assetsPath, 'phone', { flashlight: true } ) ),
+		newspaper: () => ( new CompanionConfig( assetsPath, 'newspaper', { flashlight: true } ) ),
+		book: () => ( new CompanionConfig( assetsPath, 'book', { flashlight: true } ) ),
+		laptop: () => ( new CompanionConfig( assetsPath, 'laptop', { flashlight: true } ) ),
 		dreaming: () => ( new CompanionConfig( assetsPath, 'dreaming' ) ),
 		outerspace: () => ( new CompanionConfig( assetsPath, 'outerspace' ) ),
-		headphones: () => ( new CompanionConfig( assetsPath, 'headphones', { click: true } ) ),
-		camera: () => ( new CompanionConfig( assetsPath, 'camera', { click: true } ) ),
-		synthesizer: () => ( new CompanionConfig( assetsPath, 'synthesizer', { click: true } ) ),
-		balloons: () => ( new CompanionConfig( assetsPath, 'balloons', { click: true } ) ),
-		confetti: () => ( new CompanionConfig( assetsPath, 'confetti', { click: true } ) )
+		headphones: () => ( new CompanionConfig( assetsPath, 'headphones', { click: true, flashlight: true } ) ),
+		camera: () => ( new CompanionConfig( assetsPath, 'camera', { click: true, flashlight: true } ) ),
+		synthesizer: () => ( new CompanionConfig( assetsPath, 'synthesizer', { click: true, flashlight: true } ) ),
+		balloons: () => ( new CompanionConfig( assetsPath, 'balloons', { click: true, flashlight: true } ) ),
+		confetti: () => ( new CompanionConfig( assetsPath, 'confetti', { click: true, flashlight: true } ) )
 	};
 }
 

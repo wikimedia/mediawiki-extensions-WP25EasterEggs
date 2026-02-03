@@ -101,6 +101,26 @@ describe( 'VideoPlayer', () => {
 		} );
 	} );
 
+	describe( 'cancelPlayback', () => {
+		it( 'should remove "ended" event listener and reject promise', async () => {
+			videoPlayer = new VideoPlayer( container );
+			const src = 'video.webm';
+			const removeEventListenerSpy = jest.spyOn( videoPlayer.video, 'removeEventListener' );
+
+			// Start playback (which adds listener)
+			const promise = videoPlayer.playOnce( src );
+
+			// Cancel playback
+			videoPlayer.cancelPlayback();
+
+			// Expect promise to be rejected
+			await expect( promise ).rejects.toBeUndefined();
+
+			// Check that event listener was removed
+			expect( removeEventListenerSpy ).toHaveBeenCalledWith( 'ended', expect.any( Function ) );
+		} );
+	} );
+
 	describe( 'cleanup', () => {
 		it( 'should pause video and clear src', () => {
 			videoPlayer = new VideoPlayer( container );

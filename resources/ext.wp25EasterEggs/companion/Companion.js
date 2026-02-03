@@ -94,10 +94,34 @@ class Companion {
 	/**
 	 * Handle color scheme changes
 	 *
+	 * @param {string} newScheme - New color scheme
+	 * @param {string} oldScheme - Previous color scheme
 	 * @return {void}
 	 */
-	handleColorSchemeChange() {
-		// Re-trigger playback which will resolve the new color scheme
+	handleColorSchemeChange( newScheme, oldScheme ) {
+		// If switching to dark mode and has flashlight behavior, play flashlight first
+		const didSwitchFromLightToDark = oldScheme === 'light' && newScheme === 'dark';
+		if ( this.config.interactions.flashlight && didSwitchFromLightToDark ) {
+			const flashlightSrc = this.getVideoSrc( 'flashlight' );
+			const idleSrc = this.getVideoSrc( 'idle' );
+
+			if ( flashlightSrc && idleSrc ) {
+				this.videoPlayer.playSequence( [ flashlightSrc, idleSrc ] );
+				return;
+			}
+		}
+
+		// If currently playing click animation, switch to new color scheme's click animation
+		if ( this.clickHandler && this.clickHandler.isPlayingAnimation ) {
+			const clickSrc = this.getVideoSrc( 'click' );
+			const idleSrc = this.getVideoSrc( 'idle' );
+			if ( clickSrc ) {
+				this.videoPlayer.playSequence( [ clickSrc, idleSrc ] );
+				return;
+			}
+		}
+
+		// For light mode or no flashlight, just play idle
 		this.playIdleVideo();
 	}
 

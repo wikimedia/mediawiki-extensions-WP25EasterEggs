@@ -90,6 +90,27 @@ describe( 'ImagePlayer', () => {
 		} );
 	} );
 
+	describe( 'cancelPlayback', () => {
+		beforeEach( () => {
+			jest.useFakeTimers();
+		} );
+
+		afterEach( () => {
+			jest.useRealTimers();
+		} );
+
+		it( 'should reject pending playOnce promise', async () => {
+			imagePlayer = new ImagePlayer( container );
+			const src = 'image.webp';
+			const duration = 500;
+			const promise = imagePlayer.playOnce( src, duration );
+
+			imagePlayer.cancelPlayback();
+
+			await expect( promise ).rejects.toBeUndefined();
+		} );
+	} );
+
 	describe( 'cleanup', () => {
 		it( 'should clear src and remove image from DOM', () => {
 			imagePlayer = new ImagePlayer( container );

@@ -21,17 +21,21 @@ class ClientPrefsHandler {
 		/** @type {Companion|null} */
 		this.companion = null;
 		/** @type {ColorSchemeResolver} */
-		this.colorSchemeResolver = new ColorSchemeResolver( () => this.handleColorSchemeChange() );
+		this.colorSchemeResolver = new ColorSchemeResolver(
+			this.handleColorSchemeChange.bind( this )
+		);
 	}
 
 	/**
 	 * Handle color scheme change by delegating to companion if active
 	 *
+	 * @param {string} newScheme
+	 * @param {string} oldScheme
 	 * @return {void}
 	 */
-	handleColorSchemeChange() {
+	handleColorSchemeChange( newScheme, oldScheme ) {
 		if ( this.companion && typeof this.companion.handleColorSchemeChange === 'function' ) {
-			this.companion.handleColorSchemeChange();
+			this.companion.handleColorSchemeChange( newScheme, oldScheme );
 		}
 	}
 
