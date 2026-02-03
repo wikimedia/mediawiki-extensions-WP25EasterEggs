@@ -27,7 +27,6 @@ use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
 use Wikibase\Client\Store\ClientStore;
 use Wikibase\Lib\SettingsArray;
-use Wikimedia\ObjectCache\WANObjectCache;
 
 class Hooks implements BeforePageDisplayHook, GetPreferencesHook, SiteNoticeAfterHook {
 
@@ -36,7 +35,6 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook, SiteNoticeAfte
 	/**
 	 * @param Config $config
 	 * @param UserOptionsLookup $userOptionsLookup
-	 * @param WANObjectCache $cache
 	 * @param Config|null $communityConfig
 	 * @param ClientStore|null $wikibaseStore Optional WikibaseClient Store service
 	 * @param SettingsArray|null $wikibaseSettings Optional WikibaseClient Settings service
@@ -44,13 +42,12 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook, SiteNoticeAfte
 	public function __construct(
 		private readonly Config $config,
 		private readonly UserOptionsLookup $userOptionsLookup,
-		private readonly WANObjectCache $cache,
 		private readonly ?Config $communityConfig = null,
 		private readonly ?object $wikibaseStore = null,
 		private readonly ?object $wikibaseSettings = null,
 	) {
 		$this->pageCompanionService = new PageCompanionService(
-			$this->cache,
+			$this->config,
 			$this->communityConfig,
 			$this->wikibaseStore,
 			$this->wikibaseSettings

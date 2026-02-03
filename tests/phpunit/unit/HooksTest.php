@@ -9,8 +9,6 @@ use MediaWiki\Skin\Skin;
 use MediaWiki\Title\Title;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\UserIdentity;
-use Wikimedia\ObjectCache\HashBagOStuff;
-use Wikimedia\ObjectCache\WANObjectCache;
 
 /**
  * @covers \MediaWiki\Extension\WP25EasterEggs\Hooks
@@ -23,8 +21,10 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	public function testOnBeforePageDisplayAddsMainJsModuleWhenCCEnabled() {
 		$configMock = $this->createMock( Config::class );
 		$configMock->method( 'get' )
-			->with( 'Wp25EasterEggsEnable' )
-			->willReturn( true );
+			->willReturnMap( [
+				[ 'Wp25EasterEggsEnable', true ],
+				[ 'ExtensionDirectory', '' ]
+			] );
 
 		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
 		$userOptionsLookupMock->method( 'getOption' )
@@ -37,8 +37,7 @@ class HooksTest extends \MediaWikiUnitTestCase {
 				[ 'EnableCompanion', [ 'type' => 'everywhere' ] ]
 			] );
 
-		$cache = new WANObjectCache( [ 'cache' => new HashBagOStuff() ] );
-		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $cache, $communityConfigMock );
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfigMock );
 
 		$userMock = $this->createMock( UserIdentity::class );
 
@@ -74,9 +73,8 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	public function testOnBeforePageDisplayWhenCCDisabled() {
 		$configMock = $this->createMock( Config::class );
 		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
-		$cacheMock = $this->createMock( WANObjectCache::class );
 
-		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $cacheMock, null );
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, null );
 
 		$skinMock = $this->createMock( Skin::class );
 		$outputPageMock = $this->createMock( OutputPage::class );
@@ -105,9 +103,7 @@ class HooksTest extends \MediaWikiUnitTestCase {
 			->with( 'EnableExtension' )
 			->willReturn( 'enabled' );
 
-		$cacheMock = $this->createMock( WANObjectCache::class );
-
-		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $cacheMock, $communityConfigMock );
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfigMock );
 
 		$skinMock = $this->createMock( Skin::class );
 		$outputPageMock = $this->createMock( OutputPage::class );
@@ -138,8 +134,7 @@ class HooksTest extends \MediaWikiUnitTestCase {
 			->with( 'EnableExtension' )
 			->willReturn( 'enabled' );
 
-		$cache = new WANObjectCache( [ 'cache' => new HashBagOStuff() ] );
-		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $cache, $communityConfigMock );
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfigMock );
 
 		$userMock = $this->createMock( UserIdentity::class );
 
@@ -156,9 +151,8 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	public function testOnGetPreferencesWhenCCDisabled() {
 		$configMock = $this->createMock( Config::class );
 		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
-		$cache = new WANObjectCache( [ 'cache' => new HashBagOStuff() ] );
 
-		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $cache, null );
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, null );
 
 		$userMock = $this->createMock( UserIdentity::class );
 

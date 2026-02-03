@@ -18,8 +18,7 @@
 			"class": "MediaWiki\\Extension\\WP25EasterEggs\\Hooks",
 			"services": [
 				"MainConfig",
-				"UserOptionsLookup",
-				"MainWANObjectCache"
+				"UserOptionsLookup"
 			],
 			"optional_services": [
 				"CommunityConfiguration.MediaWikiConfigReader",

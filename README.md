@@ -109,11 +109,7 @@ Project Structure
 - **[init.js](resources/ext.wp25EasterEggs/init.js)** - Entry point for the client-side module
 - **[core/ClientPrefsHandler.js](resources/ext.wp25EasterEggs/core/ClientPrefsHandler.js)** - Handles user preference changes and companion lifecycle
 - **[utils/ColorSchemeResolver.js](resources/ext.wp25EasterEggs/utils/ColorSchemeResolver.js)** - Detects and tracks color scheme changes (light/dark/OS preference)
-- **[default-companion-configs.json](resources/ext.wp25EasterEggs/default-companion-configs.json)** - Mapping of Wikibase Item IDs (QIDs) to companion configurations
-
-### Assets
-
-- **[default-companion-configs.json](resources/ext.wp25EasterEggs/default-companion-configs.json)** - Maps Wikidata QIDs to default companion states
+- **[default-companion-configs.json](resources/default-companion-configs.json)** - Mapping of Wikibase Item IDs (QIDs) to companion configurations
 
 How It Works
 ------------

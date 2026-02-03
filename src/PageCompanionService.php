@@ -3,26 +3,24 @@
 namespace MediaWiki\Extension\WP25EasterEggs;
 
 use MediaWiki\Config\Config;
+use MediaWiki\MainConfigNames;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Title\Title;
 use Wikibase\Client\Store\ClientStore;
 use Wikibase\Lib\SettingsArray;
-use Wikimedia\LightweightObjectStore\ExpirationAwareness;
-use Wikimedia\ObjectCache\WANObjectCache;
 
 /**
  * Service for determining which companion configs apply to a page
  */
 class PageCompanionService {
-
 	/**
-	 * @param WANObjectCache $cache Cache for storing default companion configs
+	 * @param Config $config Extension config
 	 * @param Config|null $communityConfig Community configuration provider
 	 * @param ClientStore|null $wikibaseStore Optional WikibaseClient Store service
 	 * @param SettingsArray|null $wikibaseSettings Optional WikibaseClient Settings service
 	 */
 	public function __construct(
-		private readonly WANObjectCache $cache,
+		private readonly Config $config,
 		private readonly ?Config $communityConfig = null,
 		private readonly ?object $wikibaseStore = null,
 		private readonly ?object $wikibaseSettings = null
@@ -98,28 +96,23 @@ class PageCompanionService {
 	 *
 	 * @return array<string,string>
 	 */
-	private function getDefaultCompanionConfigs(): array {
-		$defaultCompanionConfigs = $this->cache->getWithSetCallback(
-			$this->cache->makeKey( 'wp25eastereggs', 'default-companion-configs' ),
-			ExpirationAwareness::TTL_DAY,
-			static function () {
-				// Load the default companion configs mapping from JSON file
-				$path = __DIR__ . '/../resources/ext.wp25EasterEggs/default-companion-configs.json';
-				if ( !file_exists( $path ) ) {
-					return [];
-				}
+	protected function getDefaultCompanionConfigs() {
+		// Create the companion config filename from the config
+		$extensionDir = $this->config->get( MainConfigNames::ExtensionDirectory );
+		$relativeCompanionConfigsDir = "/WP25EasterEggs/resources/";
+		$path = $extensionDir . $relativeCompanionConfigsDir . "default-companion-configs.json";
+		if ( !file_exists( $path ) ) {
+			return [];
+		}
 
-				$content = file_get_contents( $path );
-				if ( $content === false ) {
-					return [];
-				}
+		// Get the content of the companion config file
+		$content = file_get_contents( $path );
+		if ( $content === false ) {
+			return [];
+		}
 
-				// Parse JSON and return the QID -> companion config mapping
-				$decoded = json_decode( $content, true );
-				return $decoded ?? [];
-			}
-		);
-
-		return $defaultCompanionConfigs;
+		// Parse JSON and return the QID -> companion config mapping
+		$decoded = json_decode( $content, true );
+		return $decoded ?? [];
 	}
 }
