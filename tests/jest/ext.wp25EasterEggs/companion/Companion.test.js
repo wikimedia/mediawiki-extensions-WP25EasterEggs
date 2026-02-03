@@ -6,6 +6,7 @@ describe( 'Companion', () => {
 	let mockVideoContainerInstance;
 	let mockVideoPlayerInstance;
 	const mockConfig = {
+		interactions: {},
 		videoVariants: {
 			idle: {
 				light: 'path/to/light.webm',
@@ -29,7 +30,7 @@ describe( 'Companion', () => {
 
 		// Mock VideoPlayer
 		mockVideoPlayerInstance = {
-			play: jest.fn().mockResolvedValue(),
+			playLoop: jest.fn().mockResolvedValue(),
 			cleanup: jest.fn()
 		};
 		const MockVideoPlayer = jest.fn( () => mockVideoPlayerInstance );
@@ -84,14 +85,14 @@ describe( 'Companion', () => {
 			await companion.setup();
 
 			expect( mockVideoContainerInstance.setup ).toHaveBeenCalled();
-			expect( mockVideoPlayerInstance.play ).toHaveBeenCalledWith( 'path/to/light.webm' );
+			expect( mockVideoPlayerInstance.playLoop ).toHaveBeenCalledWith( 'path/to/light.webm' );
 			expect( mockVideoContainerInstance.enable ).toHaveBeenCalled();
 		} );
 
 		it( 'should wait for playback before showing container', async () => {
 			companion = new Companion( mockConfig );
 			let resolvePlay;
-			mockVideoPlayerInstance.play.mockReturnValue( new Promise( ( resolve ) => {
+			mockVideoPlayerInstance.playLoop.mockReturnValue( new Promise( ( resolve ) => {
 				resolvePlay = resolve;
 			} ) );
 
@@ -114,7 +115,7 @@ describe( 'Companion', () => {
 
 			await companion.playIdleVideo();
 
-			expect( mockVideoPlayerInstance.play ).toHaveBeenCalledWith( 'path/to/light.webm' );
+			expect( mockVideoPlayerInstance.playLoop ).toHaveBeenCalledWith( 'path/to/light.webm' );
 		} );
 
 		it( 'should play "dark" variant when scheme is dark', async () => {
@@ -124,7 +125,7 @@ describe( 'Companion', () => {
 
 			await companion.playIdleVideo();
 
-			expect( mockVideoPlayerInstance.play ).toHaveBeenCalledWith( 'path/to/dark.webm' );
+			expect( mockVideoPlayerInstance.playLoop ).toHaveBeenCalledWith( 'path/to/dark.webm' );
 		} );
 
 		it( 'should fallback to "light" variant if specific scheme not found', async () => {
@@ -134,7 +135,7 @@ describe( 'Companion', () => {
 
 			await companion.playIdleVideo();
 
-			expect( mockVideoPlayerInstance.play ).toHaveBeenCalledWith( 'path/to/light.webm' );
+			expect( mockVideoPlayerInstance.playLoop ).toHaveBeenCalledWith( 'path/to/light.webm' );
 		} );
 
 		it( 'should do nothing if no video source is available', async () => {
@@ -144,7 +145,7 @@ describe( 'Companion', () => {
 
 			await companion.playIdleVideo();
 
-			expect( mockVideoPlayerInstance.play ).not.toHaveBeenCalled();
+			expect( mockVideoPlayerInstance.playLoop ).not.toHaveBeenCalled();
 		} );
 	} );
 

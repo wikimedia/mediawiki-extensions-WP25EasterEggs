@@ -43,15 +43,50 @@ describe( 'ImagePlayer', () => {
 		} );
 	} );
 
-	describe( 'play', () => {
+	describe( 'playLoop', () => {
 		it( 'should set src and resolve promise', async () => {
 			imagePlayer = new ImagePlayer( container );
 			const src = 'image.webp';
 
-			await imagePlayer.play( src );
+			await imagePlayer.playLoop( src );
 
 			// Check src using getAttribute because JSDOM might resolve absolute path
 			expect( imagePlayer.image.src ).toContain( src );
+		} );
+	} );
+
+	describe( 'playOnce', () => {
+		beforeEach( () => {
+			jest.useFakeTimers();
+		} );
+
+		afterEach( () => {
+			jest.useRealTimers();
+		} );
+
+		it( 'should set src and resolve promise after duration', async () => {
+			imagePlayer = new ImagePlayer( container );
+			const src = 'image.webp';
+			const duration = 500;
+
+			const promise = imagePlayer.playOnce( src, duration );
+
+			expect( imagePlayer.image.src ).toContain( src );
+
+			jest.advanceTimersByTime( duration );
+			await promise;
+		} );
+
+		it( 'should use default duration if not provided', async () => {
+			imagePlayer = new ImagePlayer( container );
+			const src = 'image.webp';
+
+			const promise = imagePlayer.playOnce( src );
+
+			expect( imagePlayer.image.src ).toContain( src );
+
+			jest.advanceTimersByTime( 2000 );
+			await promise;
 		} );
 	} );
 

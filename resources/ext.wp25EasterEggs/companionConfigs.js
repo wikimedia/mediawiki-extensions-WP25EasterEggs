@@ -19,11 +19,11 @@ function getCompanionConfigs( assetsPath ) {
 		laptop: () => ( new CompanionConfig( assetsPath, 'laptop' ) ),
 		dreaming: () => ( new CompanionConfig( assetsPath, 'dreaming' ) ),
 		outerspace: () => ( new CompanionConfig( assetsPath, 'outerspace' ) ),
-		headphones: () => ( new CompanionConfig( assetsPath, 'headphones' ) ),
-		camera: () => ( new CompanionConfig( assetsPath, 'camera' ) ),
-		synthesizer: () => ( new CompanionConfig( assetsPath, 'synthesizer' ) ),
-		balloons: () => ( new CompanionConfig( assetsPath, 'balloons' ) ),
-		confetti: () => ( new CompanionConfig( assetsPath, 'confetti' ) )
+		headphones: () => ( new CompanionConfig( assetsPath, 'headphones', { click: true } ) ),
+		camera: () => ( new CompanionConfig( assetsPath, 'camera', { click: true } ) ),
+		synthesizer: () => ( new CompanionConfig( assetsPath, 'synthesizer', { click: true } ) ),
+		balloons: () => ( new CompanionConfig( assetsPath, 'balloons', { click: true } ) ),
+		confetti: () => ( new CompanionConfig( assetsPath, 'confetti', { click: true } ) )
 	};
 }
 
