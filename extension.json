@@ -70,7 +70,7 @@
 	},
 	"ResourceFileModulePaths": {
 		"localBasePath": "",
-		"remoteSkinPath": "WP25EasterEggs"
+		"remoteExtPath": "WP25EasterEggs"
 	},
 	"ResourceModules": {
 		"ext.wp25EasterEggs.styles": {
@@ -128,6 +128,32 @@
 				"communityconfiguration-wp25eastereggs-additional-description",
 				"communityconfiguration-wp25eastereggs-modeconfiguration-section-label",
 				"communityconfiguration-wp25eastereggs-modeconfiguration-section-description"
+			]
+		},
+		"ext.wp25EasterEggs.minervaLaunchBanner": {
+			"localBasePath": "resources/ext.wp25EasterEggs.minervaLaunchBanner",
+			"remoteExtPath": "WP25EasterEggs/resources/ext.wp25EasterEggs.minervaLaunchBanner",
+			"dependencies": [
+				"ext.wp25EasterEggs.minervaLaunchBanner.codexModules"
+			],
+			"styles": [
+				"minervaLaunchBanner.less"
+			],
+			"packageFiles": [
+				{ "name": "minervaLaunchBanner.js", "main": true }
+			],
+			"messages": [
+				"extension-wp25eastereggs-minerva-launch-banner-title",
+				"extension-wp25eastereggs-minerva-launch-banner-close-label",
+				"extension-wp25eastereggs-minerva-launch-banner-description",
+				"extension-wp25eastereggs-minerva-launch-banner-settings-label"
+			]
+		},
+		"ext.wp25EasterEggs.minervaLaunchBanner.codexModules": {
+			"class": "MediaWiki\\ResourceLoader\\CodexModule",
+			"codexStyleOnly": true,
+			"codexComponents": [
+				"CdxDialog"
 			]
 		}
 	},

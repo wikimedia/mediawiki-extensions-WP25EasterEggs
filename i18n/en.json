@@ -138,5 +138,9 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Extra allow",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Adds more pages to the predefined set of pages if those are enabled. Allows only on selected pages if predefined set of pages are disabled.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Extra block",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Removes pages from the combination of predefined set of pages combined with extra allow."
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Removes pages from the combination of predefined set of pages combined with extra allow.",
+	"extension-wp25eastereggs-minerva-launch-banner-title": "Read with Baby Globe",
+	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Close",
+	"extension-wp25eastereggs-minerva-launch-banner-description": "Celebrate Wikipedia’s 25th birthday with a new reading companion: Baby Globe! Together you can unlock hidden surprises across Wikipedia.",
+	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Go to Settings"
 }
