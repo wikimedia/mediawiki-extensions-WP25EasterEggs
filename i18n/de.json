@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": []
+	},
+	"wp25EasterEggs-desc": "Dies ist eine Erweiterung zur Feier des 25. Geburtstags von Wikipedia durch das Hinzufügen interaktiver Easter Eggs.",
+	"wp25eastereggs-enable-name": "Geburtstagsmodus 🎉",
+	"wp25eastereggs-enable-label": "Geburtstagsmodus 🎉",
+	"wp25eastereggs-enable-description": "Feiere 25 Jahre Wikipedia mit einem [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ niedlichen Lesebegleiter]",
+	"wp25eastereggs-enable-help": "Feiere 25 Jahre Wikipedia mit einem niedlichen Lesebegleiter",
+	"wp25eastereggs-enable-0-label": "Deaktiviert",
+	"wp25eastereggs-enable-1-label": "Aktiviert",
+	"wp25eastereggs-enable-learn-more-link-label": "Erfahre mehr über den Geburtstagsmodus",
+	"communityconfiguration-wp25eastereggs-title": "Wikipedia 25 „Geburtstagsmodus“",
+	"communityconfiguration-wp25eastereggs-description": "Der Geburtstagsmodus ist eine zeitlich begrenzte, optionale Funktion, die anlässlich des 25-jährigen Jubiläums von Wikipedia eine festliche Atmosphäre schaffen soll.",
+	"communityconfiguration-wp25eastereggs-additional-description": "Wenn diese Funktion aktiviert ist, wird „Baby Globe“, ein Geburtstagsmaskottchen, eingeführt, das als Lesebegleiter dient und versteckte Animationen sowie visuelle Überraschungen („Easter Eggs“) freischaltet. Ist die Erweiterung deaktiviert, ist diese Einstellung für Leser nicht sichtbar. Weitere Informationen findest du auf der  [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments MetaWiki-Seite]. Diese Aktionsfunktion ist vom 16. Februar 2026 an einen Monat lang verfügbar. Am 16. März 2026 wird sie aus allen Wikis entfernt.",
+	"communityconfiguration-wp25eastereggs-enableextension-label": "Geburtstagsmodus aktivieren",
+	"communityconfiguration-wp25eastereggs-enableextension-description": "Durch Aktivieren des Geburtstagsmodus können Leser eine Darstellungseinstellung namens „Geburtstagsmodus“ ein- und ausschalten. Wenn Leser den Geburtstagsmodus aktivieren, wird der neutrale Babyglobus gemäß dem <b>globalen Filter</b> auf den Seiten angezeigt.<br /><br /> Weitere, interessantere und verspieltere Versionen von Baby Globe können in den <b>speziellen Animationsfiltern von Baby Globe</b> konfiguriert werden.<br /><br /> Alle Versionen von Baby Globe und was du von den Animationen erwarten kannst, findest du [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments/article_configuration hier].",
+	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Deaktiviert",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Aktiviert",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Globaler Filter – Filtertyp",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "Die Steuerung, wo der Baby-Globus angezeigt werden soll, steuert nicht den Schalter für die Darstellung des Geburtstagsmodus.",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Baby-Globus überall erscheinen lassen",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-allowfilter-label": "Baby-Globus soll nur auf ausgewählten Seiten angezeigt werden",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-blockfilter-label": "Baby-Globus nur auf ausgewählten Seiten deaktivieren (effektiv überall außer auf den ausgewählten Seiten aktivieren).",
+	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-label": "Globaler Filter – Filterseiten"
+}
