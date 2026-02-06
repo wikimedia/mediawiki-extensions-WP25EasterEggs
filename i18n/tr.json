@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Hedda"
+		]
+	},
+	"wp25EasterEggs-desc": "Bu, etkileşimli gizli özellikler ekleyerek Vikipedi'nin 25. yıldönümünü kutlamak için yapılmış bir eklentidir.",
+	"wp25eastereggs-enable-name": "Doğum günü modu 🎉",
+	"wp25eastereggs-enable-label": "Doğum günü modu 🎉",
+	"wp25eastereggs-enable-description": "Vikipedi'nin 25. yılını [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ sevimli bir okuma arkadaşıyla] kutlayın.",
+	"wp25eastereggs-enable-help": "Vikipedi'nin 25. yılını sevimli bir okuma arkadaşıyla kutlayın.",
+	"wp25eastereggs-enable-0-label": "Devre dışı",
+	"wp25eastereggs-enable-1-label": "Etkin",
+	"wp25eastereggs-enable-learn-more-link-label": "Doğum günü modu hakkında daha fazla bilgi edinin.",
+	"communityconfiguration-wp25eastereggs-title": "Vikipedi 25 'Doğum günü modu'",
+	"communityconfiguration-wp25eastereggs-description": "Doğum günü modu, etkinleştirildiğinde şenlikli bir atmosfer yaratarak Vikipedi'nin 25. yıldönümünü kutlamak için tasarlanmış, sınırlı süreli ve isteğe bağlı bir özelliktir."
+}

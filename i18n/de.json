@@ -22,5 +22,8 @@
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Baby-Globus überall erscheinen lassen",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-allowfilter-label": "Baby-Globus soll nur auf ausgewählten Seiten angezeigt werden",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-blockfilter-label": "Baby-Globus nur auf ausgewählten Seiten deaktivieren (effektiv überall außer auf den ausgewählten Seiten aktivieren).",
-	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-label": "Globaler Filter – Filterseiten"
+	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-label": "Globaler Filter – Filterseiten",
+	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-description": "Je nach Filtertyp wird dieses Feld entweder ignoriert, als Erlaubnisliste oder als Blockliste fungiert",
+	"communityconfiguration-wp25eastereggs-modeconfiguration-section-label": "Spezielle Animationsfilter für den Baby-Globus",
+	"communityconfiguration-wp25eastereggs-modeconfiguration-section-description": "Konfigureren, welche Baby-Globus-Animationen auf welchen Seiten erscheinen. Siehe die [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments/article_configuration Seite im MetaWiki] für die vollständige Bibliothek von Animationen."
 }
