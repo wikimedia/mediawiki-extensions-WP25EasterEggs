@@ -92,6 +92,7 @@
 				"companion/Companion.js",
 				"companion/CompanionConfig.js",
 				"core/ClientPrefsHandler.js",
+				"core/ImagePlayer.js",
 				"core/VideoContainer.js",
 				"core/VideoPlayer.js",
 				"utils/BreakpointResolver.js",

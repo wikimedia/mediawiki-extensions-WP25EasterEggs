@@ -1,3 +1,4 @@
+const { ImagePlayer } = require( '../core/ImagePlayer.js' );
 const { VideoPlayer } = require( '../core/VideoPlayer.js' );
 const { VideoContainer } = require( '../core/VideoContainer.js' );
 const { ColorSchemeResolver } = require( '../utils/ColorSchemeResolver.js' );
@@ -18,8 +19,10 @@ class Companion {
 		this.config = config || {};
 		/** @type {VideoContainer} */
 		this.videoContainer = new VideoContainer();
-		/** @type {VideoPlayer} */
-		this.videoPlayer = new VideoPlayer( this.videoContainer.container );
+		/** @type {VideoPlayer|ImagePlayer} */
+		this.videoPlayer = this.config.isReducedMotion ?
+			new ImagePlayer( this.videoContainer.container ) :
+			new VideoPlayer( this.videoContainer.container );
 	}
 
 	/**

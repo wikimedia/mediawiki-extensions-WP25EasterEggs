@@ -4,6 +4,13 @@ const { getCompanionConfigs } = require( '../../../resources/ext.wp25EasterEggs/
 const { CompanionConfig } = require( '../../../resources/ext.wp25EasterEggs/companion/CompanionConfig.js' );
 
 describe( 'companionConfigs', () => {
+	beforeAll( () => {
+		Object.defineProperty( window, 'matchMedia', {
+			writable: true,
+			value: jest.fn().mockImplementation( () => ( { matches: false } ) )
+		} );
+	} );
+
 	describe( 'getCompanionConfigs', () => {
 		it( 'returns an object with expected keys', () => {
 			const assetsPath = '/mock/assets';
@@ -36,7 +43,7 @@ describe( 'companionConfigs', () => {
 				const config = createConfig();
 
 				expect( config ).toBeInstanceOf( CompanionConfig );
-				expect( config.assetsPath ).toBe( assetsPath );
+				expect( config.assetsPath ).toBe( `${ assetsPath }/video` );
 				expect( config.configName ).toBe( key );
 			} );
 		} );

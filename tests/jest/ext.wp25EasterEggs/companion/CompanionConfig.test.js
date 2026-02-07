@@ -3,12 +3,19 @@
 const { CompanionConfig } = require( '../../../../resources/ext.wp25EasterEggs/companion/CompanionConfig.js' );
 
 describe( 'CompanionConfig', () => {
+	beforeAll( () => {
+		Object.defineProperty( window, 'matchMedia', {
+			writable: true,
+			value: jest.fn().mockImplementation( () => ( { matches: false } ) )
+		} );
+	} );
+
 	it( 'constructor sets assetsPath and configName correctly', () => {
 		const assetsPath = '/mock/assets';
 		const configName = 'test-config';
 		const config = new CompanionConfig( assetsPath, configName );
 
-		expect( config.assetsPath ).toBe( assetsPath );
+		expect( config.assetsPath ).toBe( `${ assetsPath }/video` );
 		expect( config.configName ).toBe( configName );
 	} );
 
@@ -19,8 +26,8 @@ describe( 'CompanionConfig', () => {
 
 		expect( config.videoVariants ).toEqual( {
 			idle: {
-				light: `${ assetsPath }/${ configName }-idle-light.webm`,
-				dark: `${ assetsPath }/${ configName }-idle-dark.webm`
+				light: `${ assetsPath }/video/${ configName }-idle-light.webm`,
+				dark: `${ assetsPath }/video/${ configName }-idle-dark.webm`
 			}
 		} );
 	} );

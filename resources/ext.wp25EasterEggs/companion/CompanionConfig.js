@@ -22,15 +22,19 @@ class CompanionConfig {
 	 * @param {string} configName
 	 */
 	constructor( assetsPath, configName ) {
+		/** @type {boolean} */
+		this.isReducedMotion = window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches;
 		/** @type {string} */
-		this.assetsPath = assetsPath;
+		this.assetsPath = `${ assetsPath }/${ this.isReducedMotion ? 'image' : 'video' }`;
+		/** @type {string} */
+		this.extension = this.isReducedMotion ? 'webp' : 'webm';
 		/** @type {string} */
 		this.configName = configName;
 		/** @type {VideoVariants} */
 		this.videoVariants = {
 			idle: {
-				light: `${ this.assetsPath }/${ this.configName }-idle-light.webm`,
-				dark: `${ this.assetsPath }/${ this.configName }-idle-dark.webm`
+				light: `${ this.assetsPath }/${ this.configName }-idle-light.${ this.extension }`,
+				dark: `${ this.assetsPath }/${ this.configName }-idle-dark.${ this.extension }`
 			}
 		};
 	}
