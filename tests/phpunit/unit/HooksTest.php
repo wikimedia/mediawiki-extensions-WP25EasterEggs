@@ -3,8 +3,10 @@
 namespace MediaWiki\Extension\WP25EasterEggs\Tests;
 
 use MediaWiki\Config\HashConfig;
+use MediaWiki\Context\IContextSource;
 use MediaWiki\Extension\WP25EasterEggs\Hooks;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Request\WebRequest;
 use MediaWiki\Skin\Skin;
 use MediaWiki\Title\Title;
 use MediaWiki\User\Options\UserOptionsLookup;
@@ -45,7 +47,18 @@ class HooksTest extends \MediaWikiUnitTestCase {
 		$titleMock->method( 'isContentPage' )
 			->willReturn( true );
 
+		$webRequestMock = $this->createMock( WebRequest::class );
+		$webRequestMock->method( 'getFuzzyBool' )
+			->with( 'wp25eastereggs' )
+			->willReturn( false );
+
+		$contextMock = $this->createMock( IContextSource::class );
+		$contextMock->method( 'getRequest' )
+			->willReturn( $webRequestMock );
+
 		$outputPageMock = $this->createMock( OutputPage::class );
+		$outputPageMock->method( 'getContext' )
+			->willReturn( $contextMock );
 		$outputPageMock->method( 'getTitle' )
 			->willReturn( $titleMock );
 		$outputPageMock->method( 'getActionName' )
@@ -71,7 +84,23 @@ class HooksTest extends \MediaWikiUnitTestCase {
 		$hooks = new Hooks( $configMock, $userOptionsLookupMock, null );
 
 		$skinMock = $this->createNoOpMock( Skin::class );
-		$outputPageMock = $this->createNoOpMock( OutputPage::class, [ 'getTitle' ] );
+
+		$webRequestMock = $this->createMock( WebRequest::class );
+		$webRequestMock->method( 'getFuzzyBool' )
+			->willReturn( false );
+
+		$contextMock = $this->createMock( IContextSource::class );
+		$contextMock->method( 'getRequest' )
+			->willReturn( $webRequestMock );
+
+		$outputPageMock = $this->createMock( OutputPage::class );
+		$outputPageMock->method( 'getContext' )
+			->willReturn( $contextMock );
+
+		$outputPageMock->expects( $this->never() )
+			->method( 'addModules' );
+		$outputPageMock->expects( $this->never() )
+			->method( 'addHtmlClasses' );
 
 		$hooks->onBeforePageDisplay( $outputPageMock, $skinMock );
 	}
@@ -87,7 +116,23 @@ class HooksTest extends \MediaWikiUnitTestCase {
 		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfig );
 
 		$skinMock = $this->createNoOpMock( Skin::class );
-		$outputPageMock = $this->createNoOpMock( OutputPage::class, [ 'getTitle' ] );
+
+		$webRequestMock = $this->createMock( WebRequest::class );
+		$webRequestMock->method( 'getFuzzyBool' )
+			->willReturn( false );
+
+		$contextMock = $this->createMock( IContextSource::class );
+		$contextMock->method( 'getRequest' )
+			->willReturn( $webRequestMock );
+
+		$outputPageMock = $this->createMock( OutputPage::class );
+		$outputPageMock->method( 'getContext' )
+			->willReturn( $contextMock );
+
+		$outputPageMock->expects( $this->never() )
+			->method( 'addModules' );
+		$outputPageMock->expects( $this->never() )
+			->method( 'addHtmlClasses' );
 
 		$hooks->onBeforePageDisplay( $outputPageMock, $skinMock );
 	}

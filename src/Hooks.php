@@ -20,6 +20,7 @@
 namespace MediaWiki\Extension\WP25EasterEggs;
 
 use MediaWiki\Config\Config;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
 use MediaWiki\Skin\Hook\SiteNoticeAfterHook;
@@ -59,13 +60,19 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook, SiteNoticeAfte
 	 * end users. I.e. whether the "Birthday Mode" appearance toggle switch and
 	 * the Baby Globe companion is displayed. Checks both the
 	 * `Wp25EasterEggsEnable` configuration flag and CommunityConfiguration
-	 * `EnableExtension` field.
+	 * `EnableExtension` field. This method also checks for the `wp25eastereggs`
+	 * feature flag in the query params for testing purposes.
 	 * @return bool
 	 */
 	public function isExtensionEnabled(): bool {
-		return $this->config->get( 'Wp25EasterEggsEnable' ) &&
-			$this->communityConfig &&
+		$isExtensionEnabled = $this->config->get( 'Wp25EasterEggsEnable' );
+
+		$isCommunityConfigEnabled = $this->communityConfig &&
 			$this->communityConfig->get( 'EnableExtension' ) === "enabled";
+
+		$hasFeatureFlag = RequestContext::getMain()->getRequest()->getFuzzyBool( 'wp25eastereggs' );
+
+		return ( $isExtensionEnabled && $isCommunityConfigEnabled ) || $hasFeatureFlag;
 	}
 
 	/**
