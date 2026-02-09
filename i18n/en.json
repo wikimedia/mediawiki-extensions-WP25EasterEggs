@@ -12,7 +12,7 @@
 	"wp25eastereggs-enable-0-label": "Disabled",
 	"wp25eastereggs-enable-1-label": "Enabled",
 	"wp25eastereggs-enable-learn-more-link-label": "Learn more about Birthday mode",
-	"wp25eastereggs-enable-learn-more-link-url": "https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/",
+	"wp25eastereggs-enable-learn-more-link-url": "https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/?utm_campaign=wpam&utm_source=wpam&utm_medium=wpamen",
 	"communityconfiguration-wp25eastereggs-title": "Wikipedia 25 'Birthday mode'",
 	"communityconfiguration-wp25eastereggs-description": "Birthday mode is a limited-time, opt-in feature designed to celebrate Wikipedia's 25th anniversary by creating a festive atmosphere when activated.",
 	"communityconfiguration-wp25eastereggs-additional-description": "When toggled on, it introduces \"Baby Globe\", a birthday mascot, that acts as a reading companion and unlocks hidden animations and visual \"easter egg\" surprises for users to discover. If the extension is not turned on, the appearance setting will not be visible to readers. Learn more on the [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments MetaWiki page]. This special campaign feature will be live for a month from 16 February 2026. On 16 March 2026, we will remove the feature from all wikis.",
