@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"IKristiani"
+		]
+	},
+	"wp25eastereggs-enable-description": "Celebra los 25 años de Wikipedia con una [[https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ adorable compañía de lectura]",
+	"wp25eastereggs-enable-help": "Celebra los 25 años de Wikipedia con una adorable compañía de lectura",
+	"wp25eastereggs-enable-0-label": "Desactivado",
+	"wp25eastereggs-enable-1-label": "Activado",
+	"wp25eastereggs-enable-learn-more-link-label": "Más información sobre Modo aniversario",
+	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Desactivado",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Activado",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-enabled-label": "Activado",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-disabled-label": "Desactivado",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-enabled-label": "Activado",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-disabled-label": "Desactivado",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-enabled-label": "Activado",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-disabled-label": "Desactivado",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-enabled-label": "Activado",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-disabled-label": "Desactivado",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-enabled-label": "Activado",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-disabled-label": "Desactivado",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-enabled-label": "Activado",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-disabled-label": "Desactivado",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-enabled-label": "Activado",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-disabled-label": "Desactivado",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-enabled-label": "Activado",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-disabled-label": "Desactivado",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-enabled-label": "Activado",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-disabled-label": "Desactivado",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-enabled-label": "Activado",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-disabled-label": "Desactivado",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "Activado",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "Desactivado"
+}

@@ -13,5 +13,10 @@
 	"wp25eastereggs-enable-1-label": "Etkin",
 	"wp25eastereggs-enable-learn-more-link-label": "Doğum günü modu hakkında daha fazla bilgi edinin.",
 	"communityconfiguration-wp25eastereggs-title": "Vikipedi 25 'Doğum günü modu'",
-	"communityconfiguration-wp25eastereggs-description": "Doğum günü modu, etkinleştirildiğinde şenlikli bir atmosfer yaratarak Vikipedi'nin 25. yıldönümünü kutlamak için tasarlanmış, sınırlı süreli ve isteğe bağlı bir özelliktir."
+	"communityconfiguration-wp25eastereggs-description": "Doğum günü modu, etkinleştirildiğinde şenlikli bir atmosfer yaratarak Vikipedi'nin 25. yıldönümünü kutlamak için tasarlanmış, sınırlı süreli ve isteğe bağlı bir özelliktir.",
+	"communityconfiguration-wp25eastereggs-enableextension-label": "Doğum günü modunu etkinleştirin",
+	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Devre dışı",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Etkin",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Küresel filtre - Filtre türü",
+	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-label": "Genel filtre - Filtre sayfaları"
 }

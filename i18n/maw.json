@@ -1,0 +1,26 @@
+{
+	"@metadata": {
+		"authors": [
+			"Yambutigra"
+		]
+	},
+	"wp25eastereggs-enable-name": "Dɔɣim dabisiri bɛhigu",
+	"wp25eastereggs-enable-1-label": "Di yooi",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Di yooi",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-label": "Yooi gbaŋ shɛŋa bɛ ni pun pii maa ni",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-label": "Yooi gbaŋ shɛŋa bɛ ni pun pii maa ni",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-description": "Yooi bee n-kpari BabyGlobe ŋɔ bɛhigu gbaŋ shɛŋa bɛ ni pun pii maa ni",
+	"communityconfiguration-wp25eastereggs-book-allowpages-label": "Saɣiti din paasiri",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-label": "Yooi gbaŋ shɛŋa bɛ ni pun pii maa ni",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-enabled-label": "Di yooi",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-disabled-label": "Kpariya",
+	"communityconfiguration-wp25eastereggs-laptop-allowpages-label": "Saɣiti din paasiri",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-label": "Yooi gbaŋ shɛŋa bɛ ni pun pii maa ni",
+	"communityconfiguration-wp25eastereggs-dreaming-blockpages-label": "Labaari-zali ni paasiri",
+	"communityconfiguration-wp25eastereggs-camera-allowpages-description": "Paasi gbaŋ shɛŋa gbaŋ-piiri maa ni yi yooiya. Yi kpari gbaŋ-piiri maa, di saɣiri la gbaŋ shɛŋa bɛ ni pii maa ko",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-disabled-label": "Kpariya",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-enabled-label": "Di yooi",
+	"communityconfiguration-wp25eastereggs-confetti-blockpages-label": "Labaari-zali ni paasiri",
+	"communityconfiguration-wp25eastereggs-confetti-blockpages-description": "Nyisi gbaŋ bɔbigu ni saɣiti din paasiri maa ni",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-description": "Yooi bee n-kpari BabyGlobe ŋɔ bɛhigu gbaŋ shɛŋa bɛ ni pun pii maa ni"
+}

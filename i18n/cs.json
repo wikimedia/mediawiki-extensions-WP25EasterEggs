@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"IKristiani"
+		]
+	},
+	"wp25eastereggs-enable-help": "Oslavte 25 let Wikipedie s roztomilým společníkem ke čtení",
+	"wp25eastereggs-enable-0-label": "Vypnuto",
+	"wp25eastereggs-enable-1-label": "Zapnuto",
+	"wp25eastereggs-enable-learn-more-link-label": "Zjistěte více o Narozeninovém režimu",
+	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Zapnuto",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-enabled-label": "Zapnuto",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-enabled-label": "Zapnuto",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-enabled-label": "Zapnuto",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-enabled-label": "Zapnuto",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-enabled-label": "Zapnuto",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-enabled-label": "Zapnuto",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-enabled-label": "Zapnuto",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-enabled-label": "Zapnuto",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-enabled-label": "Zapnuto",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-enabled-label": "Zapnuto",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "Zapnuto",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "Vypnuto"
+}

@@ -1,0 +1,35 @@
+{
+	"@metadata": {
+		"authors": [
+			"IKristiani"
+		]
+	},
+	"wp25eastereggs-enable-help": "かわいい読書のお供といっしょに、ウィキペディアの25周年をお祝いしよう",
+	"wp25eastereggs-enable-0-label": "無効",
+	"wp25eastereggs-enable-1-label": "有効",
+	"wp25eastereggs-enable-learn-more-link-label": "誕生日モードについて詳しく知る",
+	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "無効",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "有効",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-enabled-label": "有効",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-disabled-label": "無効",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-enabled-label": "有効",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-disabled-label": "無効",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-enabled-label": "有効",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-disabled-label": "無効",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-enabled-label": "有効",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-disabled-label": "無効",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-enabled-label": "有効",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-disabled-label": "無効",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-enabled-label": "有効",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-disabled-label": "無効",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-enabled-label": "有効",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-disabled-label": "無効",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-enabled-label": "有効",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-disabled-label": "無効",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-enabled-label": "有効",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-disabled-label": "無効",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-enabled-label": "有効",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-disabled-label": "無効",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "有効",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "無効"
+}

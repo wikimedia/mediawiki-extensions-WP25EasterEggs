@@ -1,0 +1,36 @@
+{
+	"@metadata": {
+		"authors": [
+			"IKristiani",
+			"Thailand2763"
+		]
+	},
+	"wp25eastereggs-enable-help": "ฉลอง 25 ปีวิกิพีเดียไปกับคู่หูนักอ่านแสนน่ารัก",
+	"wp25eastereggs-enable-0-label": "ปิด",
+	"wp25eastereggs-enable-1-label": "เปิด",
+	"wp25eastereggs-enable-learn-more-link-label": "เรียนรู้เพิ่มเติมเกี่ยวกับโหมดวันเกิด",
+	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "ปิด",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "เปิด",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-enabled-label": "เปิด",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-disabled-label": "ปิด",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-enabled-label": "เปิด",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-disabled-label": "ปิด",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-enabled-label": "เปิด",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-disabled-label": "ปิด",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-enabled-label": "เปิด",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-disabled-label": "ปิด",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-enabled-label": "เปิด",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-disabled-label": "ปิด",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-enabled-label": "เปิด",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-disabled-label": "ปิด",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-enabled-label": "เปิด",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-disabled-label": "ปิด",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-enabled-label": "เปิด",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-disabled-label": "ปิด",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-enabled-label": "เปิด",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-disabled-label": "ปิด",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-enabled-label": "เปิด",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-disabled-label": "ปิด",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "เปิด",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "ปิด"
+}

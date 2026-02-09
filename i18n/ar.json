@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"IKristiani",
+			"Mohammed Qays"
+		]
+	},
+	"wp25eastereggs-enable-name": "نمط عيد الميلاد",
+	"wp25eastereggs-enable-label": "نمط عيد الميلاد",
+	"wp25eastereggs-enable-help": "احتفل بمرور 25 عامًا على إنشاء ويكيبيديا برفقة شريك قراءة لطيف",
+	"wp25eastereggs-enable-0-label": "مُعطل",
+	"wp25eastereggs-enable-1-label": "مُفعّل",
+	"wp25eastereggs-enable-learn-more-link-label": "تعرف على المزيد عن وضع عيد الميلاد",
+	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "مُعطل",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "مُفعّل",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-enabled-label": "مُفعّل",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-disabled-label": "مُعطل",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-enabled-label": "مُفعّل",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-disabled-label": "مُعطل",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-enabled-label": "مُفعّل",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-disabled-label": "مُعطل",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-enabled-label": "مُفعّل",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-disabled-label": "مُعطل",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-enabled-label": "مُفعّل",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-disabled-label": "مُعطل",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-enabled-label": "مُفعّل",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-disabled-label": "مُعطل",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-enabled-label": "مُفعّل",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-disabled-label": "مُعطل",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-enabled-label": "مُفعّل",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-disabled-label": "عطّل",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-label": "تفعيل على مجموعة محددة مسبقًا من الصفحات",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-enabled-label": "مُفعّل",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-disabled-label": "مُعطل",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-enabled-label": "مُفعّل",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-disabled-label": "مُعطل",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "مُفعّل",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "مُعطل"
+}

@@ -1,0 +1,39 @@
+{
+	"@metadata": {
+		"authors": [
+			"IKristiani"
+		]
+	},
+	"wp25EasterEggs-desc": "Ini adalah ekstensi khusus perayaan ulang tahun ke-25 Wikipedia yang menampilkan fitur \"Telur Paskah\" interaktif.",
+	"wp25eastereggs-enable-description": "Rayakan seperempat abad usia Wikipedia bersama [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot teman membaca nan lucu]",
+	"wp25eastereggs-enable-help": "Rayakan seperempat abad usia Wikipedia bersama teman membaca nan lucu",
+	"wp25eastereggs-enable-0-label": "Mati",
+	"wp25eastereggs-enable-1-label": "Hidup",
+	"wp25eastereggs-enable-learn-more-link-label": "Pelajari Mode ulang tahun lebih lanjut",
+	"communityconfiguration-wp25eastereggs-title": "'Mode ulang tahun' Wikipedia 25",
+	"communityconfiguration-wp25eastereggs-enableextension-label": "Hidupkan Mode ulang tahun",
+	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Mati",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Hidup",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-enabled-label": "Hidup",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-disabled-label": "Mati",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-enabled-label": "Hidup",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-disabled-label": "Mati",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-enabled-label": "Hidup",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-disabled-label": "Mati",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-enabled-label": "Hidup",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-disabled-label": "Mati",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-enabled-label": "Hidup",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-disabled-label": "Mati",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-enabled-label": "Hidup",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-disabled-label": "Mati",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-enabled-label": "Hidup",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-disabled-label": "Mati",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-enabled-label": "Hidup",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-disabled-label": "Mati",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-enabled-label": "Hidup",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-disabled-label": "Mati",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-enabled-label": "Hidup",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-disabled-label": "Mati",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "Hidup",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "Mati"
+}

@@ -1,0 +1,15 @@
+{
+	"@metadata": {
+		"authors": [
+			"McDutchie"
+		]
+	},
+	"wp25EasterEggs-desc": "Isto es un extension pro celebrar le 25te anniversario de Wikipedia per medio del addition de ovos de Pascha interactive.",
+	"wp25eastereggs-enable-name": "Modo anniversario 🎉",
+	"wp25eastereggs-enable-label": "Modo anniversario 🎉",
+	"wp25eastereggs-enable-description": "Celebra 25 annos de Wikipedia con un [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ companion de lectura sympathic]",
+	"wp25eastereggs-enable-help": "Celebra 25 annos de Wikipedia con un companion de lectura sympathic",
+	"wp25eastereggs-enable-0-label": "Disactivate",
+	"wp25eastereggs-enable-1-label": "Activate",
+	"wp25eastereggs-enable-learn-more-link-label": "Leger plus sur le modo Anniversario"
+}
