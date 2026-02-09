@@ -33,7 +33,7 @@ class HooksTest extends \MediaWikiUnitTestCase {
 
 		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfig );
 
-		$userMock = $this->createMock( UserIdentity::class );
+		$userMock = $this->createNoOpMock( UserIdentity::class );
 
 		$skinMock = $this->createMock( Skin::class );
 		$skinMock->method( 'getUser' )
@@ -66,17 +66,12 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testOnBeforePageDisplayWhenCCDisabled() {
 		$configMock = new HashConfig( [ 'Wp25EasterEggsEnable' => true ] );
-		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
+		$userOptionsLookupMock = $this->createNoOpMock( UserOptionsLookup::class );
 
 		$hooks = new Hooks( $configMock, $userOptionsLookupMock, null );
 
-		$skinMock = $this->createMock( Skin::class );
-		$outputPageMock = $this->createMock( OutputPage::class );
-
-		$outputPageMock->expects( $this->never() )
-			->method( 'addModules' );
-		$outputPageMock->expects( $this->never() )
-			->method( 'addHtmlClasses' );
+		$skinMock = $this->createNoOpMock( Skin::class );
+		$outputPageMock = $this->createNoOpMock( OutputPage::class, [ 'getTitle' ] );
 
 		$hooks->onBeforePageDisplay( $outputPageMock, $skinMock );
 	}
@@ -86,18 +81,13 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testOnBeforePageDisplayWhenConfigFlagDisabled() {
 		$configMock = new HashConfig( [ 'Wp25EasterEggsEnable' => false ] );
-		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
+		$userOptionsLookupMock = $this->createNoOpMock( UserOptionsLookup::class );
 		$communityConfig = new HashConfig( [ 'EnableExtension' => 'enabled' ] );
 
 		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfig );
 
-		$skinMock = $this->createMock( Skin::class );
-		$outputPageMock = $this->createMock( OutputPage::class );
-
-		$outputPageMock->expects( $this->never() )
-			->method( 'addModules' );
-		$outputPageMock->expects( $this->never() )
-			->method( 'addHtmlClasses' );
+		$skinMock = $this->createNoOpMock( Skin::class );
+		$outputPageMock = $this->createNoOpMock( OutputPage::class, [ 'getTitle' ] );
 
 		$hooks->onBeforePageDisplay( $outputPageMock, $skinMock );
 	}
@@ -114,7 +104,7 @@ class HooksTest extends \MediaWikiUnitTestCase {
 
 		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfig );
 
-		$userMock = $this->createMock( UserIdentity::class );
+		$userMock = $this->createNoOpMock( UserIdentity::class );
 		$preferences = [];
 
 		$hooks->onGetPreferences( $userMock, $preferences );
@@ -128,11 +118,11 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	 */
 	public function testOnGetPreferencesWhenCCDisabled() {
 		$configMock = new HashConfig( [ 'Wp25EasterEggsEnable' => true ] );
-		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
+		$userOptionsLookupMock = $this->createNoOpMock( UserOptionsLookup::class );
 
 		$hooks = new Hooks( $configMock, $userOptionsLookupMock, null );
 
-		$userMock = $this->createMock( UserIdentity::class );
+		$userMock = $this->createNoOpMock( UserIdentity::class );
 		$preferences = [];
 
 		$hooks->onGetPreferences( $userMock, $preferences );
