@@ -64,11 +64,19 @@ class PageCompanionService {
 
 		// Check if companion is enabled for this page (global filter)
 		if ( $companionConfigResolver->isCompanionEnabled( $title ) ) {
-			$classes[] = 'wp25eastereggs-companion-enabled';
+			if ( $this->config->get( 'Wp25EasterEggsEnableDefaultState' ) ) {
+				// Show companion, no matter if it will be the defaut or a specific companion config
+				$classes[] = 'wp25eastereggs-companion-enabled';
+			}
 
 			// Resolve specific companion config (state) based on filters
 			$companionConfigName = $companionConfigResolver->getCurrentCompanionConfig( $title );
 			if ( $companionConfigName ) {
+				if ( !$this->config->get( 'Wp25EasterEggsEnableDefaultState' ) ) {
+					// Show companion only when specific config is defined for the current page
+					$classes[] = 'wp25eastereggs-companion-enabled';
+				}
+
 				// Add specific config class, e.g. wp25eastereggs-companion-confetti
 				$classes[] = 'wp25eastereggs-companion-' . $companionConfigName;
 			}
