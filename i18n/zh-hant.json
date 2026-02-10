@@ -5,8 +5,8 @@
 		]
 	},
 	"wp25EasterEggs-desc": "這是為慶祝維基百科成立 25 週年添加的互動彩蛋擴充功能。",
-	"wp25eastereggs-enable-name": "生日模式🎉",
-	"wp25eastereggs-enable-label": "生日模式🎉",
+	"wp25eastereggs-enable-name": "生日模式（Baby Globe）",
+	"wp25eastereggs-enable-label": "生日模式（Baby Globe）",
 	"wp25eastereggs-enable-description": "與[https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ 可愛的閱讀夥伴]一起慶祝維基百科 25 週年",
 	"wp25eastereggs-enable-help": "與可愛的閱讀夥伴一起慶祝維基百科 25 週年",
 	"wp25eastereggs-enable-0-label": "停用",
@@ -137,5 +137,9 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "額外允許",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "如果啟用了預先定義頁面集，則可在該集合中新增更多頁面。如果停用，則僅允許在選定的頁面上執行。",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "額外封鎖",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "從額外允許的預先定義頁面集組合中移除頁面。"
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "從額外允許的預先定義頁面集組合中移除頁面。",
+	"extension-wp25eastereggs-minerva-launch-banner-title": "與 Baby Globe 一起閱讀",
+	"extension-wp25eastereggs-minerva-launch-banner-close-label": "關閉",
+	"extension-wp25eastereggs-minerva-launch-banner-description": "與全新的閱讀伴侶「Baby Globe」一同慶祝維基百科 25 週年！來一起解鎖隱藏在維基百科的驚喜。",
+	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "前往設定"
 }

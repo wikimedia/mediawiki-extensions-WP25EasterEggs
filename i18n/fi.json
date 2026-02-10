@@ -4,8 +4,8 @@
 			"Samoasambia"
 		]
 	},
-	"wp25eastereggs-enable-name": "Syntymäpäivätila 🎉",
-	"wp25eastereggs-enable-label": "Syntymäpäivätila 🎉",
+	"wp25eastereggs-enable-name": "Syntymäpäivätila (Baby Globe)",
+	"wp25eastereggs-enable-label": "Syntymäpäivätila (Baby Globe)",
 	"wp25eastereggs-enable-description": "Juhli Wikipedian 25-vuotista matkaa [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ söpön maskotin kanssa]",
 	"wp25eastereggs-enable-help": "Juhli Wikipedian 25-vuotista matkaa söpön maskotin kanssa",
 	"wp25eastereggs-enable-0-label": "Pois käytöstä",
@@ -82,5 +82,8 @@
 	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "Käytössä",
 	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "Pois käytöstä",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Salli lisäksi sivuilla",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Estä lisäksi sivuilla"
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Estä lisäksi sivuilla",
+	"extension-wp25eastereggs-minerva-launch-banner-title": "Lue Baby Globen kanssa",
+	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Sulje",
+	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Mene asetuksiin"
 }
