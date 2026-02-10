@@ -76,7 +76,10 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionService::getCompanionConfigHtmlClasses()
 	 */
 	public function testGetCompanionConfigHtmlClassesReturnsClassesWhenEnabled() {
-		$configMock = new HashConfig( [ MainConfigNames::ExtensionDirectory => '' ] );
+		$configMock = new HashConfig( [
+			MainConfigNames::ExtensionDirectory => '',
+			'Wp25EasterEggsEnableDefaultState' => true,
+		] );
 		$communityConfigMock = new HashConfig( [
 			// Mock EnableCompanion to be enabled everywhere
 			'EnableCompanion' => (object)[ 'type' => 'everywhere' ],
@@ -148,7 +151,10 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionService::getCompanionConfigHtmlClasses()
 	 */
 	public function testGetCompanionConfigHtmlClassesWhenEnabledButNoSpecificConfigMatches() {
-		$configMock = new HashConfig( [ MainConfigNames::ExtensionDirectory => '' ] );
+		$configMock = new HashConfig( [
+			MainConfigNames::ExtensionDirectory => '',
+			'Wp25EasterEggsEnableDefaultState' => true,
+		] );
 		// Mock EnableCompanion to be enabled everywhere
 		$communityConfigMock = new HashConfig( [
 			'EnableCompanion' => (object)[ 'type' => 'everywhere' ],
@@ -173,5 +179,39 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 		$result = $service->getCompanionConfigHtmlClasses( $outputPageMock );
 
 		$this->assertSame( [ 'wp25eastereggs-companion-enabled' ], $result );
+	}
+
+	/**
+	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionService::getCompanionConfigHtmlClasses()
+	 */
+	public function testGetCompanionConfigHtmlClassesWhenDefaultStateIsDisabledAndNoSpecificConfigMatches() {
+		$configMock = new HashConfig( [
+			MainConfigNames::ExtensionDirectory => '',
+			'Wp25EasterEggsEnableDefaultState' => false,
+		] );
+		// Mock EnableCompanion to be enabled everywhere
+		$communityConfigMock = new HashConfig( [
+			'EnableCompanion' => (object)[ 'type' => 'everywhere' ],
+		] );
+
+		$service = new PageCompanionService( $configMock, $communityConfigMock );
+
+		$titleMock = $this->createMock( Title::class );
+		$titleMock->method( 'getNamespace' )
+			->willReturn( NS_MAIN );
+		$titleMock->method( 'isContentPage' )
+			->willReturn( true );
+		$titleMock->method( 'getPrefixedText' )
+			->willReturn( 'Test_Page' );
+
+		$outputPageMock = $this->createMock( OutputPage::class );
+		$outputPageMock->method( 'getTitle' )
+			->willReturn( $titleMock );
+		$outputPageMock->method( 'getActionName' )
+			->willReturn( 'view' );
+
+		$result = $service->getCompanionConfigHtmlClasses( $outputPageMock );
+
+		$this->assertSame( [], $result );
 	}
 }

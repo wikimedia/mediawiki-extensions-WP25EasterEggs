@@ -138,3 +138,15 @@ The extension can be configured via Community Configuration with the following o
   - `defaultPages` - Whether to use default QID mappings
   - `allowPages` - Additional pages to show this state
   - `blockPages` - Pages to exclude from this state
+
+Configuration
+-------------
+
+The extension allows for the following configuration options in `LocalSettings.php`:
+
+- **$wgWp25EasterEggsEnable (bool)**: Controls whether the extension's visual interventions are enabled for end users.
+  - `true`: The "Birthday Mode" appearance toggle switch and the Baby Globe companion are displayed (subject to Community Configuration "EnableExtension" setting).
+  - `false` (default): The extension's functionality and visual interventions are disabled, but the extension is still loaded and available for configuration.
+- **$wgWp25EasterEggsEnableDefaultState (bool)**: Controls whether the default companion is shown on pages that do not have a specific companion configuration.
+  - `true`: The default companion is shown on all configured pages (unless a specific configuration of the companion is displayed).
+  - `false` (default): The companion is **only** shown on pages that have a specific configuration (via Community Configuration and predefined pages).

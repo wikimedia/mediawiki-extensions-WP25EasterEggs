@@ -41,6 +41,10 @@
 		"Wp25EasterEggsEnable": {
 			"description": "Enable the easter eggs feature.",
 			"value": false
+		},
+		"Wp25EasterEggsEnableDefaultState": {
+			"description": "Enable showing the default version of companion on pages that do not have a specific special version of the companion configured for them.",
+			"value": false
 		}
 	},
 	"DefaultUserOptions": {
