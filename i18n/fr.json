@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Codeurluce",
 			"IKristiani"
 		]
 	},
@@ -8,7 +9,7 @@
 	"wp25eastereggs-enable-help": "Célébrez les 25 ans de Wikipédia avec une adorable compagnie de lecture",
 	"wp25eastereggs-enable-0-label": "Desactivé",
 	"wp25eastereggs-enable-1-label": "Activé",
-	"wp25eastereggs-enable-learn-more-link-label": "En savoir plus sur le Mode anniversaire",
+	"wp25eastereggs-enable-learn-more-link-label": "En savoir plus sur le mode anniversaire",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Desactivé",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Activé",
 	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-enabled-label": "Activé",

@@ -1,10 +1,14 @@
 {
 	"@metadata": {
 		"authors": [
+			"Beta16",
+			"Dream Indigo",
 			"IKristiani"
 		]
 	},
-	"wp25eastereggs-enable-description": "Celebra 25 anni di Wikipedia con un [[https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ simpatico compagno di letture]",
+	"wp25eastereggs-enable-name": "Modalità compleanno (Baby Globe)",
+	"wp25eastereggs-enable-label": "Modalità compleanno (Baby Globe)",
+	"wp25eastereggs-enable-description": "Celebra 25 anni di Wikipedia con un [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ simpatico compagno di letture]",
 	"wp25eastereggs-enable-help": "Celebra 25 anni di Wikipedia con un simpatico compagno di letture",
 	"wp25eastereggs-enable-0-label": "Disabilitata",
 	"wp25eastereggs-enable-1-label": "Abilitata",
@@ -15,6 +19,7 @@
 	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-disabled-label": "Disabilitata",
 	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-enabled-label": "Abilitata",
 	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-disabled-label": "Disabilitata",
+	"communityconfiguration-wp25eastereggs-book-label": "Prenota Baby Globe",
 	"communityconfiguration-wp25eastereggs-book-defaultpages-option-enabled-label": "Abilitata",
 	"communityconfiguration-wp25eastereggs-book-defaultpages-option-disabled-label": "Disabilitata",
 	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-enabled-label": "Abilitata",
@@ -32,5 +37,9 @@
 	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-enabled-label": "Abilitata",
 	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-disabled-label": "Disabilitata",
 	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "Abilitata",
-	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "Disabilitata"
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "Disabilitata",
+	"extension-wp25eastereggs-minerva-launch-banner-title": "Leggi con Baby Globe",
+	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Chiudi",
+	"extension-wp25eastereggs-minerva-launch-banner-description": "Celebra il 25º compleanno di Wikipedia con un nuovo compagno di letture: Baby Globe! Insieme potrete sbloccare delle sorpresine nascoste su Wikipedia.",
+	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Vai alle impostazioni"
 }

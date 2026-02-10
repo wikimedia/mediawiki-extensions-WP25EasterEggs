@@ -1,10 +1,12 @@
 {
 	"@metadata": {
-		"authors": []
+		"authors": [
+			"Brettchenweber"
+		]
 	},
 	"wp25EasterEggs-desc": "Dies ist eine Erweiterung zur Feier des 25. Geburtstags von Wikipedia durch das Hinzufügen interaktiver Easter Eggs.",
-	"wp25eastereggs-enable-name": "Geburtstagsmodus 🎉",
-	"wp25eastereggs-enable-label": "Geburtstagsmodus 🎉",
+	"wp25eastereggs-enable-name": "Geburtstagsmodus (Baby-Globus)",
+	"wp25eastereggs-enable-label": "Geburtstagsmodus (Baby-Globus)",
 	"wp25eastereggs-enable-description": "Feiere 25 Jahre Wikipedia mit einem [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ niedlichen Lesebegleiter]",
 	"wp25eastereggs-enable-help": "Feiere 25 Jahre Wikipedia mit einem niedlichen Lesebegleiter",
 	"wp25eastereggs-enable-0-label": "Deaktiviert",
@@ -135,5 +137,9 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Zusätzliche Erlaubnis",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Fügt dem vordefinierten Seitensatz weitere Seiten hinzu, sofern diese aktiviert sind. Ist der vordefinierte Seitensatz deaktiviert, sind nur ausgewählte Seiten zulässig.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Zusätzliche Sperre",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Entfernt Seiten aus der Kombination aus vordefiniertem Seitensatz und zusätzlichen zulässigen Werten."
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Entfernt Seiten aus der Kombination aus vordefiniertem Seitensatz und zusätzlichen zulässigen Werten.",
+	"extension-wp25eastereggs-minerva-launch-banner-title": "Lesen mit Baby-Globus",
+	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Schließen",
+	"extension-wp25eastereggs-minerva-launch-banner-description": "Feiere den 25. Geburtstag von Wikipedia mit einem neuen Lesebegleiter: Baby-Globus! Gemeinsam könnt ihr versteckte Überraschungen in der Wikipedia entdecken.",
+	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Einstellungen öffnen"
 }
