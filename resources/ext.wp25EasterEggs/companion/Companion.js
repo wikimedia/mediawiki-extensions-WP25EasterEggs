@@ -3,6 +3,7 @@ const { VideoPlayer } = require( '../core/VideoPlayer.js' );
 const { VideoContainer } = require( '../core/VideoContainer.js' );
 const { ColorSchemeResolver } = require( '../utils/ColorSchemeResolver.js' );
 const { CompanionConfig } = require( './CompanionConfig.js' );
+const { InactivityHandler } = require( '../interactions/InactivityHandler.js' );
 const { ClickHandler } = require( '../interactions/ClickHandler.js' );
 
 /**
@@ -31,6 +32,8 @@ class Companion {
 			new VideoPlayer( this.videoContainer.container );
 		/** @type {ClickHandler|null} */
 		this.clickHandler = null;
+		/** @type {InactivityHandler|null} */
+		this.inactivityHandler = null;
 	}
 
 	/**
@@ -58,6 +61,15 @@ class Companion {
 				getVideoSrc: this.getVideoSrc.bind( this )
 			} );
 			this.clickHandler.setup();
+		}
+
+		if ( this.config.interactions.sleep ) {
+			this.inactivityHandler = new InactivityHandler( {
+				container: this.videoContainer.container,
+				videoPlayer: this.videoPlayer,
+				getVideoSrc: this.getVideoSrc.bind( this )
+			} );
+			this.inactivityHandler.setup();
 		}
 	}
 
@@ -99,6 +111,15 @@ class Companion {
 	 * @return {void}
 	 */
 	handleColorSchemeChange( newScheme, oldScheme ) {
+		// If currently sleeping, stay sleeping but updated for new color scheme
+		if ( this.inactivityHandler && this.inactivityHandler.state === 'sleep' ) {
+			const sleepSrc = this.getVideoSrc( 'sleepLoop' );
+			if ( sleepSrc ) {
+				this.videoPlayer.playLoop( sleepSrc );
+				return;
+			}
+		}
+
 		// If switching to dark mode and has flashlight behavior, play flashlight first
 		const didSwitchFromLightToDark = oldScheme === 'light' && newScheme === 'dark';
 		if ( this.config.interactions.flashlight && didSwitchFromLightToDark ) {
@@ -132,6 +153,11 @@ class Companion {
 		if ( this.clickHandler ) {
 			this.clickHandler.cleanup();
 			this.clickHandler = null;
+		}
+
+		if ( this.inactivityHandler ) {
+			this.inactivityHandler.cleanup();
+			this.inactivityHandler = null;
 		}
 
 		this.videoPlayer.cleanup();

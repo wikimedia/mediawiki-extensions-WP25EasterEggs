@@ -9,12 +9,16 @@
  * @property {VideoVariant} idle
  * @property {VideoVariant} click
  * @property {VideoVariant} flashlight
+ * @property {VideoVariant} sleepLoop
+ * @property {VideoVariant} sleepTransitionOut
+ * @property {VideoVariant} transitionFromSleep
  */
 
 /**
  * @typedef {Object} Interactions
  * @property {boolean | undefined} click
  * @property {boolean | undefined} flashlight
+ * @property {boolean | undefined} sleep
  */
 
 /**
@@ -60,6 +64,21 @@ class CompanionConfig {
 		if ( this.interactions.flashlight ) {
 			this.videoVariants.flashlight = {
 				dark: `${ this.assetsPath }/flashlight-dark.${ this.extension }`
+			};
+		}
+
+		if ( this.interactions.sleep ) {
+			this.videoVariants.sleepLoop = {
+				light: `${ this.assetsPath }/dreaming-idle-light.${ this.extension }`,
+				dark: `${ this.assetsPath }/dreaming-idle-dark.${ this.extension }`
+			};
+			this.videoVariants.sleepTransitionOut = {
+				light: `${ this.assetsPath }/dreaming-trans-out-light.${ this.extension }`,
+				dark: `${ this.assetsPath }/dreaming-trans-out-dark.${ this.extension }`
+			};
+			this.videoVariants.transitionFromSleep = {
+				light: `${ this.assetsPath }/${ this.configName }-trans-in-light.${ this.extension }`,
+				dark: `${ this.assetsPath }/${ this.configName }-trans-in-dark.${ this.extension }`
 			};
 		}
 	}
