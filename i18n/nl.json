@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"McDutchie",
 			"Siebrand"
 		]
 	},
@@ -89,7 +90,7 @@
 	"communityconfiguration-wp25eastereggs-outerspace-blockpages-label": "Extra blokkeren",
 	"communityconfiguration-wp25eastereggs-outerspace-blockpages-description": "Verwijdert pagina's uit de combinatie van een vooraf gedefinieerde set pagina's, aangevuld met extra toegestane pagina's.",
 	"communityconfiguration-wp25eastereggs-headphones-label": "koptelefoon Baby Globe + Klik",
-	"communityconfiguration-wp25eastereggs-headphones-description": "Bij het laden van de pagina luistert Baby Globe naar muziek via een koptelefoon. Na een klik maakt Baby Globe een dansje en gaan sommige puzzelstukjes glinsteren als een discobal.",
+	"communityconfiguration-wp25eastereggs-headphones-description": "Bij het laden van de pagina luistert Baby Globe naar muziek via een koptelefoon. Na een klik maakt Baby Globe een dansje en gaat een aantal puzzelstukjes glinsteren als een discobal.",
 	"communityconfiguration-wp25eastereggs-headphones-defaultpages-label": "Inschakelen op een vooraf gedefinieerde set pagina's",
 	"communityconfiguration-wp25eastereggs-headphones-defaultpages-description": "Schakel deze status van de BabyGlobe in/uit op een vooraf gedefinieerd aantal pagina's",
 	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-enabled-label": "Ingeschakeld",
