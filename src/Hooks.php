@@ -21,9 +21,11 @@ namespace MediaWiki\Extension\WP25EasterEggs;
 
 use MediaWiki\Config\Config;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Html\Html;
 use MediaWiki\Output\Hook\BeforePageDisplayHook;
 use MediaWiki\Preferences\Hook\GetPreferencesHook;
 use MediaWiki\Skin\Hook\SiteNoticeAfterHook;
+use MediaWiki\SpecialPage\SpecialPageFactory;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\User;
 use Wikibase\Client\Store\ClientStore;
@@ -36,6 +38,7 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook, SiteNoticeAfte
 	/**
 	 * @param Config $config
 	 * @param UserOptionsLookup $userOptionsLookup
+	 * @param SpecialPageFactory $specialPageFactory
 	 * @param Config|null $communityConfig
 	 * @param ClientStore|null $wikibaseStore Optional WikibaseClient Store service
 	 * @param SettingsArray|null $wikibaseSettings Optional WikibaseClient Settings service
@@ -43,6 +46,7 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook, SiteNoticeAfte
 	public function __construct(
 		private readonly Config $config,
 		private readonly UserOptionsLookup $userOptionsLookup,
+		private readonly SpecialPageFactory $specialPageFactory,
 		private readonly ?Config $communityConfig = null,
 		private readonly ?object $wikibaseStore = null,
 		private readonly ?object $wikibaseSettings = null,
@@ -140,6 +144,24 @@ class Hooks implements BeforePageDisplayHook, GetPreferencesHook, SiteNoticeAfte
 			return;
 		}
 
-		$siteNotice .= '<div class="wp25eastereggs-sitenotice-landmark"></div>';
+		$learnMoreContainer = '';
+		if ( $skin->getSkinName() === 'minerva' ) {
+			$mobileOptionsUrl = $this->specialPageFactory->getTitleForAlias( 'MobileOptions' )->getLocalURL();
+			$learnMoreLink = Html::element( 'a', [
+				'href' => $mobileOptionsUrl
+			], $skin->msg( 'extension-wp25eastereggs-minerva-learn-more-link-label' )->text() );
+
+			$learnMoreContainer = Html::rawElement( 'div', [
+				'class' => 'wp25eastereggs-sitenotice-learn-more-link'
+			], $learnMoreLink );
+		}
+
+		$landmark = Html::element( 'div', [
+			'class' => 'wp25eastereggs-sitenotice-landmark'
+		] );
+
+		$siteNotice .= Html::rawElement( 'div', [
+			'class' => 'wp25eastereggs-sitenotice'
+		], $landmark . $learnMoreContainer );
 	}
 }

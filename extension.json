@@ -18,7 +18,8 @@
 			"class": "MediaWiki\\Extension\\WP25EasterEggs\\Hooks",
 			"services": [
 				"MainConfig",
-				"UserOptionsLookup"
+				"UserOptionsLookup",
+				"SpecialPageFactory"
 			],
 			"optional_services": [
 				"CommunityConfiguration.MediaWikiConfigReader",

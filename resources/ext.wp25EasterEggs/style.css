@@ -1,4 +1,5 @@
-.wp25eastereggs-sitenotice-landmark,
+.wp25eastereggs-sitenotice,
+.wp25eastereggs-sitenotice-learn-more-link,
 .wp25eastereggs-vector-sitenotice-landmark,
 .wp25eastereggs-video-container {
 	display: none;
@@ -6,19 +7,27 @@
 
 /* Sitenotice landmark (applied to minerva and vector in md breakpoint) */
 
+html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .skin-minerva .wp25eastereggs-sitenotice {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
 html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .skin-minerva .wp25eastereggs-sitenotice-landmark {
-	display: block;
 	width: 12.25rem;
 	height: 12.25rem;
-	margin: 0 auto;
 }
 
 @media screen and ( max-width: 1119px ) {
+	html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .skin-vector-2022 .wp25eastereggs-sitenotice {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
 	html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .skin-vector-2022 .wp25eastereggs-sitenotice-landmark {
-		display: block;
 		width: 12.25rem;
 		height: 12.25rem;
-		margin: 0 auto;
 	}
 }
 
@@ -50,10 +59,20 @@ html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .wp25ea
 }
 
 @media screen and ( min-width: 1680px ) {
-	html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .wp25eastereggs-video-container {
+	html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .skin-vector-2022 .wp25eastereggs-video-container {
 		width: 15.5rem;
 		height: 15.5rem;
 	}
+}
+
+/* Minerva learn more link */
+
+html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .skin-minerva .wp25eastereggs-sitenotice-learn-more-link {
+	display: block;
+}
+
+html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .skin-minerva .wp25eastereggs-sitenotice-learn-more-link a {
+	text-align: center;
 }
 
 /* Add a gap between bodyContent and companion for the case the sidebar is hidden */

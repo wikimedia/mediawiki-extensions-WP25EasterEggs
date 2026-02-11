@@ -8,6 +8,7 @@ use MediaWiki\Extension\WP25EasterEggs\Hooks;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\Skin\Skin;
+use MediaWiki\SpecialPage\SpecialPageFactory;
 use MediaWiki\Title\Title;
 use MediaWiki\User\Options\UserOptionsLookup;
 use MediaWiki\User\UserIdentity;
@@ -28,12 +29,13 @@ class HooksTest extends \MediaWikiUnitTestCase {
 		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
 		$userOptionsLookupMock->method( 'getOption' )
 			->willReturn( '1' );
+		$specialPageFactoryMock = $this->createMock( SpecialPageFactory::class );
 		$communityConfig = new HashConfig( [
 			'EnableExtension' => 'enabled',
 			'EnableCompanion' => [ 'type' => 'everywhere' ],
 		] );
 
-		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfig );
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $specialPageFactoryMock, $communityConfig );
 
 		$userMock = $this->createNoOpMock( UserIdentity::class );
 
@@ -80,8 +82,9 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	public function testOnBeforePageDisplayWhenCCDisabled() {
 		$configMock = new HashConfig( [ 'Wp25EasterEggsEnable' => true ] );
 		$userOptionsLookupMock = $this->createNoOpMock( UserOptionsLookup::class );
+		$specialPageFactoryMock = $this->createMock( SpecialPageFactory::class );
 
-		$hooks = new Hooks( $configMock, $userOptionsLookupMock, null );
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $specialPageFactoryMock, null );
 
 		$skinMock = $this->createNoOpMock( Skin::class );
 
@@ -111,9 +114,10 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	public function testOnBeforePageDisplayWhenConfigFlagDisabled() {
 		$configMock = new HashConfig( [ 'Wp25EasterEggsEnable' => false ] );
 		$userOptionsLookupMock = $this->createNoOpMock( UserOptionsLookup::class );
+		$specialPageFactoryMock = $this->createMock( SpecialPageFactory::class );
 		$communityConfig = new HashConfig( [ 'EnableExtension' => 'enabled' ] );
 
-		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfig );
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $specialPageFactoryMock, $communityConfig );
 
 		$skinMock = $this->createNoOpMock( Skin::class );
 
@@ -145,9 +149,10 @@ class HooksTest extends \MediaWikiUnitTestCase {
 		$userOptionsLookupMock = $this->createMock( UserOptionsLookup::class );
 		$userOptionsLookupMock->method( 'getOption' )
 			->willReturn( true );
+		$specialPageFactoryMock = $this->createMock( SpecialPageFactory::class );
 		$communityConfig = new HashConfig( [ 'EnableExtension' => 'enabled' ] );
 
-		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $communityConfig );
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $specialPageFactoryMock, $communityConfig );
 
 		$userMock = $this->createNoOpMock( UserIdentity::class );
 		$preferences = [];
@@ -164,8 +169,9 @@ class HooksTest extends \MediaWikiUnitTestCase {
 	public function testOnGetPreferencesWhenCCDisabled() {
 		$configMock = new HashConfig( [ 'Wp25EasterEggsEnable' => true ] );
 		$userOptionsLookupMock = $this->createNoOpMock( UserOptionsLookup::class );
+		$specialPageFactoryMock = $this->createMock( SpecialPageFactory::class );
 
-		$hooks = new Hooks( $configMock, $userOptionsLookupMock, null );
+		$hooks = new Hooks( $configMock, $userOptionsLookupMock, $specialPageFactoryMock, null );
 
 		$userMock = $this->createNoOpMock( UserIdentity::class );
 		$preferences = [];
