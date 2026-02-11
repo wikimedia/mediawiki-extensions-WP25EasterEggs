@@ -5,8 +5,8 @@
 		]
 	},
 	"wp25EasterEggs-desc": "Esta é unha extensión para celebrar o 25 aniversario da Wikipedia engadindo ovos de Pascua interactivos.",
-	"wp25eastereggs-enable-name": "Modo aniversario 🎉",
-	"wp25eastereggs-enable-label": "Modo aniversario 🎉",
+	"wp25eastereggs-enable-name": "Modo aniversario (globo pequecho)",
+	"wp25eastereggs-enable-label": "Modo aniversario (globo pequecho)",
 	"wp25eastereggs-enable-description": "Celebra os 25 anos da Wikipedia cun [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot compañeiro de lectura riquiño]",
 	"wp25eastereggs-enable-help": "Celebra os 25 anos da Wikipedia cun compañeiro de lectura riquiño",
 	"wp25eastereggs-enable-0-label": "Desactivado",
@@ -137,5 +137,9 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Permiso adicional",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Engade máis páxinas ao conxunto predefinido de páxinas se estas están activadas. Permítese só nas páxinas seleccionadas se o conxunto predefinido de páxinas está desactivado.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Bloqueo adicional",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Elimina páxinas da combinación de conxuntos predefinidos de páxinas combinados con permisos adicionais."
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Elimina páxinas da combinación de conxuntos predefinidos de páxinas combinados con permisos adicionais.",
+	"extension-wp25eastereggs-minerva-launch-banner-title": "Ler co globo pequecho",
+	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Pechar",
+	"extension-wp25eastereggs-minerva-launch-banner-description": "Celebra o 25 aniversario da Wikipedia cun novo compañeiro de lectura: o globo pequecho! Xuntos, podedes desbloquear sorpresas agochadas na Wikipedia.",
+	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Vai á configuración"
 }

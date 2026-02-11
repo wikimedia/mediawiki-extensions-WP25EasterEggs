@@ -5,8 +5,8 @@
 		]
 	},
 	"wp25EasterEggs-desc": "Dëst ass eng Erweiderung fir de 25. Gebuertsdag vun der Wikipedia ze feieren, andeems interaktiv ''Easter Eggs'' derbäigesat ginn.",
-	"wp25eastereggs-enable-name": "Gebuertsdagsmodus 🎉",
-	"wp25eastereggs-enable-label": "Gebuertsdagsmodus 🎉",
+	"wp25eastereggs-enable-name": "Gebuertsdagsmodus (Beebee-Globus)",
+	"wp25eastereggs-enable-label": "Gebuertsdagsmodus (Beebee-Globus)",
 	"wp25eastereggs-enable-description": "Feiert 25 Joer Wikipedia mat engem [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ butzege Liesbegleeder]",
 	"wp25eastereggs-enable-help": "Feiert 25 Joer Wikipedia mat engem butzege Liesbegleeder",
 	"wp25eastereggs-enable-0-label": "Desaktivéiert",
@@ -137,5 +137,9 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Zousätzlech erlaben",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Setzt zousätzlech Säiten op déi virdefinéiert Lëscht vu Säiten, falls déi aktivéiert ass. Erlaabt just op ausgewielte Säiten, wann déi virdefinéiert Lëscht vu Säiten desaktivéiert ass.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Zousätzlech blockéieren",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Hëlt Säite vun der kombinéierte Lëscht vu virdefinéierten an zousätzlech erlaabte Säiten erof."
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Hëlt Säite vun der kombinéierte Lëscht vu virdefinéierten an zousätzlech erlaabte Säiten erof.",
+	"extension-wp25eastereggs-minerva-launch-banner-title": "Liese mam Beebee-Globus",
+	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Zoumaachen",
+	"extension-wp25eastereggs-minerva-launch-banner-description": "Feiert de 25. Gebuertsdag vun der Wikipedia mat engem neie Liesbegleeder: dem Beebee-Globus! Zesumme kënnt Dir verstoppt Iwwerraschungen uechter d'Wikipedia fräischalten.",
+	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "An d'Astellunge goen"
 }

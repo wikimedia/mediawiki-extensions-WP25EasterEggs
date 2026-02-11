@@ -1,23 +1,44 @@
 {
 	"@metadata": {
 		"authors": [
-			"IKristiani"
+			"IKristiani",
+			"WikipedistaOndra"
 		]
 	},
+	"wp25EasterEggs-desc": "Toto je rozšíření k oslavě 25. narozenin Wikipedie přidáním interaktivních velikonočních vajíček.",
+	"wp25eastereggs-enable-name": "Narozeninový režim (Baby Globe)",
+	"wp25eastereggs-enable-label": "Narozeninový režim (Baby Globe)",
+	"wp25eastereggs-enable-description": "Oslavte 25 let Wikipedie s [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ roztomilým čtenářským společníkem]",
 	"wp25eastereggs-enable-help": "Oslavte 25 let Wikipedie s roztomilým společníkem ke čtení",
 	"wp25eastereggs-enable-0-label": "Vypnuto",
 	"wp25eastereggs-enable-1-label": "Zapnuto",
 	"wp25eastereggs-enable-learn-more-link-label": "Zjistěte více o Narozeninovém režimu",
+	"communityconfiguration-wp25eastereggs-title": "Wikipedie 25 'Narozeninový režim'",
+	"communityconfiguration-wp25eastereggs-description": "Narozeninový režim je časově omezená funkce, ke které je nutné se přihlásit a která je navržena k oslavě 25. výročí Wikipedie vytvořením slavnostní atmosféry po aktivaci.",
+	"communityconfiguration-wp25eastereggs-enableextension-label": "Povolit narozeninový režim",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Vypnuto",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Zapnuto",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Globální filtr - Typ filtru",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Povolit zobrazování Baby Globe všude",
+	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-label": "Globální filtr - Filtrovat stránky",
 	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-enabled-label": "Zapnuto",
 	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-phone-allowpages-label": "Extra povoleno",
+	"communityconfiguration-wp25eastereggs-phone-blockpages-label": "Extra blok",
+	"communityconfiguration-wp25eastereggs-newspaper-label": "Noviny Baby Globe",
 	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-enabled-label": "Zapnuto",
 	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-newspaper-allowpages-label": "Extra povoleno",
+	"communityconfiguration-wp25eastereggs-newspaper-blockpages-label": "Extra blok",
 	"communityconfiguration-wp25eastereggs-book-defaultpages-option-enabled-label": "Zapnuto",
 	"communityconfiguration-wp25eastereggs-book-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-book-allowpages-label": "Extra povoleno",
+	"communityconfiguration-wp25eastereggs-book-blockpages-label": "Extra blok",
 	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-enabled-label": "Zapnuto",
 	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-disabled-label": "Vypnuto",
+	"communityconfiguration-wp25eastereggs-laptop-allowpages-label": "Extra povoleno",
+	"communityconfiguration-wp25eastereggs-laptop-blockpages-label": "Extra blok",
+	"communityconfiguration-wp25eastereggs-dreaming-label": "Snící Baby Globe",
 	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-enabled-label": "Zapnuto",
 	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-disabled-label": "Vypnuto",
 	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-enabled-label": "Zapnuto",
@@ -31,5 +52,7 @@
 	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-enabled-label": "Zapnuto",
 	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-disabled-label": "Vypnuto",
 	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "Zapnuto",
-	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "Vypnuto"
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "Vypnuto",
+	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Zavřít",
+	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Přejít do nastavení"
 }
