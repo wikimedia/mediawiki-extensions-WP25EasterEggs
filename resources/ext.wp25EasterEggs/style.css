@@ -19,7 +19,7 @@ html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .skin-m
 }
 
 @media screen and ( max-width: 1119px ) {
-	html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .skin-vector-2022 .wp25eastereggs-sitenotice {
+	html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1:not( .ve-active ) .skin-vector-2022 .wp25eastereggs-sitenotice {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
@@ -34,7 +34,7 @@ html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .skin-m
 /* Column-end landmark (applied to vector) */
 
 @media screen and ( min-width: 1120px ) {
-	html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .wp25eastereggs-vector-sitenotice-landmark {
+	html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1:not( .ve-active ) .wp25eastereggs-vector-sitenotice-landmark {
 		display: block;
 		width: 12.25rem;
 		height: 12.25rem;
@@ -42,7 +42,7 @@ html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .skin-m
 }
 
 @media screen and ( min-width: 1680px ) {
-	html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .wp25eastereggs-vector-sitenotice-landmark {
+	html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1:not( .ve-active ) .wp25eastereggs-vector-sitenotice-landmark {
 		display: block;
 		width: 15.5rem;
 		height: 15.5rem;
@@ -78,7 +78,7 @@ html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1 .skin-m
 /* Add a gap between bodyContent and companion for the case the sidebar is hidden */
 
 @media screen and ( min-width: 1120px ) {
-	html.wp25eastereggs-companion-enabled .mw-body {
+	html.wp25eastereggs-companion-enabled.wp25eastereggs-enable-clientpref-1:not( .ve-active ) .mw-body {
 		column-gap: 24px;
 	}
 }
