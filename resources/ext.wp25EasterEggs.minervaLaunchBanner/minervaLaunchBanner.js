@@ -5,10 +5,10 @@ const makeTemplate = function () {
         <header class="cdx-dialog__header cdx-dialog__header--default">
             <div class="cdx-dialog__header__title-group">
                 <h2 id="cdx-dialog-label-0" class="cdx-dialog__header__title">
-                    ${ mw.message( 'extension-wp25eastereggs-minerva-launch-banner-title' ).text() }
+                    ${ mw.message( 'extension-wp25eastereggs-minerva-launch-banner-title' ).escaped() }
 				</h2>
             </div>
-            <button class="cdx-button cdx-button--action-default cdx-button--weight-quiet cdx-button--size-medium cdx-button--icon-only cdx-dialog__header__close-button" type="button" aria-label="${ mw.message( 'extension-wp25eastereggs-minerva-launch-banner-close-label' ).text() }">
+            <button class="cdx-button cdx-button--action-default cdx-button--weight-quiet cdx-button--size-medium cdx-button--icon-only cdx-dialog__header__close-button" type="button" aria-label="${ mw.message( 'extension-wp25eastereggs-minerva-launch-banner-close-label' ).escaped() }">
                 <span class="cdx-icon cdx-icon--medium">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20" height="20" viewBox="0 0 20 20"><title>Close</title><g><path d="m4.34 2.93 12.73 12.73-1.41 1.41L2.93 4.35z"></path><path d="M17.07 4.34 4.34 17.07l-1.41-1.41L15.66 2.93z"></path></g></svg>
                 </span>
@@ -20,13 +20,13 @@ const makeTemplate = function () {
                 <div class="extension-wp25eastereggs-minerva-launch-banner-image"></div>
             </div>
             <p>
-                ${ mw.message( 'extension-wp25eastereggs-minerva-launch-banner-description' ).text() }
+                ${ mw.message( 'extension-wp25eastereggs-minerva-launch-banner-description' ).escaped() }
             </p>
         </div>
         <footer class="cdx-dialog__footer cdx-dialog__footer--default">
             <div class="cdx-dialog__footer__actions">
                 <button class="cdx-button cdx-button--action-progressive cdx-button--weight-primary cdx-button--size-medium cdx-button--framed cdx-dialog__footer__primary-action">
-                    ${ mw.message( 'extension-wp25eastereggs-minerva-launch-banner-settings-label' ).text() }
+                    ${ mw.message( 'extension-wp25eastereggs-minerva-launch-banner-settings-label' ).escaped() }
                 </button>
             </div>
         </footer>
