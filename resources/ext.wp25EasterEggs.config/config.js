@@ -43,7 +43,7 @@ const setupModeConfigurationSection = () => waitForElement( '[id="EnableCompanio
 
 	createElement( {
 		tag: 'h3',
-		innerHTML: mw.msg( 'communityconfiguration-wp25eastereggs-modeconfiguration-section-label' ).escaped(),
+		innerHTML: mw.message( 'communityconfiguration-wp25eastereggs-modeconfiguration-section-label' ).escaped(),
 		className: 'communityconfiguration-wp25eastereggs-section-label'
 	}, { mode: 'append', element: modeConfigurationSection } );
 
