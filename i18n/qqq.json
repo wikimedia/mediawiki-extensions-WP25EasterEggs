@@ -144,9 +144,5 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Description for the additional allow pages field for the Balloons state.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Label for the field where administrators can specify pages where the Balloons state should be blocked.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Description for the block pages field for the Balloons state.",
-	"extension-wp25eastereggs-minerva-launch-banner-title": "Title of the launch banner shown on Minerva skin.",
-	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Label for the close button on the launch banner.",
-	"extension-wp25eastereggs-minerva-launch-banner-description": "Description text displayed in the launch banner introducing the feature.",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Label for the button that takes the user to settings from the launch banner.",
 	"extension-wp25eastereggs-minerva-learn-more-link-label": "Label for the link in the site notice that leads to the mobile appearance settings page."
 }
