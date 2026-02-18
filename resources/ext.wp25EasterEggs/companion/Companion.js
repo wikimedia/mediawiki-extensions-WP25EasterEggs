@@ -5,6 +5,7 @@ const { ColorSchemeResolver } = require( '../utils/ColorSchemeResolver.js' );
 const { CompanionConfig } = require( './CompanionConfig.js' );
 const { InactivityHandler } = require( '../interactions/InactivityHandler.js' );
 const { ClickHandler } = require( '../interactions/ClickHandler.js' );
+const { AudioHandler } = require( '../interactions/AudioHandler.js' );
 
 /**
  * @typedef {import('./CompanionConfig.js').VideoVariants} VideoVariants
@@ -34,6 +35,8 @@ class Companion {
 		this.clickHandler = null;
 		/** @type {InactivityHandler|null} */
 		this.inactivityHandler = null;
+		/** @type {AudioHandler|null} */
+		this.audioHandler = null;
 	}
 
 	/**
@@ -70,6 +73,14 @@ class Companion {
 				getVideoSrc: this.getVideoSrc.bind( this )
 			} );
 			this.inactivityHandler.setup();
+		}
+
+		if ( this.config.interactions.welcomeAudio ) {
+			this.audioHandler = new AudioHandler( {
+				container: this.videoContainer.container,
+				baseAssetsPath: this.config.baseAssetsPath
+			} );
+			this.audioHandler.setup();
 		}
 	}
 
@@ -158,6 +169,11 @@ class Companion {
 		if ( this.inactivityHandler ) {
 			this.inactivityHandler.cleanup();
 			this.inactivityHandler = null;
+		}
+
+		if ( this.audioHandler ) {
+			this.audioHandler.cleanup();
+			this.audioHandler = null;
 		}
 
 		this.videoPlayer.cleanup();

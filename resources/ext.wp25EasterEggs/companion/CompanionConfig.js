@@ -19,6 +19,7 @@
  * @property {boolean | undefined} click
  * @property {boolean | undefined} flashlight
  * @property {boolean | undefined} sleep
+ * @property {boolean | undefined} welcomeAudio
  */
 
 /**
@@ -30,15 +31,17 @@
  */
 class CompanionConfig {
 	/**
-	 * @param {string} assetsPath
+	 * @param {string} baseAssetsPath
 	 * @param {string} configName
 	 * @param {Interactions | undefined} interactions
 	 */
-	constructor( assetsPath, configName, interactions ) {
+	constructor( baseAssetsPath, configName, interactions ) {
 		/** @type {boolean} */
 		this.isReducedMotion = window.matchMedia( '(prefers-reduced-motion: reduce)' ).matches;
 		/** @type {string} */
-		this.assetsPath = `${ assetsPath }/${ this.isReducedMotion ? 'image' : 'video' }`;
+		this.baseAssetsPath = baseAssetsPath;
+		/** @type {string} */
+		this.assetsPath = `${ this.baseAssetsPath }/${ this.isReducedMotion ? 'image' : 'video' }`;
 		/** @type {string} */
 		this.extension = this.isReducedMotion ? 'webp' : 'webm';
 		/** @type {string} */

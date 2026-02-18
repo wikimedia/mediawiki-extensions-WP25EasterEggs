@@ -60,6 +60,7 @@ class ClickHandler {
 		}
 
 		this.isPlayingAnimation = true;
+		this.container.dispatchEvent( new CustomEvent( 'companion-click' ) );
 		this.container.style.cursor = 'default';
 
 		// Play click animation once, then return to idle

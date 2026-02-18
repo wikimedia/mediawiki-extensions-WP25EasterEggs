@@ -96,6 +96,7 @@
 				"core/ImagePlayer.js",
 				"core/VideoContainer.js",
 				"core/VideoPlayer.js",
+				"interactions/AudioHandler.js",
 				"interactions/ClickHandler.js",
 				"interactions/InactivityHandler.js",
 				"utils/BreakpointResolver.js",
