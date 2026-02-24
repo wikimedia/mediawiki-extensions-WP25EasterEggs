@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"Artem Titkov"
+			"Artem Titkov",
+			"Dream Indigo"
 		]
 	},
 	"wp25EasterEggs-desc": "A short description of the extension.",
@@ -53,7 +54,7 @@
 	"communityconfiguration-wp25eastereggs-newspaper-allowpages-description": "Description for the additional allow pages field for the Newspaper state.",
 	"communityconfiguration-wp25eastereggs-newspaper-blockpages-label": "Label for the field where administrators can specify pages where the Newspaper state should be blocked.",
 	"communityconfiguration-wp25eastereggs-newspaper-blockpages-description": "Description for the block pages field for the Newspaper state.",
-	"communityconfiguration-wp25eastereggs-book-label": "Label for the \"Book\" state configuration section.",
+	"communityconfiguration-wp25eastereggs-book-label": "Label for the \"Book\" (as in the object) state configuration section.",
 	"communityconfiguration-wp25eastereggs-book-description": "Description explaining the Book state controls which pages can display this Easter egg theme.",
 	"communityconfiguration-wp25eastereggs-book-defaultpages-label": "Label for the setting that controls whether the Book state appears on predefined pages.",
 	"communityconfiguration-wp25eastereggs-book-defaultpages-description": "Description explaining the predefined pages toggle for the Book state.",

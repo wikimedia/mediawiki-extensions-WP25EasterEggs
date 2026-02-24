@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ouclie"
+		]
+	},
+	"wp25eastereggs-enable-0-label": "既閉",
+	"wp25eastereggs-enable-1-label": "既啟",
+	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "既閉",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "既啟",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-enabled-label": "既啟",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-disabled-label": "既閉",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-enabled-label": "既啟",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-disabled-label": "既閉",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-enabled-label": "既啟",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-disabled-label": "既閉",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-enabled-label": "既啟",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-disabled-label": "既閉",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-disabled-label": "既閉",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-enabled-label": "既啟",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-enabled-label": "既啟",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-disabled-label": "既閉",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-enabled-label": "既啟",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-disabled-label": "既閉",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "既啟",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "既閉"
+}

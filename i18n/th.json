@@ -2,6 +2,7 @@
 	"@metadata": {
 		"authors": [
 			"IKristiani",
+			"Patsagorn Y.",
 			"Thailand2763",
 			"Wutkh"
 		]
@@ -21,9 +22,13 @@
 	"communityconfiguration-wp25eastereggs-enableextension-description": "การเปิดใช้งานโหมดวันเกิดจะทำให้ผู้อ่านเลือกเปิดหรือปิดใช้งานการตั้งค่าการมองเห็นกลุ่ม 'โหมดวันเกิด' ได้ เมื่อผู้อ่านเปิดใช้งาน 'โหมดวันเกิด' แล้ว เบบี้โกลบรูปแบบเรียบเฉยจะปรากฏตัวขึ้นบนหน้าเพจตาม<b>ตัวกรองทั่วไป</b><br /><br />ส่วนเบบี้โกลบรูปแบบที่น่าสนใจและสนุกสนานมากกว่านี้อยู่ในการตั้งค่า<b>ตัวกรองแอนิเมชันพิเศษของเบบีโกลบ</b><br /><br />สามารถดูรูปแบบทั้งหมดของเบบีโกลบและสิ่งที่คาดว่าจะพบจากเอนิเมชันได้[https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments/article_configuration ที่นี่]",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "ปิด",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "เปิด",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-label": "ค่าโดยปริยายของโหมดวันเกิด",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-help-text": "เมื่อค่าเริ่มต้นเป็น 'เปิดใช้งาน' ผู้อ่านจะยังสามารถปิดใช้งานได้ในการตั้งค่าการแสดงผล และในทางกลับกันด้วย",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "ปิดใช้งาน",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "เปิดใช้งาน",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "ตัวกรองทั่วไป - ประเภทตัวกรอง",
-	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "ควบคุมลักษณะการแสดงตัวของเบบีโกลบเท่านั้น ไม่ได้ควบคุมการสลับโหมดวันเกิด",
-	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "เปิดให้เบบีโกลบปรากฏตัวได้ทุกหน้า",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "ควบคุมว่าเบบีโกลบจะแสดงที่ตำแหน่งใด แต่ไม่ได้ควบคุมว่าต้องแสดงเบบีโกลบหรือไม่",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "เปิดใช้งานเบบรโกลบให้แสดงตามตัวกรองภาพเคลื่อนไหวพิเศษ",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-allowfilter-label": "เปิดให้เบบีโกลบปรากฏตัวเฉพาะหน้าที่เลือกไว้เท่านั้น",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-blockfilter-label": "ปิดไม่ให้เบบีโกลบปรากฏตัวเฉพาะหน้าที่เลือกไว้เท่านั้น (หมายถึงเปิดให้ปรากฏตัวได้ทุกหน้ายกเว้นหน้าที่เลือก)",
 	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-label": "ตัวกรองทั่วไป - หน้าที่กรองไว้",
@@ -143,5 +148,6 @@
 	"extension-wp25eastereggs-minerva-launch-banner-title": "อ่านกับเบบีโกลบ",
 	"extension-wp25eastereggs-minerva-launch-banner-close-label": "ปิด",
 	"extension-wp25eastereggs-minerva-launch-banner-description": "มาร่วมฉลองวันเกิด 25 ปีของวิกิพีเดียกับเพื่อนซี้สายอ่านคนใหม่ \"เบบีโกลบ\"! ร่วมมือกันเพื่อปลดล็อกเซอร์ไพรส์เจ๋ง ๆ ที่แอบซ่อนอยู่ทั่ววิกิพีเดียกันเถอะ",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "ไปที่การตั้งค่า"
+	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "ไปที่การตั้งค่า",
+	"extension-wp25eastereggs-minerva-learn-more-link-label": "การตั้งค่าโหมดวันเกิด (เบบีโกลบ)"
 }

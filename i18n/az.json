@@ -1,0 +1,31 @@
+{
+	"@metadata": {
+		"authors": [
+			"Nemoralis"
+		]
+	},
+	"wp25EasterEggs-desc": "Bu, Vikipediyanın 25-ci ildönümünü interaktiv Pasxa Yumurtaları əlavə etməklə qeyd etmək uzantısıdır.",
+	"wp25eastereggs-enable-name": "Ad günü rejimi (Körpə Qlobus)",
+	"wp25eastereggs-enable-label": "Ad günü rejimi (Körpə Qlobus)",
+	"wp25eastereggs-enable-description": "Vikipediyanın 25 illiyini [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ şirin oxuma yoldaşınız] ilə birlikdə qeyd edin",
+	"wp25eastereggs-enable-help": "Vikipediyanın 25 illiyini şirin oxuma yoldaşınız ilə birlikdə qeyd edin",
+	"wp25eastereggs-enable-0-label": "Söndür",
+	"wp25eastereggs-enable-1-label": "Yandır",
+	"wp25eastereggs-enable-learn-more-link-label": "Ad günü rejimi haqqında daha ətraflı",
+	"communityconfiguration-wp25eastereggs-title": "Vikipediya 25 'Ad günü rejimi'",
+	"communityconfiguration-wp25eastereggs-description": "Ad günü rejimi, Vikipediyanın 25-ci ildönümünü qeyd etmək üçün nəzərdə tutulmuş məhdud müddətli funksiyadır və aktivləşdirildikdə bayram atmosferi yaradır.",
+	"communityconfiguration-wp25eastereggs-additional-description": "Aktivləşdirildikdə, oxuma yoldaşı kimi fəaliyyət göstərən və istifadəçilərin kəşf etməsi üçün gizli animasiyaları və vizual \"pasxa yumurtası\" sürprizlərini açan ad günü maskotu olan \"Körpə Qlobus\" təqdim olunur. Uzantı aktiv deyilsə, parametr oxucular üçün görünməyəcək. Daha ətraflı məlumatı [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments MetaWiki səhifəsində] əldə edin. Bu xüsusi kampaniya xüsusiyyəti 16 fevral 2026-cı il tarixindən etibarən bir ay ərzində aktiv olacaq. 16 mart 2026-cı ildə bu xüsusiyyəti bütün vikilərdən silinəcək.",
+	"communityconfiguration-wp25eastereggs-enableextension-label": "Ad günü rejimini aktivləşdir",
+	"communityconfiguration-wp25eastereggs-enableextension-description": "\"Ad günü rejimi\"nin aktiv edilməsi oxuculara müvafiq parametri açıb-bağlamağa imkan verəcək. Oxucular \"Ad günü rejimi\"ni aktiv etdikdə, körpə qlobus <b>Qlobal filtr</b>ə uyğun olaraq səhifələrdə görünəcək.<br /><br /> Körpə qlobusun digər, daha maraqlı və əyləncəli versiyaları <b>Baby Globe xüsusi animasiya filtrləri</b> bölməsində konfiqurasiya olunur.<br /><br />\n\nKörpə qlobusun bütün versiyalarına və animasiyalardan nə gözləmək lazım olduğuna [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments/article_configuration burada] baxa bilərsiniz.",
+	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Söndür",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Yandır",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Qlobal filtr - Filtr növü",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "Körpə qlobusun harada göstərilməli olduğunu idarə edir, Ad günü rejiminin görünüş düyməsini idarə etmir.",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Körpə Qlobusun hər yerdə görünməsini aktivləşdir",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-allowfilter-label": "Körpə qlobusunun yalnız seçilmiş səhifələrdə görünməsini aktivləşdir",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-blockfilter-label": "Yalnız seçilmiş səhifələrdə Körpə qlobusu deaktiv et (seçilmiş səhifələr xaricində hər yerdə effektiv şəkildə aktivləşdirin)",
+	"extension-wp25eastereggs-minerva-launch-banner-title": "Körpə qlobus ilə birlikdə oxu",
+	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Bağla",
+	"extension-wp25eastereggs-minerva-launch-banner-description": "Vikipediyanın 25-ci doğum gününü yeni oxuma yoldaşınız olan körpə qlobus ilə qeyd edin! Birlikdə Vikipediyada gizli sürprizləri aça bilərsiniz.",
+	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Parametrlərə get"
+}

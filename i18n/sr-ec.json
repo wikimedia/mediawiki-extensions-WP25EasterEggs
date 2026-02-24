@@ -4,5 +4,12 @@
 			"Milicevic01"
 		]
 	},
-	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-disabled-label": "Онемогућено"
+	"wp25eastereggs-enable-0-label": "Онемогућено",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "Онемогућено",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "Омогућено",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-disabled-label": "Онемогућено",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-disabled-label": "Онемогућено",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-enabled-label": "Омогућено",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-disabled-label": "Онемогућено",
+	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Затвори"
 }
