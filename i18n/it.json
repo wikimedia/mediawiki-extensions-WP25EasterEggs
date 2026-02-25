@@ -18,12 +18,12 @@
 	"wp25eastereggs-enable-learn-more-link-label": "Scopri di più sulla Modalità compleanno",
 	"communityconfiguration-wp25eastereggs-title": "Wikipedia 25 'Modalità compleanno'",
 	"communityconfiguration-wp25eastereggs-description": "La modalità Compleanno è una funzionalità facoltativa a tempo limitato, creata per celebrare il 25º anniversario di Wikipedia creando un'atmosfera festosa quando viene attivata.",
-	"communityconfiguration-wp25eastereggs-additional-description": "Una volta attivata, introduce \"Baby Globe\", una mascotte di compleanno che funge da compagno di lettura e che sblocca animazioni nascoste e sorpresine (\"easter egg\") visive che gli utenti possono scoprire. Se l'estensione non è attiva, l'impostazione relativa all'aspetto non sarà visibile a chi legge. Leggi di più sulla [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments pagina MetaWiki]. Questa speciale funzionalità della campagna sarà disponibile per un mese a partire dal 16 febbraio 2026. Il 16 marzo 2026, rimuoveremo la funzionalità da tutte le wiki.",
+	"communityconfiguration-wp25eastereggs-additional-description": "Una volta attivata, introduce \"Baby Globe\", una mascotte di compleanno che funge da compagno di lettura e che sblocca animazioni nascoste e sorpresine (\"easter egg\") visive che gli utenti possono scoprire. Se l'estensione non è attiva, l'impostazione relativa all'aspetto non sarà visibile a chi legge. Leggi di più sulla [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments pagina MetaWiki]. Questa speciale funzionalità della campagna sarà disponibile a partire dal 16 febbraio 2026. Il 6 aprile 2026, rimuoveremo la funzionalità da tutte le wiki.",
 	"communityconfiguration-wp25eastereggs-enableextension-label": "Abilita la modalità Compleanno",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Disabilitata",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Abilitata",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Filtro globale - Tipo di filtro",
-	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Consenti a Baby Globe di apparire ovunque",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Consenti a Baby Globe di apparire in base ai filtri di animazione speciali di Baby Globe",
 	"communityconfiguration-wp25eastereggs-modeconfiguration-section-label": "Filtri di animazione speciali di Baby Globe",
 	"communityconfiguration-wp25eastereggs-phone-label": "Baby Globe telefono",
 	"communityconfiguration-wp25eastereggs-phone-defaultpages-label": "Abilita su un set predefinito di pagine",
@@ -103,9 +103,5 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Consenti extra",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Aggiunge altre pagine al set predefinito di pagine, se queste sono abilitate. Consente l'accesso solo alle pagine selezionate, se il set predefinito di pagine è disabilitato.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Blocco extra",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Rimuove le pagine dalla combinazione di un set predefinito di pagine con permessi aggiuntivi.",
-	"extension-wp25eastereggs-minerva-launch-banner-title": "Leggi con Baby Globe",
-	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Chiudi",
-	"extension-wp25eastereggs-minerva-launch-banner-description": "Celebra il 25º compleanno di Wikipedia con un nuovo compagno di letture: Baby Globe! Insieme potrete sbloccare delle sorpresine nascoste su Wikipedia.",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Vai alle impostazioni."
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Rimuove le pagine dalla combinazione di un set predefinito di pagine con permessi aggiuntivi."
 }

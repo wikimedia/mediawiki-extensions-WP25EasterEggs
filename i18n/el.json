@@ -1,0 +1,9 @@
+{
+	"@metadata": {
+		"authors": [
+			"Geraki"
+		]
+	},
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "Ενεργοποιημένο",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "Ελέγχει πού θα πρέπει να εμφανίζεται μια έκδοση του Baby Globe, δεν ελέγχει τον διακόπτη εμφάνισης της λειτουργίας Γενέθλια."
+}

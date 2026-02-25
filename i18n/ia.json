@@ -16,12 +16,12 @@
 	"communityconfiguration-wp25eastereggs-description": "Le modo de anniversario es un function temporari e facultative, create pro celebrar le 25<sup>te</sup> anniversario de Wikipedia per generar un atmosphera festive quando es activate.",
 	"communityconfiguration-wp25eastereggs-additional-description": "Quando activate, illo introduce le “globo infante”, un mascotte de anniversario que functiona como companion de lecture e disvela animationes celate e surprisas visual como “ovos de Pascha” que le usatores pote discoperir. Si le extension non es activate, le parametro de apparentia non essera visible al lectores. Apprende plus sur le [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments pagina de Meta-Wiki]. Iste function special de campania essera active a partir del 16 de februario 2026. Le 6 de april 2026, nos removera le function de tote le wikis.",
 	"communityconfiguration-wp25eastereggs-enableextension-label": "Activar le modo de anniversario",
-	"communityconfiguration-wp25eastereggs-enableextension-description": "Activar le modo de anniversario permittera al lectores activar e disactivar un configuration de apparentia titulate ‘Modo de anniversario’. Quando le lectores activa ‘Modo de anniversario’, le Globo infante neutral appare in paginas in function del <b>Filtro Global</b>.<br /><br />Altere versiones plus interessante e ludic del Globo infante se configura in le <b>Filtros special de animation del Globo infante</b>.<br /><br />Vide [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments/article_configuration tote le versiones del Globo infante e qual expectation haber del animationes].",
+	"communityconfiguration-wp25eastereggs-enableextension-description": "Activar le modo de anniversario permittera al lectores activar e disactivar un configuration de apparentia titulate “Modo de anniversario (Globo infante)”. Quando le lectores activa le “Modo de anniversario”, un version del Globo infante appare in paginas como configurate in le Filtros special de animation del Globo infante.",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Disactivate",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Activate",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Filtro global – Typo de filtro",
-	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "Controla ubi le Globo infante debe esser monstrate, ma non controla le commutator de apparentia del Modo de anniversario.",
-	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Facer le Globo infante apparer ubique",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "Controla ubi un version del Globo infante debe esser monstrate, ma non controla le commutator de apparentia del Modo de anniversario.",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Facer le Globo infante apparer secundo le filtros de animation special del Globo infante",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-allowfilter-label": "Facer le Globo infante apparer solmente sur paginas seligite",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-blockfilter-label": "Disactivar le Globo infante solmente sur paginas seligite (activar ubique excepte sur le paginas seligite)",
 	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-label": "Filtro global – Paginas de filtro",
@@ -137,9 +137,5 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Permission extra",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Adde plus paginas al insimul predefinite de paginas si illos es activate. Lo permitte solmente sur le paginas seligite si le insimul predefinite de paginas es disactivate.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Blocage extra",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Remove paginas del insimul predefinite de paginas combinate con le permission extra.",
-	"extension-wp25eastereggs-minerva-launch-banner-title": "Leger con le Globo infante",
-	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Clauder",
-	"extension-wp25eastereggs-minerva-launch-banner-description": "Celebra le 25<sup>te</sup> anniversario de Wikipedia con un nove companion de lectura: le Globo infante! Insimul vos pote disvelar surprisas celate in tote partes de Wikipedia.",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Ir al parametros"
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Remove paginas del insimul predefinite de paginas combinate con le permission extra."
 }

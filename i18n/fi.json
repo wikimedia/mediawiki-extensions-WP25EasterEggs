@@ -82,8 +82,5 @@
 	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "Käytössä",
 	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "Pois käytöstä",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Salli lisäksi sivuilla",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Estä lisäksi sivuilla",
-	"extension-wp25eastereggs-minerva-launch-banner-title": "Lue Baby Globen kanssa",
-	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Sulje",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Mene asetuksiin"
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Estä lisäksi sivuilla"
 }

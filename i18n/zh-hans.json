@@ -138,9 +138,5 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "额外允许",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "如果启用了预定义页面集，则向预定义页面集中添加更多页面。如果禁用了预定义页面集，则仅允许在选定的页面上执行此操作。",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "额外阻止",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "从预定义页面集合与额外允许的页面组合中移除页面。",
-	"extension-wp25eastereggs-minerva-launch-banner-title": "与 Baby Globe 一起阅读",
-	"extension-wp25eastereggs-minerva-launch-banner-close-label": "关闭",
-	"extension-wp25eastereggs-minerva-launch-banner-description": "庆祝维基百科25周年，全新阅读伴侣“Baby Globe”来啦！你们可以一起解锁维基百科中隐藏的惊喜。",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "前往设置"
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "从预定义页面集合与额外允许的页面组合中移除页面。"
 }

@@ -138,9 +138,5 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Izin tambahan",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Tambah halaman ke rangkaian halaman yang telah ditentukan sebelumnya jika halaman tersebut diaktifkan. Hanya mengizinkan pada halaman yang dipilih jika rangkaian halaman yang telah ditentukan sebelumnya dinonaktifkan.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Blok tambahan",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Hapus halaman dari kombinasi rangkaian halaman yang sudah ditentukan sebelumnya yang dikombinasikan dengan izin tambahan.",
-	"extension-wp25eastereggs-minerva-launch-banner-title": "Membaca bersama Bayi Globe",
-	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Tutup",
-	"extension-wp25eastereggs-minerva-launch-banner-description": "Rayakan ulang tahun Wikipedia yang ke-25 dengan teman baca baru: Bayi Globe! Bersama-sama, kalian dapat mengungkap kejutan tersembunyi di Wikipedia.",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Buka Pengaturan"
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Hapus halaman dari kombinasi rangkaian halaman yang sudah ditentukan sebelumnya yang dikombinasikan dengan izin tambahan."
 }

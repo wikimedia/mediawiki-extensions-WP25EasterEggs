@@ -141,9 +141,5 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Autorisation supplémentaire",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Ajoute des pages supplémentaires à l'ensemble de pages prédéfinies si celui-ci est activé. Autorise uniquement certaines pages si l'ensemble de pages prédéfinies est désactivé.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Bloc supplémentaire",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Supprime des pages de la combinaison d'un ensemble prédéfini de pages et d'une autorisation supplémentaire.",
-	"extension-wp25eastereggs-minerva-launch-banner-title": "Lisez avec Bébé Globe",
-	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Fermer",
-	"extension-wp25eastereggs-minerva-launch-banner-description": "Célébrez le 25e anniversaire de Wikipédia avec un nouveau compagnon de lecture : Bébé Globe ! Ensemble, vous pourrez découvrir des surprises cachées sur Wikipédia.",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Accéder aux paramètres"
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Supprime des pages de la combinaison d'un ensemble prédéfini de pages et d'une autorisation supplémentaire."
 }

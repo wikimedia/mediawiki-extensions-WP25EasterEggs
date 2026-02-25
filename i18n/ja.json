@@ -1,7 +1,8 @@
 {
 	"@metadata": {
 		"authors": [
-			"IKristiani"
+			"IKristiani",
+			"YeBoy371"
 		]
 	},
 	"wp25eastereggs-enable-help": "かわいい読書のお供といっしょに、ウィキペディアの25周年をお祝いしよう",
@@ -10,6 +11,8 @@
 	"wp25eastereggs-enable-learn-more-link-label": "誕生日モードについて詳しく知る",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "無効",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "有効",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "無効",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "有効",
 	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-enabled-label": "有効",
 	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-disabled-label": "無効",
 	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-enabled-label": "有効",

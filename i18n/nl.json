@@ -139,9 +139,5 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Extra toestaan",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Voegt meer pagina's toe aan de vooraf gedefinieerde set pagina's als deze zijn ingeschakeld. Staat dit alleen toe op geselecteerde pagina's als de vooraf gedefinieerde set pagina's is uitgeschakeld.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Extra blokkeren",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Verwijdert pagina's uit de combinatie van een vooraf gedefinieerde set pagina's, aangevuld met extra toegestane pagina's.",
-	"extension-wp25eastereggs-minerva-launch-banner-title": "Lezen met Baby Globe",
-	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Sluiten",
-	"extension-wp25eastereggs-minerva-launch-banner-description": "Vier de 25e verjaardag van Wikipedia met een nieuwe leespartner: Baby Globe! Ontdek samen de verborgen verrassingen op Wikipedia.",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Naar de instellingen"
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Verwijdert pagina's uit de combinatie van een vooraf gedefinieerde set pagina's, aangevuld met extra toegestane pagina's."
 }

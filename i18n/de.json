@@ -24,7 +24,7 @@
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "Deaktiviert",
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "Aktiviert",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Globaler Filter – Filtertyp",
-	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "Die Steuerung, wo eine Version des Baby-Globus' angezeigt werden soll, steuert nicht den Schalter für die Darstellung des Geburtstagsmodus.",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "Die Steuerung, wo eine Version des Baby-Globus angezeigt werden soll, steuert nicht den Schalter für die Darstellung des Geburtstagsmodus.",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Baby-Globus aktivieren, damit es gemäß den speziellen Animationsfiltern von Baby-Globus angezeigt wird.",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-allowfilter-label": "Baby-Globus soll nur auf ausgewählten Seiten angezeigt werden",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-blockfilter-label": "Baby-Globus nur auf ausgewählten Seiten deaktivieren (effektiv überall außer auf den ausgewählten Seiten aktivieren).",
@@ -142,9 +142,5 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Fügt dem vordefinierten Seitensatz weitere Seiten hinzu, sofern diese aktiviert sind. Ist der vordefinierte Seitensatz deaktiviert, sind nur ausgewählte Seiten zulässig.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Zusätzliche Sperre",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Entfernt Seiten aus der Kombination aus vordefiniertem Seitensatz und zusätzlichen zulässigen Werten.",
-	"extension-wp25eastereggs-minerva-launch-banner-title": "Lesen mit Baby-Globus",
-	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Schließen",
-	"extension-wp25eastereggs-minerva-launch-banner-description": "Feiere den 25. Geburtstag von Wikipedia mit einem neuen Lesebegleiter: Baby-Globus! Gemeinsam könnt ihr versteckte Überraschungen in der Wikipedia entdecken.",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Einstellungen öffnen",
 	"extension-wp25eastereggs-minerva-learn-more-link-label": "Geburtstagsmodus (Baby-Globus)-Einstellungen"
 }

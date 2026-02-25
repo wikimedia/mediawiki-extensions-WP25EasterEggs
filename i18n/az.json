@@ -23,9 +23,5 @@
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "Körpə qlobusun harada göstərilməli olduğunu idarə edir, Ad günü rejiminin görünüş düyməsini idarə etmir.",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Körpə Qlobusun hər yerdə görünməsini aktivləşdir",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-allowfilter-label": "Körpə qlobusunun yalnız seçilmiş səhifələrdə görünməsini aktivləşdir",
-	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-blockfilter-label": "Yalnız seçilmiş səhifələrdə Körpə qlobusu deaktiv et (seçilmiş səhifələr xaricində hər yerdə effektiv şəkildə aktivləşdirin)",
-	"extension-wp25eastereggs-minerva-launch-banner-title": "Körpə qlobus ilə birlikdə oxu",
-	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Bağla",
-	"extension-wp25eastereggs-minerva-launch-banner-description": "Vikipediyanın 25-ci doğum gününü yeni oxuma yoldaşınız olan körpə qlobus ilə qeyd edin! Birlikdə Vikipediyada gizli sürprizləri aça bilərsiniz.",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Parametrlərə get"
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-blockfilter-label": "Yalnız seçilmiş səhifələrdə Körpə qlobusu deaktiv et (seçilmiş səhifələr xaricində hər yerdə effektiv şəkildə aktivləşdirin)"
 }

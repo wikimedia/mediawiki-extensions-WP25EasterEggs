@@ -138,9 +138,5 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Hiển thị thêm tại",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Thêm các trang vào tập hợp trang được xác định trước nếu các trang đó được bật. Chỉ cho phép thao tác trên các trang được chọn nếu tập hợp trang được xác định trước bị tắt.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Cấm bổ sung tại",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Xóa các trang khỏi tập hợp các trang được xác định trước kết hợp cùng tập hợp cho phép bổ sung.",
-	"extension-wp25eastereggs-minerva-launch-banner-title": "Đọc cùng Baby Globe",
-	"extension-wp25eastereggs-minerva-launch-banner-close-label": "Đóng",
-	"extension-wp25eastereggs-minerva-launch-banner-description": "Hãy cùng chào mừng sinh nhật lần thứ 25 của Wikipedia với một người bạn đồng hành mới: Baby Globe! Cùng nhau, bạn có thể khám phá những điều bất ngờ ẩn giấu khắp Wikipedia.",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "Đi tới Tùy chọn"
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Xóa các trang khỏi tập hợp các trang được xác định trước kết hợp cùng tập hợp cho phép bổ sung."
 }

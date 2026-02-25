@@ -142,9 +142,5 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "अगर पृष्ठों का पूर्वनिर्धारित समुच्चय सक्षम हो तो उस पर और पृष्ठ जोड़ता है। अगर पृष्ठों का पूर्वनिर्धारित समुच्चय अक्षम हो तो केवल चयनित पृष्ठों पर अनुमति देता है।",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "अतिरिक्त अवरोध",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "पृष्ठों का पूर्वनिर्धारित समुच्चय और अतिरिक्त अनुमति के पृष्ठों से पृष्ठ हटाता है।",
-	"extension-wp25eastereggs-minerva-launch-banner-title": "बेबी ग्लोब के साथ पढ़ें",
-	"extension-wp25eastereggs-minerva-launch-banner-close-label": "बंद करें",
-	"extension-wp25eastereggs-minerva-launch-banner-description": "विकिपीडिया के 25वें जन्मदिन का जश्न मनाइए एक नए पठन साथी के साथ: बेबी ग्लोब! साथ मिलकर आप विकिपीडिया में छिपे रहस्यों को उजागर कर सकते हैं।",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "सेटिंग्स में जाएँ",
 	"extension-wp25eastereggs-minerva-learn-more-link-label": "जन्मदिन मोड (बेबी ग्लोब) सेटिंग्स"
 }

@@ -145,9 +145,5 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "เพิ่มหน้าจากกลุ่มของหน้าที่กำหนดไว้ในกรณีที่เปิดการใช้งาน หรืออนุญาตเฉพาะหน้าที่เลือกไว้ในกรณีที่ปิดการใช้งานกลุ่มของหน้าที่กำหนดไว้",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "บล็อกเพิ่มเติม",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "ลบหน้าออกจากกลุ่มของหน้าที่กำหนดไว้ในรายการอนุญาตเพิ่มเติม",
-	"extension-wp25eastereggs-minerva-launch-banner-title": "อ่านกับเบบีโกลบ",
-	"extension-wp25eastereggs-minerva-launch-banner-close-label": "ปิด",
-	"extension-wp25eastereggs-minerva-launch-banner-description": "มาร่วมฉลองวันเกิด 25 ปีของวิกิพีเดียกับเพื่อนซี้สายอ่านคนใหม่ \"เบบีโกลบ\"! ร่วมมือกันเพื่อปลดล็อกเซอร์ไพรส์เจ๋ง ๆ ที่แอบซ่อนอยู่ทั่ววิกิพีเดียกันเถอะ",
-	"extension-wp25eastereggs-minerva-launch-banner-settings-label": "ไปที่การตั้งค่า",
 	"extension-wp25eastereggs-minerva-learn-more-link-label": "การตั้งค่าโหมดวันเกิด (เบบีโกลบ)"
 }
