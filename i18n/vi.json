@@ -6,8 +6,8 @@
 		]
 	},
 	"wp25EasterEggs-desc": "Đây là phần mở rộng chào mừng kỷ niệm 25 năm Wikipedia thành lập bằng cách thêm các mục tương tác thú vị.",
-	"wp25eastereggs-enable-name": "Chế độ sinh nhật (Baby Globe)",
-	"wp25eastereggs-enable-label": "Chế độ sinh nhật (Baby Globe)",
+	"wp25eastereggs-enable-name": "Chế độ sinh nhật (Em bé Globe)",
+	"wp25eastereggs-enable-label": "Chế độ sinh nhật (Em bé Globe)",
 	"wp25eastereggs-enable-description": "Cùng chào mừng 25 năm Wikipedia với một [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ người bạn đồng hành dễ thương]",
 	"wp25eastereggs-enable-help": "Cùng chào mừng 25 năm Wikipedia với một người bạn đọc dễ thương",
 	"wp25eastereggs-enable-0-label": "Tắt",
@@ -138,5 +138,6 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Hiển thị thêm tại",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Thêm các trang vào tập hợp trang được xác định trước nếu các trang đó được bật. Chỉ cho phép thao tác trên các trang được chọn nếu tập hợp trang được xác định trước bị tắt.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Cấm bổ sung tại",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Xóa các trang khỏi tập hợp các trang được xác định trước kết hợp cùng tập hợp cho phép bổ sung."
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Xóa các trang khỏi tập hợp các trang được xác định trước kết hợp cùng tập hợp cho phép bổ sung.",
+	"extension-wp25eastereggs-minerva-learn-more-link-label": "Cài đặt Chế độ sinh nhật (Em bé Globe)"
 }

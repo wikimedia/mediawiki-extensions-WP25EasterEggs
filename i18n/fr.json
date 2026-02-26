@@ -141,5 +141,6 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Autorisation supplémentaire",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Ajoute des pages supplémentaires à l'ensemble de pages prédéfinies si celui-ci est activé. Autorise uniquement certaines pages si l'ensemble de pages prédéfinies est désactivé.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Bloc supplémentaire",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Supprime des pages de la combinaison d'un ensemble prédéfini de pages et d'une autorisation supplémentaire."
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Supprime des pages de la combinaison d'un ensemble prédéfini de pages et d'une autorisation supplémentaire.",
+	"extension-wp25eastereggs-minerva-learn-more-link-label": "Paramètres du Mode anniversaire (Bébé Globe)"
 }

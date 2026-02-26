@@ -138,5 +138,6 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Izin tambahan",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Tambah halaman ke rangkaian halaman yang telah ditentukan sebelumnya jika halaman tersebut diaktifkan. Hanya mengizinkan pada halaman yang dipilih jika rangkaian halaman yang telah ditentukan sebelumnya dinonaktifkan.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Blok tambahan",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Hapus halaman dari kombinasi rangkaian halaman yang sudah ditentukan sebelumnya yang dikombinasikan dengan izin tambahan."
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Hapus halaman dari kombinasi rangkaian halaman yang sudah ditentukan sebelumnya yang dikombinasikan dengan izin tambahan.",
+	"extension-wp25eastereggs-minerva-learn-more-link-label": "Pengaturan Mode Ulang Tahun (Bayi Globe)"
 }

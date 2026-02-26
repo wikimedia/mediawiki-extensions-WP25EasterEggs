@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Amire80",
 			"Artem Titkov",
 			"Dream Indigo"
 		]
@@ -18,7 +19,7 @@
 	"communityconfiguration-wp25eastereggs-description": "Description of the WP25EasterEggs extension configuration section in Community Configuration.",
 	"communityconfiguration-wp25eastereggs-additional-description": "Additional description text for the configuration header, appearing after the main description.",
 	"communityconfiguration-wp25eastereggs-enableextension-label": "Label for the option to enable or disable the WP25EasterEggs extension globally.",
-	"communityconfiguration-wp25eastereggs-enableextension-description": "Description for the extension enable/disable option.",
+	"communityconfiguration-wp25eastereggs-enableextension-description": "Description for the extension enable/disable option. \"Birthday mode (Baby Globe)\" is {{msg-mw|Wp25eastereggs-enable-name}}",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Label for the option to disable the extension.",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Label for the option to enable the extension.",
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-label": "Label for the configuration setting that determines if Birthday Mode is on by default for new users.",

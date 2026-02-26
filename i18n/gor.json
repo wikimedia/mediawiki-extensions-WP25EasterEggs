@@ -1,12 +1,13 @@
 {
 	"@metadata": {
 		"authors": [
+			"IKristiani",
 			"Marwan Mohamad"
 		]
 	},
 	"wp25EasterEggs-desc": "Utiya ekstensi tuwawu moporame dulahu pilotutuwa WIkipedia o-25 wolo u mopoduhengo Easter Egg interaktif.",
-	"wp25eastereggs-enable-name": "Mode dulahu pilotutuwa 🎉",
-	"wp25eastereggs-enable-label": "Mode dulahu pilotutuwa 🎉",
+	"wp25eastereggs-enable-name": "Mode dulahu pilotutuwa (Bayi Globe) 🎉",
+	"wp25eastereggs-enable-label": "Mode dulahu pilotutuwa (Bayi Globe) 🎉",
 	"wp25eastereggs-enable-description": "Moporame 25 lo taawunu Wikipedia wolo [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ cute reading companion]",
 	"wp25eastereggs-enable-help": "Moporame 25 lo taawunu Wikipedia wolo sahabti mobaca taa garapu",
 	"wp25eastereggs-enable-learn-more-link-label": "Pobalajariya po'olo mode dulahu pilotutuwa",

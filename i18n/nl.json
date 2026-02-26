@@ -2,13 +2,14 @@
 	"@metadata": {
 		"authors": [
 			"HanV",
+			"IKristiani",
 			"McDutchie",
 			"Siebrand"
 		]
 	},
 	"wp25EasterEggs-desc": "Dit is een extensie om het 25-jarig bestaan van Wikipedia te vieren met interactieve Easter Eggs.",
-	"wp25eastereggs-enable-name": "Verjaardagsmodus (Baby Globe)",
-	"wp25eastereggs-enable-label": "Verjaardagsmodus (Baby Globe)",
+	"wp25eastereggs-enable-name": "Verjaardagsmodus (Baby Globe) 🎉",
+	"wp25eastereggs-enable-label": "Verjaardagsmodus (Baby Globe) 🎉",
 	"wp25eastereggs-enable-description": "Vier 25 jaar Wikipedia met een [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ schattige leespartner]",
 	"wp25eastereggs-enable-help": "Vier 25 jaar Wikipedia met een schattige leespartner.",
 	"wp25eastereggs-enable-0-label": "Uitgeschakeld",

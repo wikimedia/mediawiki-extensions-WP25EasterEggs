@@ -4,7 +4,9 @@
 			"IKristiani"
 		]
 	},
-	"wp25eastereggs-enable-description": "Celebra los 25 años de Wikipedia con una [[https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ adorable compañía de lectura]",
+	"wp25eastereggs-enable-name": "Modo aniversario (Bebé Globo)",
+	"wp25eastereggs-enable-label": "Modo aniversario (Bebé Globo)",
+	"wp25eastereggs-enable-description": "Celebra los 25 años de Wikipedia con una [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ adorable compañía de lectura]",
 	"wp25eastereggs-enable-help": "Celebra los 25 años de Wikipedia con una adorable compañía de lectura",
 	"wp25eastereggs-enable-0-label": "Desactivado",
 	"wp25eastereggs-enable-1-label": "Activado",
@@ -32,5 +34,6 @@
 	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-enabled-label": "Activado",
 	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-disabled-label": "Desactivado",
 	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "Activado",
-	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "Desactivado"
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "Desactivado",
+	"extension-wp25eastereggs-minerva-learn-more-link-label": "Configuración del Modo aniversario (Bebé Globo)"
 }

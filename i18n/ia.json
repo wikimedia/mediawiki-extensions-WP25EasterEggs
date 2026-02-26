@@ -19,6 +19,10 @@
 	"communityconfiguration-wp25eastereggs-enableextension-description": "Activar le modo de anniversario permittera al lectores activar e disactivar un configuration de apparentia titulate “Modo de anniversario (Globo infante)”. Quando le lectores activa le “Modo de anniversario”, un version del Globo infante appare in paginas como configurate in le Filtros special de animation del Globo infante.",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Disactivate",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Activate",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-label": "Stato predefinite pro le Modo de anniversario",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-help-text": "Quando ‘Activate’ es le option predefinite, le lectores pote totevia disactivar le modo desde le parametros de apparentia, e vice versa.",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "Disactivate",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "Activate",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Filtro global – Typo de filtro",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "Controla ubi un version del Globo infante debe esser monstrate, ma non controla le commutator de apparentia del Modo de anniversario.",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Facer le Globo infante apparer secundo le filtros de animation special del Globo infante",
@@ -137,5 +141,6 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Permission extra",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Adde plus paginas al insimul predefinite de paginas si illos es activate. Lo permitte solmente sur le paginas seligite si le insimul predefinite de paginas es disactivate.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Blocage extra",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Remove paginas del insimul predefinite de paginas combinate con le permission extra."
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Remove paginas del insimul predefinite de paginas combinate con le permission extra.",
+	"extension-wp25eastereggs-minerva-learn-more-link-label": "Parametros del modo de anniversario (Globo infante)"
 }

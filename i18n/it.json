@@ -103,5 +103,6 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Consenti extra",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Aggiunge altre pagine al set predefinito di pagine, se queste sono abilitate. Consente l'accesso solo alle pagine selezionate, se il set predefinito di pagine è disabilitato.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Blocco extra",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Rimuove le pagine dalla combinazione di un set predefinito di pagine con permessi aggiuntivi."
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Rimuove le pagine dalla combinazione di un set predefinito di pagine con permessi aggiuntivi.",
+	"extension-wp25eastereggs-minerva-learn-more-link-label": "Impostazioni modalità compleanno (Baby Globe)"
 }

@@ -66,5 +66,6 @@
 	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "Zapnuto",
 	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "Vypnuto",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Extra povoleno",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Extra blok"
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Extra blok",
+	"extension-wp25eastereggs-minerva-learn-more-link-label": "Nastavení narozeninového režimu (Baby Globe)"
 }

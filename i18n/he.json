@@ -1,0 +1,27 @@
+{
+	"@metadata": {
+		"authors": [
+			"Amire80"
+		]
+	},
+	"wp25EasterEggs-desc": "זאת הרחבה לחגיגת יום הולדת 25 של ויקיפדיה על־ידי הוספת ביצי פסחא אינטראקטיביות.",
+	"wp25eastereggs-enable-name": "מצב יום הולדת (בייבי גלובוס)",
+	"wp25eastereggs-enable-label": "מצב יום הולדת (בייבי גלובוס)",
+	"wp25eastereggs-enable-description": "חגיגת 25 שנה לוויקיפדיה עם [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ שותף חמוד לקריאה]",
+	"wp25eastereggs-enable-help": "חגיגת 25 שנה לוויקיפדיה עם שותף חמוד לקריאה",
+	"wp25eastereggs-enable-0-label": "כבוי",
+	"wp25eastereggs-enable-1-label": "מופעל",
+	"wp25eastereggs-enable-learn-more-link-label": "מידע נוסף על מצב יום הולדת",
+	"communityconfiguration-wp25eastereggs-title": "מצב יום הולדת של ויקיפדיה 25",
+	"communityconfiguration-wp25eastereggs-description": "מצב יום הולדת הוא תכונה מוגבלת בזמן שניתן להצטרף אליה, ושנועדה לחגוג 25 שנה לוויקיפדיה על־ידי יצירת אווירה חגיגית בעת הפעלתה.",
+	"communityconfiguration-wp25eastereggs-additional-description": "כאשר ההרחבה מופעלת, היא מציגה את \"בייבי גלובוס\", קמע יום הולדת, המשמש כשותף לקריאה ופותח הנפשות נסתרות והפתעות \"ביצת פסחא\" חזותיות לגילוי המשתמשים. אם ההרחבה אינה מופעלת, הגדרת המראה לא תהיה גלויה לקוראים. למידע נוסף נא לבקר בדף [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments MetaWiki]. תכונת הקמפיין המיוחדת הזאת תהיה זמינה מ־16 בפברואר 2026. ב־6 באפריל 2026, נסיר את התכונה מכל אתרי הוויקי.",
+	"communityconfiguration-wp25eastereggs-enableextension-label": "הפעלת מצב יום הולדת",
+	"communityconfiguration-wp25eastereggs-enableextension-description": "הפעלת מצב יום הולדת תאפשר לקוראים להפעיל ולכבות הגדרת מראה שכותרתה \"מצב יום הולדת (בייבי גלובוס)\". כאשר קוראים מפעילים \"מצב יום הולדת\", גרסה של בייבי גלובוס מופיעה בדפים לפי ההגדרה במסנני הההנפשה המיוחדים של בייבי גלובוס.",
+	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "כבויה",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "מופעלת",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-label": "מצב ברירת מחדל עבור מצב יום הולדת",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-help-text": "כאשר ברירת המחדל היא \"מופעל\", הקוראים עדיין יכולים לכבות את המצב מהגדרות המראה ולהפך.",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "כבויה",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "מופעלת",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "מסנן גלובלי – סוג המסנן"
+}
