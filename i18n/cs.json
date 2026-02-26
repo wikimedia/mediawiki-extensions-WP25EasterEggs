@@ -1,7 +1,9 @@
 {
 	"@metadata": {
 		"authors": [
-			"IKristiani"
+			"IKristiani",
+			"WikipedistaOndra"
 		]
-	}
+	},
+	"wp25EasterEggs-desc": "Toto je rozšíření k oslavě 25. narozenin Wikipedie přidáním interaktivních velikonočních vajíček."
 }

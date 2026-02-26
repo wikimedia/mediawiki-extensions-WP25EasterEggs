@@ -1,8 +1,10 @@
 {
 	"@metadata": {
 		"authors": [
-			"Siebrand"
+			"Siebrand",
+			"HanV",
+			"McDutchie"
 		]
 	},
-	"wp25EasterEggs-desc": "Deze uitbreiding viert het 25-jarig bestaan van Wikipedia met interactieve Easter Eggs."
+	"wp25EasterEggs-desc": "Dit is een extensie om het 25-jarig bestaan van Wikipedia te vieren met interactieve Easter Eggs."
 }
