@@ -23,5 +23,12 @@
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-help-text": "כאשר ברירת המחדל היא \"מופעל\", הקוראים עדיין יכולים לכבות את המצב מהגדרות המראה ולהפך.",
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "כבויה",
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "מופעלת",
-	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "מסנן גלובלי – סוג המסנן"
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "מסנן גלובלי – סוג המסנן",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "מופעל",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "כבוי",
+	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "להרשות גם כאן",
+	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "הוספת דפים לקבוצת הדפים המוגדרת מראש אם הם מופעלים. מתיר רק בדפים נבחרים אם קבוצת הדפים המוגדרת מראש מושבתת.",
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "לחסום גם כאן",
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "הסרת דפים משילוב של קבוצת דפים מוגדרת מראש בשילוב \"להרשות גם כאן\".",
+	"extension-wp25eastereggs-minerva-learn-more-link-label": "הגדרות מצב יום הולדת (בייבי גלובוס)"
 }
