@@ -5,6 +5,7 @@
 			"Dream Indigo",
 			"IKristiani",
 			"Il cappuccione",
+			"Neonsn0w",
 			"ZioNicco"
 		]
 	},
@@ -22,6 +23,7 @@
 	"communityconfiguration-wp25eastereggs-enableextension-label": "Abilita la modalità Compleanno",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Disabilitata",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Abilitata",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-label": "Stato predefinito per la modalità Compleanno",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Filtro globale - Tipo di filtro",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Consenti a Baby Globe di apparire in base ai filtri di animazione speciali di Baby Globe",
 	"communityconfiguration-wp25eastereggs-modeconfiguration-section-label": "Filtri di animazione speciali di Baby Globe",
