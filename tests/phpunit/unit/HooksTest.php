@@ -66,6 +66,11 @@ class HooksTest extends \MediaWikiUnitTestCase {
 			->willReturn( $titleMock );
 		$outputPageMock->method( 'getActionName' )
 			->willReturn( 'view' );
+		$outputPageMock->method( 'getRequest' )
+			->willReturn( $webRequestMock );
+		$webRequestMock->method( 'getCheck' )
+			->with( 'oldid' )
+			->willReturn( false );
 
 		$outputPageMock->expects( $this->once() )
 			->method( 'addModules' )

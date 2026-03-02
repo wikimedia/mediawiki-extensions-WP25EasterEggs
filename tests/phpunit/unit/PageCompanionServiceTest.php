@@ -6,6 +6,7 @@ use MediaWiki\Config\HashConfig;
 use MediaWiki\Extension\WP25EasterEggs\PageCompanionService;
 use MediaWiki\MainConfigNames;
 use MediaWiki\Output\OutputPage;
+use MediaWiki\Request\WebRequest;
 use MediaWiki\Title\Title;
 
 /**
@@ -66,6 +67,38 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 			->willReturn( $titleMock );
 		$outputPageMock->method( 'getActionName' )
 			->willReturn( 'view' );
+		$requestMock = $this->createMock( WebRequest::class );
+		$requestMock->method( 'getCheck' )->willReturn( false );
+		$outputPageMock->method( 'getRequest' )->willReturn( $requestMock );
+
+		$result = $service->getCompanionConfigHtmlClasses( $outputPageMock );
+
+		$this->assertSame( [], $result );
+	}
+
+	/**
+	 * @covers \MediaWiki\Extension\WP25EasterEggs\PageCompanionService::getCompanionConfigHtmlClasses()
+	 */
+	public function testGetCompanionConfigHtmlClassesWhenIsDiffPage() {
+		$configMock = new HashConfig( [ MainConfigNames::ExtensionDirectory => '' ] );
+		$communityConfigMock = new HashConfig();
+
+		$service = new PageCompanionService( $configMock, $communityConfigMock );
+
+		$titleMock = $this->createMock( Title::class );
+		$titleMock->method( 'getNamespace' )
+			->willReturn( NS_MAIN );
+		$titleMock->method( 'isContentPage' )
+			->willReturn( true );
+
+		$outputPageMock = $this->createMock( OutputPage::class );
+		$outputPageMock->method( 'getTitle' )
+			->willReturn( $titleMock );
+		$outputPageMock->method( 'getActionName' )
+			->willReturn( 'view' );
+		$requestMock = $this->createMock( WebRequest::class );
+		$requestMock->method( 'getCheck' )->willReturn( true );
+		$outputPageMock->method( 'getRequest' )->willReturn( $requestMock );
 
 		$result = $service->getCompanionConfigHtmlClasses( $outputPageMock );
 
@@ -106,6 +139,9 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 			->willReturn( $titleMock );
 		$outputPageMock->method( 'getActionName' )
 			->willReturn( 'view' );
+		$requestMock = $this->createMock( WebRequest::class );
+		$requestMock->method( 'getCheck' )->willReturn( false );
+		$outputPageMock->method( 'getRequest' )->willReturn( $requestMock );
 
 		$result = $service->getCompanionConfigHtmlClasses( $outputPageMock );
 
@@ -141,6 +177,9 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 			->willReturn( $titleMock );
 		$outputPageMock->method( 'getActionName' )
 			->willReturn( 'view' );
+		$requestMock = $this->createMock( WebRequest::class );
+		$requestMock->method( 'getCheck' )->willReturn( false );
+		$outputPageMock->method( 'getRequest' )->willReturn( $requestMock );
 
 		$result = $service->getCompanionConfigHtmlClasses( $outputPageMock );
 
@@ -175,6 +214,9 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 			->willReturn( $titleMock );
 		$outputPageMock->method( 'getActionName' )
 			->willReturn( 'view' );
+		$requestMock = $this->createMock( WebRequest::class );
+		$requestMock->method( 'getCheck' )->willReturn( false );
+		$outputPageMock->method( 'getRequest' )->willReturn( $requestMock );
 
 		$result = $service->getCompanionConfigHtmlClasses( $outputPageMock );
 
@@ -209,6 +251,9 @@ class PageCompanionServiceTest extends \MediaWikiUnitTestCase {
 			->willReturn( $titleMock );
 		$outputPageMock->method( 'getActionName' )
 			->willReturn( 'view' );
+		$requestMock = $this->createMock( WebRequest::class );
+		$requestMock->method( 'getCheck' )->willReturn( false );
+		$outputPageMock->method( 'getRequest' )->willReturn( $requestMock );
 
 		$result = $service->getCompanionConfigHtmlClasses( $outputPageMock );
 

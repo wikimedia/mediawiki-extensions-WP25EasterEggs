@@ -96,7 +96,9 @@ class PageCompanionService {
 		$isMainNamespace = $title->getNamespace() === NS_MAIN;
 		$isContent = $title->isContentPage();
 		$isViewAction = $out->getActionName() === "view";
-		return $isMainNamespace && $isContent && $isViewAction;
+		$isDiff = $out->getRequest()->getCheck( 'oldid' );
+
+		return $isMainNamespace && $isContent && $isViewAction && !$isDiff;
 	}
 
 	/**
