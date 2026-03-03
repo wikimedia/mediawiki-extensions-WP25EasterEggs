@@ -3,10 +3,11 @@
 		"authors": [
 			"Amire80",
 			"Artem Titkov",
-			"Dream Indigo"
+			"Dream Indigo",
+			"Eduardoaddad"
 		]
 	},
-	"wp25EasterEggs-desc": "A short description of the extension.",
+	"wp25EasterEggs-desc": "This is an extension to celebrate Wikipedia's 25th birthday by adding interactive Easter Eggs.",
 	"wp25eastereggs-enable-name": "Label for the Birthday mode feature toggle in the Appearance menu and Settings page. Includes a party emoji (🎉).",
 	"wp25eastereggs-enable-label": "Label for the Birthday mode feature toggle in the Appearance Preferences page on both desktop and mobile interfaces. Includes a party emoji (🎉).",
 	"wp25eastereggs-enable-description": "Description explaining the Birthday mode feature, shown in the mobile Settings page.",
