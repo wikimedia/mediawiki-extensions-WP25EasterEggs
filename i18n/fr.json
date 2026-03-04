@@ -5,7 +5,8 @@
 			"Cosmophilus",
 			"Goombiis",
 			"IKristiani",
-			"Pa2chant.bis"
+			"Pa2chant.bis",
+			"VIGNERON"
 		]
 	},
 	"wp25EasterEggs-desc": "Ceci est une extension pour célébrer le 25e anniversaire de Wikipédia en ajoutant des œufs de Pâques interactifs.",
@@ -13,7 +14,7 @@
 	"wp25eastereggs-enable-label": "Mode anniversaire (Bébé Globe)",
 	"wp25eastereggs-enable-description": "Célébrez les 25 ans de Wikipédia avec un [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ adorable compagnon de lecture]",
 	"wp25eastereggs-enable-help": "Célébrez les 25 ans de Wikipédia avec un adorable compagnon de lecture",
-	"wp25eastereggs-enable-0-label": "Desactivé",
+	"wp25eastereggs-enable-0-label": "Désactivé",
 	"wp25eastereggs-enable-1-label": "Activé",
 	"wp25eastereggs-enable-learn-more-link-label": "En savoir plus sur le mode anniversaire",
 	"communityconfiguration-wp25eastereggs-title": "\"Mode anniversaire\" des 25 ans de Wiipédia",
