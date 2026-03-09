@@ -1,0 +1,11 @@
+{
+	"@metadata": {
+		"authors": [
+			"Ceirios"
+		]
+	},
+	"communityconfiguration-wp25eastereggs-enableextension-description": "Bydd galluogi Modd Pen-blwydd yn galluogi darllenwyr i droi gosodiad ymddangosiad o'r enw \"Modd Pen-blwydd (Babi Glôb)\" ymlaen ac i ffwrdd. Pan fydd darllenwyr yn galluogi \"Modd Pen-blwydd\", mae fersiwn o Babi Glôb yn ymddangos ar dudalennau fel y'i osodwyd yn hidlwyr animeiddio arbennig Babi Glôb.",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-label": "Gosodiad diofyn ar gyfer modd Pen-blwydd",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Galluogi Babi Glôb i ymddangos yn ôl hidlwyr animeiddio arbennig Babi Glôb",
+	"extension-wp25eastereggs-minerva-learn-more-link-label": "Gosodiadau Modd Pen-blwydd (Babi Glôb)"
+}
