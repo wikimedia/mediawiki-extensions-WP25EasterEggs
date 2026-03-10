@@ -17,7 +17,7 @@
 	"wp25eastereggs-enable-0-label": "Désactivé",
 	"wp25eastereggs-enable-1-label": "Activé",
 	"wp25eastereggs-enable-learn-more-link-label": "En savoir plus sur le mode anniversaire",
-	"communityconfiguration-wp25eastereggs-title": "\"Mode anniversaire\" des 25 ans de Wiipédia",
+	"communityconfiguration-wp25eastereggs-title": "\"Mode anniversaire\" des 25 ans de Wikipédia",
 	"communityconfiguration-wp25eastereggs-description": "Le mode anniversaire est une fonctionnalité optionnelle à durée limitée conçue pour célébrer le 25e anniversaire de Wikipédia en créant une ambiance festive lorsqu'elle est activée.",
 	"communityconfiguration-wp25eastereggs-additional-description": "Une fois activée, cette extension introduit « Baby Globe », une mascotte d'anniversaire qui accompagne la lecture et débloque des animations cachées et des surprises visuelles à découvrir, de type \"Easter egg\". Si l'extension n'est pas activée, cette apparence optionnelle restera invisible. Pour en savoir plus, consultez [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments la page MetaWiki]. Cette fonctionnalité spéciale sera disponible pendant un mois à partir du 16 février 2026. Elle sera retirée de tous les wikis le 16 mars 2026.",
 	"communityconfiguration-wp25eastereggs-enableextension-label": "Activer le Mode anniversaire",
