@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"Davidzdh",
 			"Ouclie"
 		]
 	},
@@ -15,7 +16,7 @@
 	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-enabled-label": "既啟",
 	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-disabled-label": "既閉",
 	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-enabled-label": "既啟",
-	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-disabled-label": "既閉",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-disabled-label": "廢",
 	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-disabled-label": "既閉",
 	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-enabled-label": "既啟",
 	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-enabled-label": "既啟",

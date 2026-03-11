@@ -1,0 +1,17 @@
+{
+	"@metadata": {
+		"authors": [
+			"Jon Harald Søby"
+		]
+	},
+	"wp25EasterEggs-desc": "Denne utvidelsen feirer Wikipedias 25-årsdag ved å legge til interaktive påskeegg.",
+	"wp25eastereggs-enable-name": "Bursdagsmodus (Baby Globe)",
+	"wp25eastereggs-enable-label": "Bursdagsmodus (Baby Globe)",
+	"wp25eastereggs-enable-description": "Feir Wikipedias 25-årsjubileum med en [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ søt maskot]",
+	"wp25eastereggs-enable-help": "Feir Wikipedias 25-årsjubileum med en søt maskot",
+	"wp25eastereggs-enable-0-label": "Deaktivert",
+	"wp25eastereggs-enable-1-label": "Aktivert",
+	"wp25eastereggs-enable-learn-more-link-label": "Lær mer om bursdagsmodus",
+	"communityconfiguration-wp25eastereggs-title": "«Bursdagsmodus» for Wikipedias 25-årsjubileum",
+	"communityconfiguration-wp25eastereggs-description": "Bursdagsmodusen er en tidsbegrenset funksjon designet for å feire Wikipedias 25-årsjubileum ved å skape en festlig atmosfære når den aktiveres."
+}
