@@ -22,6 +22,8 @@
 	"communityconfiguration-wp25eastereggs-enableextension-description": "Door de verjaardagsmodus in te schakelen, kunnen lezers een weergave-instelling met de titel 'Verjaardagsmodus (Baby Globe)' in- en uitschakelen. Wanneer lezers de 'Verjaardagsmodus' inschakelen, verschijnt een versie van Baby Globe op de pagina's zoals ingesteld in de speciale animatiefilters van Baby Globe.",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Uitgeschakeld",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Ingeschakeld",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "Uitgeschakeld",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "Ingeschakeld",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Globaal filter - Filtertype",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "Hiermee wordt bepaald waar een versie van Baby Globe moet worden weergegeven en dit heeft geen invloed op de schakelaar voor de weergave van de Verjaardagsmodus.",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "Baby Globe-animatie inschakelen, zodat deze wordt weergegeven volgens de speciale Baby Globe-animatiefilters.",
