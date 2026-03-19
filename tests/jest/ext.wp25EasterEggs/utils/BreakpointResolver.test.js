@@ -96,6 +96,26 @@ describe( 'BreakpointResolver', () => {
 			const mqLg = mockQueries[ '(min-width: 1120px)' ];
 			expect( mqLg.addEventListener ).toHaveBeenCalledWith( 'change', expect.any( Function ) );
 		} );
+
+		it( 'should fallback to addListener if addEventListener is undefined', () => {
+			mockMatchMedia.mockImplementation( ( query ) => {
+				const mq = {
+					matches: false,
+					media: query,
+					addListener: jest.fn(),
+					removeListener: jest.fn()
+				};
+				mockQueries[ query ] = mq;
+				return mq;
+			} );
+
+			breakpointResolver = new BreakpointResolver( onChange );
+			breakpointResolver.setup();
+
+			const mqLg = mockQueries[ '(min-width: 1120px)' ];
+			expect( mqLg.addEventListener ).toBeUndefined();
+			expect( mqLg.addListener ).toHaveBeenCalledWith( expect.any( Function ) );
+		} );
 	} );
 
 	describe( 'breakpoint changes', () => {
@@ -149,6 +169,30 @@ describe( 'BreakpointResolver', () => {
 			breakpointResolver.cleanup();
 
 			expect( mqLg.removeEventListener ).toHaveBeenCalledWith( 'change', expect.any( Function ) );
+			expect( breakpointResolver.removeListener ).toBeNull();
+		} );
+
+		it( 'should fallback to removeListener if addEventListener is undefined', () => {
+			mockMatchMedia.mockImplementation( ( query ) => {
+				const mq = {
+					matches: false,
+					media: query,
+					addListener: jest.fn(),
+					removeListener: jest.fn()
+				};
+				mockQueries[ query ] = mq;
+				return mq;
+			} );
+
+			breakpointResolver = new BreakpointResolver( onChange );
+			breakpointResolver.setup();
+
+			const mqLg = mockQueries[ '(min-width: 1120px)' ];
+
+			breakpointResolver.cleanup();
+
+			expect( mqLg.removeEventListener ).toBeUndefined();
+			expect( mqLg.removeListener ).toHaveBeenCalledWith( expect.any( Function ) );
 			expect( breakpointResolver.removeListener ).toBeNull();
 		} );
 

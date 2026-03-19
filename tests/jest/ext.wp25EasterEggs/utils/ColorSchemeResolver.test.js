@@ -103,6 +103,25 @@ describe( 'ColorSchemeResolver', () => {
 			// Assert
 			expect( colorSchemeResolver.removeOsListener ).toBeInstanceOf( Function );
 		} );
+
+		it( 'should fallback to addListener if addEventListener is undefined', () => {
+			// Arrange
+			const mockLegacyMatchMedia = {
+				matches: false,
+				addListener: jest.fn(),
+				removeListener: jest.fn()
+			};
+			window.matchMedia = jest.fn().mockReturnValue( mockLegacyMatchMedia );
+			colorSchemeResolver = new ColorSchemeResolver( onChange );
+
+			// Act
+			colorSchemeResolver.setup();
+
+			// Assert
+			expect( window.matchMedia ).toHaveBeenCalledWith( '(prefers-color-scheme: dark)' );
+			expect( mockLegacyMatchMedia.addListener )
+				.toHaveBeenCalledWith( expect.any( Function ) );
+		} );
 	} );
 
 	describe( 'handleOsColorSchemeChange', () => {
@@ -218,6 +237,25 @@ describe( 'ColorSchemeResolver', () => {
 
 			// Assert
 			expect( mockMatchMedia.removeEventListener ).toHaveBeenCalledWith( 'change', expect.any( Function ) );
+		} );
+
+		it( 'should fallback to removeListener if addEventListener is undefined', () => {
+			// Arrange
+			const mockLegacyMatchMedia = {
+				matches: false,
+				addListener: jest.fn(),
+				removeListener: jest.fn()
+			};
+			window.matchMedia = jest.fn().mockReturnValue( mockLegacyMatchMedia );
+			colorSchemeResolver = new ColorSchemeResolver( onChange );
+			colorSchemeResolver.setup();
+
+			// Act
+			colorSchemeResolver.cleanup();
+
+			// Assert
+			expect( mockLegacyMatchMedia.removeListener )
+				.toHaveBeenCalledWith( expect.any( Function ) );
 		} );
 
 		it( 'should set removeOsListener to null', () => {
