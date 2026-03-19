@@ -27,10 +27,17 @@ class ColorSchemeResolver {
 	setup() {
 		const boundHandleOsColorSchemeChange = this.handleOsColorSchemeChange.bind( this );
 		const osColorSchemeMediaQuery = window.matchMedia( '(prefers-color-scheme: dark)' );
-		osColorSchemeMediaQuery.addEventListener( 'change', boundHandleOsColorSchemeChange );
-		this.removeOsListener = () => {
-			osColorSchemeMediaQuery.removeEventListener( 'change', boundHandleOsColorSchemeChange );
-		};
+		if ( osColorSchemeMediaQuery.addEventListener ) {
+			osColorSchemeMediaQuery.addEventListener( 'change', boundHandleOsColorSchemeChange );
+			this.removeOsListener = () => {
+				osColorSchemeMediaQuery.removeEventListener( 'change', boundHandleOsColorSchemeChange );
+			};
+		} else {
+			osColorSchemeMediaQuery.addListener( boundHandleOsColorSchemeChange );
+			this.removeOsListener = () => {
+				osColorSchemeMediaQuery.removeListener( boundHandleOsColorSchemeChange );
+			};
+		}
 	}
 
 	/**

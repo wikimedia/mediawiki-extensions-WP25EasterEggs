@@ -34,8 +34,13 @@ class BreakpointResolver {
 		};
 
 		// Add listener for breakpoint changes
-		mq.addEventListener( 'change', listener );
-		this.removeListener = () => mq.removeEventListener( 'change', listener );
+		if ( mq.addEventListener ) {
+			mq.addEventListener( 'change', listener );
+			this.removeListener = () => mq.removeEventListener( 'change', listener );
+		} else {
+			mq.addListener( listener );
+			this.removeListener = () => mq.removeListener( listener );
+		}
 
 		// Set initial breakpoint
 		updateState( mq.matches );
