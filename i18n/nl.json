@@ -22,6 +22,8 @@
 	"communityconfiguration-wp25eastereggs-enableextension-description": "Door de verjaardagsmodus in te schakelen, kunnen lezers een weergave-instelling met de titel 'Verjaardagsmodus (Baby Globe)' in- en uitschakelen. Wanneer lezers de 'Verjaardagsmodus' inschakelen, verschijnt een versie van Baby Globe op de pagina's zoals ingesteld in de speciale animatiefilters van Baby Globe.",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Uitgeschakeld",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Ingeschakeld",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-label": "Standaardstatus voor de verjaardagsmodus",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-help-text": "Wanneer deze functie standaard is ingeschakeld, kunnen lezers de modus nog steeds uitschakelen via de uiterlijk-instellingen en omgekeerd.",
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "Uitgeschakeld",
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "Ingeschakeld",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Globaal filter - Filtertype",
@@ -142,5 +144,6 @@
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-label": "Extra toestaan",
 	"communityconfiguration-wp25eastereggs-balloons-allowpages-description": "Voegt meer pagina's toe aan de vooraf gedefinieerde set pagina's als deze zijn ingeschakeld. Staat dit alleen toe op geselecteerde pagina's als de vooraf gedefinieerde set pagina's is uitgeschakeld.",
 	"communityconfiguration-wp25eastereggs-balloons-blockpages-label": "Extra blokkeren",
-	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Verwijdert pagina's uit de combinatie van een vooraf gedefinieerde set pagina's, aangevuld met extra toegestane pagina's."
+	"communityconfiguration-wp25eastereggs-balloons-blockpages-description": "Verwijdert pagina's uit de combinatie van een vooraf gedefinieerde set pagina's, aangevuld met extra toegestane pagina's.",
+	"extension-wp25eastereggs-minerva-learn-more-link-label": "Instellingen voor de verjaardagsmodus (Baby Globe)"
 }
