@@ -1,0 +1,40 @@
+{
+	"@metadata": {
+		"authors": [
+			"JeffreyKim"
+		]
+	},
+	"wp25eastereggs-enable-name": "生日模式（Baby Globe）",
+	"wp25eastereggs-enable-label": "生日模式（Baby Globe）",
+	"wp25eastereggs-enable-0-label": "停用",
+	"wp25eastereggs-enable-1-label": "啟用",
+	"wp25eastereggs-enable-learn-more-link-label": "了解多啲關於生日模式",
+	"communityconfiguration-wp25eastereggs-enableextension-description": "啟用生日模式後，讀者可以自行開關一個叫做「生日模式（Baby Globe）」嘅外觀設定。當讀者開啟「生日模式」時，個版會根據返Baby Globe特別動畫過濾器設定顯示一個Baby Globe版本。",
+	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "停用",
+	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "啟用",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "停用",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "啟用",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-enabled-label": "啟用",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-disabled-label": "停用",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-enabled-label": "啟用",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-disabled-label": "停用",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-enabled-label": "啟用",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-disabled-label": "停用",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-enabled-label": "啟用",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-disabled-label": "停用",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-enabled-label": "啟用",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-disabled-label": "停用",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-enabled-label": "啟用",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-disabled-label": "停用",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-enabled-label": "啟用",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-disabled-label": "停用",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-enabled-label": "啟用",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-disabled-label": "停用",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-enabled-label": "啟用",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-disabled-label": "停用",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-enabled-label": "啟用",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-disabled-label": "停用",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "啟用",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "停用",
+	"extension-wp25eastereggs-minerva-learn-more-link-label": "生日模式（Baby Globe）設定"
+}
