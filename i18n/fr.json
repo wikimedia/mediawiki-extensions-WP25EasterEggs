@@ -6,6 +6,7 @@
 			"Goombiis",
 			"IKristiani",
 			"Pa2chant.bis",
+			"SleaY",
 			"VIGNERON"
 		]
 	},
@@ -24,6 +25,7 @@
 	"communityconfiguration-wp25eastereggs-enableextension-description": "L'activation du mode Anniversaire permettra aux lecteurs d'activer ou de désactiver une option d'affichage intitulée « Mode Anniversaire ». Lorsque ce mode est activé, l'icône Bébé Globe Neutre apparaît sur les pages en fonction du <b>filtre global</b> .<br /><br /> D'autres versions plus intéressantes et ludiques de Bébé Globe sont configurées dans les <b>filtres d'animation spéciaux de Bébé Globe</b> .<br /><br /> Découvrez toutes les versions de Bébé Globe et ce que vous pouvez attendre des animations [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments/article_configuration ici].",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Désactivé",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Activé",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-label": "État par défaut pour le mode Anniversaire",
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "Désactivé",
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "Activé",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Filtre global - Type de filtre",
