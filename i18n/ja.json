@@ -2,13 +2,22 @@
 	"@metadata": {
 		"authors": [
 			"IKristiani",
+			"Omotecho",
 			"YeBoy371"
 		]
 	},
+	"wp25EasterEggs-desc": "この拡張機能はインタラクティブな「イースターエッグ」を追加し、\nウィキペディア25周年を祝います。",
+	"wp25eastereggs-enable-name": "誕生日モード（ベビー・グローブ）",
+	"wp25eastereggs-enable-label": "誕生日モード（ベビー・グローブ）",
+	"wp25eastereggs-enable-description": "ウィキペディア25周年を、[https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ かわいい読書のお供と一緒にお祝いしましょう]！",
 	"wp25eastereggs-enable-help": "かわいい読書のお供といっしょに、ウィキペディアの25周年をお祝いしよう",
 	"wp25eastereggs-enable-0-label": "無効",
 	"wp25eastereggs-enable-1-label": "有効",
 	"wp25eastereggs-enable-learn-more-link-label": "誕生日モードについて詳しく知る",
+	"communityconfiguration-wp25eastereggs-title": "ウィキペディア25〈誕生日モード〉",
+	"communityconfiguration-wp25eastereggs-description": "誕生日モードは、ウィキペディアの25周年を記念して期間限定で提供される選択制の機能（オプトイン）で、有効にするとお祝いムードを盛り上げます。",
+	"communityconfiguration-wp25eastereggs-additional-description": "オンにすると「ベビー・グローブ」が登場して読書のお供をしてくれたり、利用者の皆さんには隠れアニメーションなど、目で楽しむ「イースターエッグ」のサプライズ探しができます。この拡張機能はオンにしないままだと、外観設定を読者に表示見しなくなります。詳しくは[https://meta。wikimedia。org/wiki/Wikipedia_25/Easter_egg_experiments メタウィキ]のこちら。特別キャンペーンのこの機能は2026年2月16日から配信されます。この機能はウィキメディアの全プロジェクトから2026年4月6日付で除去の予定です。",
+	"communityconfiguration-wp25eastereggs-enableextension-label": "誕生日モードを有効にする",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "無効",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "有効",
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "無効",
