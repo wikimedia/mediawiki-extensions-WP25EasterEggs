@@ -2,11 +2,12 @@
 	"@metadata": {
 		"authors": [
 			"IKristiani",
+			"Meno25",
 			"Mohammed Qays"
 		]
 	},
-	"wp25eastereggs-enable-name": "نمط عيد الميلاد",
-	"wp25eastereggs-enable-label": "نمط عيد الميلاد",
+	"wp25eastereggs-enable-name": "وضع عيد الميلاد (بيبي غلوب)",
+	"wp25eastereggs-enable-label": "وضع عيد الميلاد (بيبي غلوب)",
 	"wp25eastereggs-enable-help": "احتفل بمرور 25 عامًا على إنشاء ويكيبيديا برفقة شريك قراءة لطيف",
 	"wp25eastereggs-enable-0-label": "مُعطل",
 	"wp25eastereggs-enable-1-label": "مُفعّل",
