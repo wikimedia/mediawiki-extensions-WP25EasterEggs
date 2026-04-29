@@ -8,7 +8,7 @@
 	"license-name": "GPL-2.0-or-later",
 	"type": "other",
 	"requires": {
-		"MediaWiki": ">= 1.45.0"
+		"MediaWiki": ">= 1.47.0"
 	},
 	"AutoloadNamespaces": {
 		"MediaWiki\\Extension\\WP25EasterEggs\\": "src/"
@@ -89,7 +89,10 @@
 				"style.css"
 			],
 			"packageFiles": [
-				{ "name": "init.js", "main": true },
+				{
+					"name": "init.js",
+					"main": true
+				},
 				"companion/Companion.js",
 				"companion/CompanionConfig.js",
 				"core/ClientPrefsHandler.js",
@@ -125,7 +128,10 @@
 				"config.less"
 			],
 			"packageFiles": [
-				{ "name": "config.js", "main": true },
+				{
+					"name": "config.js",
+					"main": true
+				},
 				"domUtils.js"
 			],
 			"messages": [
