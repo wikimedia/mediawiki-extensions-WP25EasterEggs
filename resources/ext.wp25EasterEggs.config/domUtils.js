@@ -55,7 +55,6 @@ const createElement = ( { tag, innerHTML, className }, { element, mode } ) => {
 		newTag.innerHTML = innerHTML;
 	}
 	if ( className ) {
-		// eslint-disable-next-line mediawiki/class-doc
 		newTag.className = className;
 	}
 
