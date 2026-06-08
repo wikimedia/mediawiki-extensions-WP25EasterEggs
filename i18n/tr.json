@@ -1,6 +1,7 @@
 {
 	"@metadata": {
 		"authors": [
+			"HakanIST",
 			"Hedda"
 		]
 	},
@@ -17,6 +18,30 @@
 	"communityconfiguration-wp25eastereggs-enableextension-label": "Doğum günü modunu etkinleştirin",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Devre dışı",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "Etkin",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "Devre dışı",
+	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "Etkin",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "Küresel filtre - Filtre türü",
-	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-label": "Genel filtre - Filtre sayfaları"
+	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-label": "Genel filtre - Filtre sayfaları",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-enabled-label": "Etkin",
+	"communityconfiguration-wp25eastereggs-phone-defaultpages-option-disabled-label": "Devre dışı",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-enabled-label": "Etkin",
+	"communityconfiguration-wp25eastereggs-newspaper-defaultpages-option-disabled-label": "Devre dışı",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-enabled-label": "Etkin",
+	"communityconfiguration-wp25eastereggs-book-defaultpages-option-disabled-label": "Devre dışı",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-enabled-label": "Etkin",
+	"communityconfiguration-wp25eastereggs-laptop-defaultpages-option-disabled-label": "Devre dışı",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-enabled-label": "Etkin",
+	"communityconfiguration-wp25eastereggs-dreaming-defaultpages-option-disabled-label": "Devre dışı",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-enabled-label": "Etkin",
+	"communityconfiguration-wp25eastereggs-outerspace-defaultpages-option-disabled-label": "Devre dışı",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-enabled-label": "Etkin",
+	"communityconfiguration-wp25eastereggs-headphones-defaultpages-option-disabled-label": "Devre dışı",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-enabled-label": "Etkin",
+	"communityconfiguration-wp25eastereggs-camera-defaultpages-option-disabled-label": "Devre dışı",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-enabled-label": "Etkin",
+	"communityconfiguration-wp25eastereggs-synthesizer-defaultpages-option-disabled-label": "Devre dışı",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-enabled-label": "Etkin",
+	"communityconfiguration-wp25eastereggs-confetti-defaultpages-option-disabled-label": "Devre dışı",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-enabled-label": "Etkin",
+	"communityconfiguration-wp25eastereggs-balloons-defaultpages-option-disabled-label": "Devre dışı"
 }
