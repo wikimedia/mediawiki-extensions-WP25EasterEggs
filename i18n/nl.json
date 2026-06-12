@@ -7,7 +7,7 @@
 			"Siebrand"
 		]
 	},
-	"wp25EasterEggs-desc": "Dit is een extensie om het 25-jarig bestaan van Wikipedia te vieren met interactieve Easter Eggs.",
+	"wp25EasterEggs-desc": "Dit is een uitbreiding om het 25-jarig bestaan van Wikipedia te vieren met interactieve Easter Eggs.",
 	"wp25eastereggs-enable-name": "Verjaardagsmodus (Baby Globe) 🎉",
 	"wp25eastereggs-enable-label": "Verjaardagsmodus (Baby Globe) 🎉",
 	"wp25eastereggs-enable-description": "Vier 25 jaar Wikipedia met een [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/ schattige leespartner]",
@@ -17,7 +17,7 @@
 	"wp25eastereggs-enable-learn-more-link-label": "Meer lezen over de Verjaardagsmodus",
 	"communityconfiguration-wp25eastereggs-title": "Wikipedia 25 'Verjaardagsmodus'",
 	"communityconfiguration-wp25eastereggs-description": "De Verjaardagsmodus is een tijdelijke, optionele functie die is ontworpen om het 25-jarig jubileum van Wikipedia te vieren door, wanneer geactiveerd, een feestelijke sfeer te creëren.",
-	"communityconfiguration-wp25eastereggs-additional-description": "Wanneer deze functie is ingeschakeld, wordt 'Baby Globe' geïntroduceerd, een verjaardagsmascotte die fungeert als leesmaatje en verborgen animaties en visuele Easter Egg-verrassingen ontgrendelt die gebruikers kunnen ontdekken. Als de extensie niet is ingeschakeld, is de weergave-instelling niet zichtbaar voor lezers. Lees meer op de [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments MetaWiki-pagina]. Deze speciale campagnefunctie is actief vanaf 16 februari 2026. Op 6 april 2026 wordt de functie van alle wiki's verwijderd.",
+	"communityconfiguration-wp25eastereggs-additional-description": "Wanneer deze functie is ingeschakeld, wordt 'Baby Globe' geïntroduceerd, een verjaardagsmascotte die fungeert als leesmaatje en verborgen animaties en visuele Easter Egg-verrassingen ontgrendelt die gebruikers kunnen ontdekken. Als de uitbreiding niet is ingeschakeld, is de weergave-instelling niet zichtbaar voor lezers. Lees meer op de [https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments MetaWiki-pagina]. Deze speciale campagnefunctie is actief vanaf 16 februari 2026. Op 6 april 2026 wordt de functie van alle wiki's verwijderd.",
 	"communityconfiguration-wp25eastereggs-enableextension-label": "Verjaardagsmodus inschakelen",
 	"communityconfiguration-wp25eastereggs-enableextension-description": "Door de verjaardagsmodus in te schakelen, kunnen lezers een weergave-instelling met de titel 'Verjaardagsmodus (Baby Globe)' in- en uitschakelen. Wanneer lezers de 'Verjaardagsmodus' inschakelen, verschijnt een versie van Baby Globe op de pagina's zoals ingesteld in de speciale animatiefilters van Baby Globe.",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "Uitgeschakeld",
