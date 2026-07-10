@@ -6,8 +6,10 @@
 			"Mohammed Qays"
 		]
 	},
+	"wp25EasterEggs-desc": "هذا امتداد للاحتفال بالذكرى السنوية الخامسة والعشرين لموقع ويكيبيديا من خلال إضافة بيض عيد الفصح التفاعلي.",
 	"wp25eastereggs-enable-name": "وضع عيد الميلاد (بيبي غلوب)",
 	"wp25eastereggs-enable-label": "وضع عيد الميلاد (بيبي غلوب)",
+	"wp25eastereggs-enable-description": "احتفل بمرور 25 عامًا على تأسيس ويكيبيديا مع رفيق قراءة لطيف [https://wikimediafoundation.org/wikipedia25/wikipedia-mascot/]",
 	"wp25eastereggs-enable-help": "احتفل بمرور 25 عامًا على إنشاء ويكيبيديا برفقة شريك قراءة لطيف",
 	"wp25eastereggs-enable-0-label": "مُعطل",
 	"wp25eastereggs-enable-1-label": "مُفعّل",
