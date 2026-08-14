@@ -3,7 +3,8 @@
 		"authors": [
 			"0x48fe75df30",
 			"Anterdc99",
-			"Gsdn"
+			"Gsdn",
+			"Ouclie"
 		]
 	},
 	"wp25EasterEggs-desc": "这是为庆祝维基百科成立 25 周年而添加的互动彩蛋扩展。",
@@ -18,15 +19,15 @@
 	"communityconfiguration-wp25eastereggs-description": "生日模式是一项限时可选功能，旨在庆祝维基百科诞生25周年，激活后可营造节日气氛。",
 	"communityconfiguration-wp25eastereggs-additional-description": "当切换后，会出现维基百科生日吉祥物“Baby Globe”，这可作为您的阅读伙伴，并且有解锁隐藏的动画与视觉彩蛋惊喜供用户挖掘。若未启用此扩展功能，则读者不会看到该外观设置。更多相关信息，请参见[https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments 此MetaWiki页面]。此特别活动将于2026年2月16日起上线。之后在2026年4月6日，我们会从所有wiki中删除此功能。",
 	"communityconfiguration-wp25eastereggs-enableextension-label": "启用生日模式",
-	"communityconfiguration-wp25eastereggs-enableextension-description": "启用生日模式后，读者可以打开或关闭名为“生日模式”的外观设置。当读者启用“生日模式”时，一般版本的 Baby Globe 会根据'''全域筛选'''显示在页面上。<br/><br/>其他更有趣、更活泼的 Baby Globe 版本可在 '''Baby Globe 特殊动画滤镜'''中配置。<br/><br/>在此可查看所有版本的 Baby Globe 以及动画预期效果：[https://meta.wikimedia.org/wiki/Wikipedia_25/Easter_egg_experiments/article_configuration]。",
+	"communityconfiguration-wp25eastereggs-enableextension-description": "启用生日模式后，读者可以开启或关闭名为“生日模式（儿童世界）”的外观设置。启用“生日模式”后，页面上将显示在儿童世界特殊动画滤镜中配置的儿童世界版本。",
 	"communityconfiguration-wp25eastereggs-enableextension-option-disabled-label": "禁用",
 	"communityconfiguration-wp25eastereggs-enableextension-option-enabled-label": "启用",
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-label": "生日模式的默认状态",
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-disabled-label": "已禁用",
 	"communityconfiguration-wp25eastereggs-defaultuserpreference-option-enabled-label": "已启用",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-label": "全域筛选器 - 筛选器类型",
-	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "控制Baby Globe的显示位置，但不控制生日模式的外观开关。",
-	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "启用Baby Globe，使其显示在所有位置",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-description": "控制儿童世界的显示位置，但不控制生日模式的外观开关。",
+	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-everywhere-label": "启用儿童世界功能，使其按照儿童世界特殊动画滤镜显示。",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-allowfilter-label": "启用Baby Globe，使其仅在所选页面上显示",
 	"communityconfiguration-wp25eastereggs-enablecompanion-type-option-blockfilter-label": "仅在所选页面上禁用Baby Globe（除所选页面外，在其余所有页面上启用）",
 	"communityconfiguration-wp25eastereggs-enablecompanion-filterpages-label": "全域筛选器 - 筛选页面",
